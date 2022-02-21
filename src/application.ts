@@ -14,7 +14,9 @@ import {
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MongodbDataSource} from './datasources';
+import {UserRepository} from './repositories';
 import {MySequence} from './sequence';
+import {MyUserService, MyUserServiceBindings} from './services';
 export {ApplicationConfig};
 
 export class PsServerApplication extends BootMixin(
@@ -38,6 +40,15 @@ export class PsServerApplication extends BootMixin(
     this.component(JWTAuthenticationComponent);
     this.dataSource(MongodbDataSource, UserServiceBindings.DATASOURCE_NAME);
 
+    // Bind user service
+    // console.log(
+    //   MyUserServiceBindings.USER_SERVICE,
+    //   // MyUserServiceBindings.USER_SERVICE,
+    //   UserServiceBindings.USER_REPOSITORY,
+    // );
+    this.bind(MyUserServiceBindings.USER_SERVICE).toClass(MyUserService);
+    // Bind user repository
+    this.bind(UserServiceBindings.USER_REPOSITORY).toClass(UserRepository);
     // this.component(AuthorizationComponent);
     this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here

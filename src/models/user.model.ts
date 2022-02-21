@@ -8,6 +8,9 @@ enum ROLE {
 @model({
   settings: {
     mongodb: {collection: 'Users'},
+    // scope: {
+    //   where: {isActive: false},
+    // },
   },
 })
 export class User extends Entity {
@@ -24,6 +27,7 @@ export class User extends Entity {
   @property({
     type: 'string',
     index: true,
+    hidden: true,
     jsonSchema: {
       pattern: '\\d+',
     },
@@ -32,8 +36,15 @@ export class User extends Entity {
 
   @property({
     type: 'string',
+  })
+  name?: string;
+
+  @property({
+    type: 'string',
     index: true,
-    format: 'email',
+    jsonSchema: {
+      format: 'email',
+    },
   })
   email?: string;
 
@@ -58,32 +69,35 @@ export class User extends Entity {
         'Password should be more than 6 and less than 512 characters',
     },
   })
-  password?: string;
+  password: string;
 
   @property({
     type: 'boolean',
     default: false,
   })
-  isActive: boolean;
+  isActive?: boolean;
 
   @property({
-    type: 'Date',
-    defaultFn: '$now',
+    type: 'date',
+    defaultFn: 'now',
   })
-  createdAt: 'Date';
+  createdAt?: 'date';
 
   @property({
     type: 'string',
+    default: undefined,
   })
   resetPasswordToken?: string;
 
   @property({
     type: 'boolean',
+    default: false,
   })
   emailVerified?: boolean;
 
   @property({
     type: 'string',
+    default: undefined,
   })
   verificationToken?: string;
 
@@ -94,7 +108,7 @@ export class User extends Entity {
       enum: Object.values(ROLE),
     },
   })
-  role: ROLE;
+  role?: ROLE;
 }
 
 export interface UserRelations {

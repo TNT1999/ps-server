@@ -1,9 +1,5 @@
-import * as dotenv from 'dotenv';
 import {ApplicationConfig, PsServerApplication} from './application';
-
 export * from './application';
-
-dotenv.config();
 
 export async function main(options: ApplicationConfig = {}) {
   const app = new PsServerApplication(options);
@@ -12,7 +8,6 @@ export async function main(options: ApplicationConfig = {}) {
 
   const url = app.restServer.url;
   console.log(`Server is running at ${url}`);
-  console.log(`Try ${url}/ping`);
   return app;
 }
 
