@@ -27,13 +27,6 @@ export class MyUserService implements UserService<User, Credentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    // const credentialsFound = await this.userRepository.findCredentials(
-    //   foundUser.id,
-    // );
-    // if (!credentialsFound) {
-    //   throw new HttpErrors.Unauthorized(invalidCredentialsError);
-    // }
-
     const passwordMatched = await compare(
       credentials.password,
       foundUser.password,
@@ -70,8 +63,8 @@ export class MyUserService implements UserService<User, Credentials> {
   }
 }
 
-export const MyUserServiceBindings = {
-  USER_SERVICE: BindingKey.create<UserService<User, Credentials>>(
+export namespace MyUserServiceBindings {
+  export const USER_SERVICE = BindingKey.create<UserService<User, Credentials>>(
     `services.${MyUserService.name}_custom.service`,
-  ),
-};
+  );
+}

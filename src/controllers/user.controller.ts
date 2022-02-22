@@ -1,17 +1,32 @@
-import {authenticate, TokenService} from '@loopback/authentication';
+import {authenticate} from '@loopback/authentication';
 import {
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
 import {inject} from '@loopback/core';
-import {get, post, requestBody, response, SchemaObject} from '@loopback/rest';
+import {
+  get,
+  param,
+  post,
+  requestBody,
+  response,
+  SchemaObject,
+} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
+import pick from 'lodash/pick';
 import {ValidateEmailInterceptor} from '../interceptors';
 import {User} from '../models';
 import {UserRepository} from '../repositories';
-import {Credentials, MyUserService, MyUserServiceBindings} from '../services';
+import {
+  Credentials,
+  EmailService,
+  EmailServiceBindings,
+  JWTService,
+  MyUserService,
+  MyUserServiceBindings,
+} from '../services';
 const CredentialsSchema: SchemaObject = {
   type: 'object',
   required: ['email', 'password'],
@@ -40,14 +55,14 @@ export const CredentialsRequestBody = {
 // @intercept(ValidatePhoneNumInterceptor.BINDING_KEY)
 export class UserController {
   constructor(
-    // @repository(UserRepository)
-    // public userRepository: UserRepository,
     @inject(UserServiceBindings.USER_REPOSITORY)
     public userRepository: UserRepository,
     @inject(TokenServiceBindings.TOKEN_SERVICE)
-    public jwtService: TokenService,
+    public jwtService: JWTService,
     @inject(MyUserServiceBindings.USER_SERVICE)
     public userService: MyUserService,
+    @inject(EmailServiceBindings.EMAIL_SERVICE)
+    public emailService: EmailService,
   ) {}
 
   @post('auth/login')
@@ -94,9 +109,10 @@ export class UserController {
   async getMe(
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
-  ): Promise<string> {
-    console.log(currentUserProfile);
-    return currentUserProfile[securityId];
+  ): Promise<Partial<User>> {
+    const userId = currentUserProfile[securityId];
+    const currentUser = await this.userRepository.findById(userId);
+    return pick(currentUser, ['id', 'name', 'email', 'phone', 'role']);
   }
 
   @post('/auth/register')
@@ -118,15 +134,17 @@ export class UserController {
       ...newUser,
       password: hashPassword,
     });
+    const verifyEmailToken =
+      await this.jwtService.generateVerificationEmailToken(savedUser.id);
 
-    // await this.userRepository.userCredentials(savedUser.id).create({password});
+    const urlVerifyEmail = `http://localhost:8000/api/auth/verify-email?token=${verifyEmailToken}`;
+    await this.emailService.sendVerifyEmailRegister(savedUser, urlVerifyEmail);
     return omit(savedUser, 'password', 'role');
-    // return savedUser;
   }
 
   @get('/auth/verify-email')
   @response(200, {
-    description: 'User',
+    description: 'Verify email',
     content: {
       'application/json': {
         schema: {
@@ -136,10 +154,33 @@ export class UserController {
     },
   })
   async verifyEmail(
+    @param.query.string('token') token: string,
+  ): Promise<string> {
+    const userId = await this.jwtService.verifyEmailToken(token);
+    await this.userRepository.updateById(userId, {
+      isActive: true,
+      emailVerified: true,
+    });
+    return 'Success';
+  }
+
+  @get('/auth/resetPassword')
+  @response(200, {
+    description: 'Reset password for User',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'string',
+        },
+      },
+    },
+  })
+  async resetPassword(
     @requestBody(CredentialsRequestBody) newUser: Credentials,
   ): Promise<string> {
-    return 'verify Email';
+    return 'reset password';
   }
+
   // @post('/users')
   // @response(200, {
   //   description: 'User model instance',

@@ -97,12 +97,6 @@ export class User extends Entity {
 
   @property({
     type: 'string',
-    default: undefined,
-  })
-  verificationToken?: string;
-
-  @property({
-    type: 'string',
     default: ROLE.USER,
     jsonSchema: {
       enum: Object.values(ROLE),
