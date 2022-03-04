@@ -3,7 +3,6 @@ import {
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
-import {authorize} from '@loopback/authorization';
 import {inject} from '@loopback/core';
 import {
   get,
@@ -18,8 +17,7 @@ import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {compare, genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
-import {ObjectId} from 'mongodb';
-import {Order, ROLES, User} from '../models';
+import {User} from '../models';
 import {UserRepository} from '../repositories';
 import {
   Credentials,
@@ -83,7 +81,7 @@ export const ChangePasswordRequestBody = {
 
 // @intercept(ValidateEmailInterceptor.BINDING_KEY)
 // @intercept(ValidatePhoneNumInterceptor.BINDING_KEY)
-export class UserController {
+export class ProductController {
   constructor(
     @inject(UserServiceBindings.USER_REPOSITORY)
     public userRepository: UserRepository,
@@ -225,7 +223,6 @@ export class UserController {
     }
     user.resetPasswordToken = resetKey;
     await this.userRepository.save(user);
-    // await this.userRepository. (user, {resetPasswordToken: resetKey});
     await this.emailService.sendResetPasswordMail(user, token);
     //send email
     return 'Reset password link sending to email';
@@ -326,7 +323,6 @@ export class UserController {
     return 'Success';
   }
 
-  @authenticate('jwt')
   @post('/auth/update-profile')
   @response(200, {
     description: 'Update profile user',
@@ -342,66 +338,7 @@ export class UserController {
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile, // need include @authenticate
     @requestBody() updateProfile: Partial<User>,
-  ): Promise<Partial<User>> {
-    const userId = currentUserProfile[securityId];
-    const result = await this.userRepository.execute(
-      'User',
-      'findOneAndUpdate',
-      {_id: new ObjectId(userId)},
-      {
-        $set: omit(updateProfile, 'password', 'roles', '_id'),
-      },
-      {
-        returnDocument: 'after',
-      },
-    );
-
-    return pick(result.value, 'name', 'email', 'phone');
-  }
-
-  @authenticate('jwt')
-  @authorize({allowedRoles: [ROLES.USER]})
-  @get('/auth/getOrders')
-  @response(200, {
-    description: 'Get all order',
-    content: {
-      'application/json': {
-        schema: {
-          'x-ts-type': Order,
-        },
-      },
-    },
-  })
-  async getOrders(
-    @inject(SecurityBindings.USER)
-    currentUserProfile: UserProfile,
-  ): Promise<Order[]> {
-    const orders = await this.userRepository
-      .orders(currentUserProfile[securityId])
-      .find();
-    return orders;
-  }
-
-  @authenticate('jwt')
-  @post('/auth/createOrder')
-  @response(200, {
-    description: 'Create order',
-    content: {
-      'application/json': {
-        schema: {
-          'x-ts-type': Order,
-        },
-      },
-    },
-  })
-  async createOrder(
-    @inject(SecurityBindings.USER)
-    currentUserProfile: UserProfile,
-    @requestBody() order: Order,
-  ): Promise<Order> {
-    const savedOrder = await this.userRepository
-      .orders(currentUserProfile[securityId])
-      .create(order);
-    return savedOrder;
+  ): Promise<string> {
+    return 'Success';
   }
 }

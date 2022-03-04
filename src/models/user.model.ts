@@ -1,6 +1,7 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, hasMany, model, property} from '@loopback/repository';
+import {Order} from '.';
 
-enum ROLE {
+export enum ROLES {
   USER = 'user',
   ADMIN = 'admin',
 }
@@ -97,16 +98,20 @@ export class User extends Entity {
 
   @property({
     type: 'string',
-    default: ROLE.USER,
+    default: [ROLES.USER],
     jsonSchema: {
-      enum: Object.values(ROLE),
+      enum: Object.values(ROLES),
     },
   })
-  role?: ROLE;
+  roles?: ROLES[];
+
+  @hasMany(() => Order, {keyTo: 'userId'})
+  orders?: Order[];
 }
 
 export interface UserRelations {
   // describe navigational properties here
+  // orders?: OrderWithRelations[];
 }
 
 export type UserWithRelations = User & UserRelations;

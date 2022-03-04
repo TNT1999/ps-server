@@ -4,16 +4,22 @@ import {
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
+import {
+  AuthorizationComponent,
+  AuthorizationTags,
+} from '@loopback/authorization';
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
+import {Request, Response, RestApplication} from '@loopback/rest';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
 } from '@loopback/rest-explorer';
 import {ServiceMixin} from '@loopback/service-proxy';
+import morgan from 'morgan';
 import path from 'path';
+import {MyAuthorizationProvider} from './authorizer';
 import {MongodbDataSource} from './datasources';
 import {UserRepository} from './repositories';
 import {MySequence} from './sequence';
@@ -34,6 +40,7 @@ export class PsServerApplication extends BootMixin(
     super(options);
 
     // Set up the custom sequence
+    // this.setupLogging();
     this.sequence(MySequence);
 
     // Set up default home page
@@ -46,9 +53,9 @@ export class PsServerApplication extends BootMixin(
     this.component(RestExplorerComponent);
     this.component(AuthenticationComponent);
     this.component(JWTAuthenticationComponent);
+    this.component(AuthorizationComponent);
     this.dataSource(MongodbDataSource, UserServiceBindings.DATASOURCE_NAME);
     this.setupBinding();
-    // this.component(AuthorizationComponent);
     this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here
     this.bootOptions = {
@@ -77,5 +84,22 @@ export class PsServerApplication extends BootMixin(
     this.bind(TokenServiceBindings.TOKEN_EXPIRES_IN).to(
       CustomJWTServiceConstants.TOKEN_EXPIRES_IN_VALUE,
     );
+    // Bind the authorizer provider
+    this.bind('authorizationProviders.my-authorizer-provider')
+      .toProvider(MyAuthorizationProvider)
+      .tag(AuthorizationTags.AUTHORIZER);
+  }
+
+  private setupLogging() {
+    const morganFactory = (config?: morgan.Options<Request, Response>) => {
+      return morgan('combined', config);
+    };
+
+    const defaultConfig: morgan.Options<Request, Response> = {};
+
+    this.expressMiddleware(morganFactory, defaultConfig, {
+      injectConfiguration: 'watch',
+      key: 'middleware.morgan',
+    });
   }
 }

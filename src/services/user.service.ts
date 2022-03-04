@@ -42,10 +42,10 @@ export class MyUserService implements UserService<User, Credentials> {
   convertToUserProfile(user: User): UserProfile {
     return {
       [securityId]: user.id.toString(),
-      name: user.email,
+      name: user.name,
       id: user.id,
       email: user.email,
-      role: user.role,
+      roles: user.roles,
     };
   }
 

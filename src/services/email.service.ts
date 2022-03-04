@@ -351,17 +351,21 @@ export class EmailService {
       `,
     });
   }
-  async sendResetPasswordMail(user: Partial<User>): Promise<SentMessageInfo> {
+  async sendResetPasswordMail(
+    user: Partial<User>,
+    token: string,
+  ): Promise<SentMessageInfo> {
     const transporter = await EmailService.setupTransporter();
     return transporter.sendMail({
+      from: '"PhoneShop" <noreply@phoneshop.com>',
       to: user.email,
-      subject: '[LB4] Reset Password Request',
+      subject: 'Reset Password Request',
       html: `
       <div>
           <p>Hi there,</p>
           <p style="color: red;">We received a request to reset the password for your account</p>
           <p>To reset your password click on the link provided below</p>
-          <a href="${process.env.APPLICATION_URL}/reset-password-finish.html?resetKey=${user.resetKey}">Reset your password link</a>
+          <a href="http://localhost:8000/api/auth/resetPasswordComplete?token=${token}">Reset your password link</a>
           <p>If you didn’t request to reset your password, please ignore this email or reset your password to protect your account.</p>
           <p>Thanks</p>
           <p>LB4 team</p>

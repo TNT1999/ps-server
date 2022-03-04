@@ -1,4 +1,5 @@
 import {ApplicationConfig, PsServerApplication} from './application';
+import {chalk} from './utils';
 export * from './application';
 
 export async function main(options: ApplicationConfig = {}) {
@@ -7,7 +8,9 @@ export async function main(options: ApplicationConfig = {}) {
   await app.start();
 
   const url = app.restServer.url;
-  console.log(`Server is running at ${url}`);
+  console.log(
+    chalk.cyan('Server is running at ' + chalk.green.underline(`${url}`)),
+  );
   return app;
 }
 
