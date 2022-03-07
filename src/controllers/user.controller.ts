@@ -9,6 +9,7 @@ import {
   get,
   HttpErrors,
   param,
+  patch,
   post,
   requestBody,
   response,
@@ -25,6 +26,8 @@ import {
   Credentials,
   EmailService,
   EmailServiceBindings,
+  GoogleBindings,
+  GoogleService,
   JWTService,
   MyUserService,
   MyUserServiceBindings,
@@ -93,6 +96,8 @@ export class UserController {
     public userService: MyUserService,
     @inject(EmailServiceBindings.EMAIL_SERVICE)
     public emailService: EmailService,
+    @inject(GoogleBindings.GOOGLE_SERVICE)
+    public googleService: GoogleService,
   ) {}
 
   @post('auth/login')
@@ -121,6 +126,68 @@ export class UserController {
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
     return {token};
+  }
+
+  @post('auth/facebook')
+  @response(200, {
+    description: 'Login using facebook account',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            token: {
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+  })
+  async loginOrSignupWithFacebook(
+    @requestBody(CredentialsRequestBody) credentials: Credentials,
+  ): Promise<{token: string}> {
+    // ensure the user exists, and the password is correct
+    const user = await this.userService.verifyCredentials(credentials);
+    // convert a User object into a UserProfile object (reduced set of properties)
+    const userProfile = this.userService.convertToUserProfile(user);
+    // create a JSON Web Token based on the user profile
+    const token = await this.jwtService.generateToken(userProfile);
+    return {token};
+  }
+
+  @post('auth/google')
+  @response(200, {
+    description: 'Login using Google account',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            token: {
+              type: 'string',
+            },
+            newUser: {
+              type: 'boolean',
+            },
+          },
+        },
+      },
+    },
+  })
+  async loginOrSignupWithGoogle(
+    @requestBody() code: string,
+  ): Promise<{token: string; newUser: boolean}> {
+    const {email, sub: googleUserId} = await this.googleService.getUser(code);
+
+    const {user, newUser} = await this.userService.loginOrSignupUser({
+      email,
+      googleUserId,
+    } as User);
+    const userProfile = this.userService.convertToUserProfile(user);
+    // create a JSON Web Token based on the user profile
+    const token = await this.jwtService.generateToken(userProfile);
+    return {token, newUser};
   }
 
   @authenticate('jwt')
@@ -158,11 +225,7 @@ export class UserController {
   async register(
     @requestBody(CredentialsRequestBody) newUser: Credentials,
   ): Promise<Partial<User>> {
-    const hashPassword = await hash(newUser.password, await genSalt());
-    const savedUser = await this.userRepository.create({
-      ...newUser,
-      password: hashPassword,
-    });
+    const savedUser = await this.userService.createUser(newUser as User);
     const verifyEmailToken =
       await this.jwtService.generateVerificationEmailToken(savedUser.id);
 
@@ -307,8 +370,12 @@ export class UserController {
     currentUserProfile: UserProfile, // need include @authenticate
     @requestBody(ChangePasswordRequestBody) changePassword: ChangePassword,
   ): Promise<string> {
+    const invalidOldPasswordError = 'Invalid password.';
     const userId = currentUserProfile[securityId];
     const currentUser = await this.userService.findUserById(userId);
+    if (!currentUser.password) {
+      throw new HttpErrors.Unauthorized(invalidOldPasswordError);
+    }
     const oldPasswordMatched = await compare(
       changePassword.oldPassword,
       currentUser.password,
@@ -322,12 +389,15 @@ export class UserController {
       await genSalt(),
     );
 
-    await this.userRepository.updateById(userId, {password: hashNewPassword});
+    await this.userRepository.updateById(userId, {
+      password: hashNewPassword,
+      resetPasswordToken: undefined,
+    });
     return 'Success';
   }
 
   @authenticate('jwt')
-  @post('/auth/update-profile')
+  @patch('/auth/update-profile')
   @response(200, {
     description: 'Update profile user',
     content: {

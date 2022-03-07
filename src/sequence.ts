@@ -27,8 +27,8 @@ const middlewareList: ExpressRequestHandler[] = [
     return [
       chalk.blue(tokens['remote-addr'](req, res)),
       method === 'GET' ? chalk.greenBright.bold(method) : warning.bold(method),
-      chalk.cyanBright.underline(tokens.url(req, res)),
-      status === '200' ? chalk.greenBright.bold(status) : error.bold(status),
+      chalk.cyan.underline(tokens.url(req, res)),
+      status === '200' ? chalk.green.bold(status) : error.bold(status),
       chalk.yellow(tokens['response-time'](req, res)),
     ].join(' ');
   }),

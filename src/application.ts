@@ -27,6 +27,10 @@ import {
   CustomJWTServiceConstants,
   EmailService,
   EmailServiceBindings,
+  FacebookBindings,
+  FacebookService,
+  GoogleBindings,
+  GoogleService,
   JWTService,
   MyUserService,
   MyUserServiceBindings,
@@ -88,6 +92,10 @@ export class PsServerApplication extends BootMixin(
     this.bind('authorizationProviders.my-authorizer-provider')
       .toProvider(MyAuthorizationProvider)
       .tag(AuthorizationTags.AUTHORIZER);
+
+    // binding google and facebook service through @injectable
+    this.bind(GoogleBindings.GOOGLE_SERVICE).toInjectable(GoogleService);
+    this.bind(FacebookBindings.FACEBOOK_SERVICE).toInjectable(FacebookService);
   }
 
   private setupLogging() {

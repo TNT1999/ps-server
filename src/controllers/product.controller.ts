@@ -14,7 +14,7 @@ import {
   SchemaObject,
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
-import {compare, genSalt, hash} from 'bcryptjs';
+import {genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
 import {User} from '../models';
@@ -284,42 +284,6 @@ export class ProductController {
     user.password = hashNewPassword;
     user.resetPasswordToken = undefined;
     await this.userRepository.save(user);
-    return 'Success';
-  }
-
-  @authenticate('jwt')
-  @post('/auth/change-password')
-  @response(200, {
-    description: 'Change password for User',
-    content: {
-      'application/json': {
-        schema: {
-          type: 'string',
-        },
-      },
-    },
-  })
-  async changePassword(
-    @inject(SecurityBindings.USER)
-    currentUserProfile: UserProfile, // need include @authenticate
-    @requestBody(ChangePasswordRequestBody) changePassword: ChangePassword,
-  ): Promise<string> {
-    const userId = currentUserProfile[securityId];
-    const currentUser = await this.userService.findUserById(userId);
-    const oldPasswordMatched = await compare(
-      changePassword.oldPassword,
-      currentUser.password,
-    );
-    if (!oldPasswordMatched) {
-      const invalidOldPasswordError = 'Invalid password.';
-      throw new HttpErrors.Unauthorized(invalidOldPasswordError);
-    }
-    const hashNewPassword = await hash(
-      changePassword.newPassword,
-      await genSalt(),
-    );
-
-    await this.userRepository.updateById(userId, {password: hashNewPassword});
     return 'Success';
   }
 

@@ -70,7 +70,7 @@ export class User extends Entity {
         'Password should be more than 6 and less than 512 characters',
     },
   })
-  password: string;
+  password?: string;
 
   @property({
     type: 'boolean',
