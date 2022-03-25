@@ -21,6 +21,7 @@ import morgan from 'morgan';
 import path from 'path';
 import {MyAuthorizationProvider} from './authorizer';
 import {MongodbDataSource} from './datasources';
+import {loggerMiddleware} from './middleware';
 import {UserRepository} from './repositories';
 import {MySequence} from './sequence';
 import {
@@ -44,7 +45,7 @@ export class PsServerApplication extends BootMixin(
     super(options);
 
     // Set up the custom sequence
-    // this.setupLogging();
+    this.middleware(loggerMiddleware);
     this.sequence(MySequence);
 
     // Set up default home page

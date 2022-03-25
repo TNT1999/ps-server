@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {AttributeProduct, ColorOptionProduct} from '.';
+import {Variant} from './variant.model';
 
 enum AttrsProduct {
   HANG_SX = 'Hãng sản xuất',
@@ -14,9 +16,16 @@ enum ProductFields {
   PRICE,
 }
 
+export class ColorOptions {
+  price: string;
+  name: string;
+  amount: string;
+  images: string[];
+  id: string;
+}
 @model({
   settings: {
-    mongodb: {collection: 'Products'},
+    mongodb: {collection: 'products'},
   },
 })
 export class Product extends Entity {
@@ -44,7 +53,6 @@ export class Product extends Entity {
 
   @property({
     type: 'number',
-    index: true,
   })
   reviewCount?: number;
 
@@ -57,15 +65,8 @@ export class Product extends Entity {
   })
   isHot?: boolean;
 
-  @property({
-    type: 'object',
-    jsonSchema: {
-      anyOf: Object(AttrsProduct),
-    },
-  })
-  attrs?: {
-    [key in AttrsProduct]: string;
-  };
+  @property.array(AttributeProduct)
+  attrs?: AttributeProduct[];
 
   @property({
     type: 'date',
@@ -85,6 +86,9 @@ export class Product extends Entity {
   @property()
   price?: string;
 
+  @property()
+  discount?: number;
+
   @property({
     type: 'boolean',
     default: false,
@@ -98,6 +102,12 @@ export class Product extends Entity {
     },
   })
   productFields?: object;
+
+  @property.array(ColorOptionProduct)
+  colorOptions?: ColorOptions[];
+
+  @belongsTo(() => Variant, {name: 'variant'})
+  variantsId?: string;
 }
 
 export interface ProductRelations {

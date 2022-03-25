@@ -29,7 +29,7 @@ export class Order extends Entity {
   })
   id: string;
 
-  @belongsTo(() => User)
+  @belongsTo(() => User, {name: 'user'})
   // @property({
   //   type: 'string',
   //   mongodb: {dataType: 'ObjectId'},

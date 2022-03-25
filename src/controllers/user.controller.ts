@@ -4,7 +4,7 @@ import {
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
 import {authorize} from '@loopback/authorization';
-import {inject} from '@loopback/core';
+import {inject, intercept} from '@loopback/core';
 import {
   get,
   HttpErrors,
@@ -20,6 +20,7 @@ import {compare, genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
 import {ObjectId} from 'mongodb';
+import {ValidateEmailInterceptor} from '../interceptors';
 import {Order, ROLES, User} from '../models';
 import {UserRepository} from '../repositories';
 import {
@@ -84,7 +85,6 @@ export const ChangePasswordRequestBody = {
   },
 };
 
-// @intercept(ValidateEmailInterceptor.BINDING_KEY)
 // @intercept(ValidatePhoneNumInterceptor.BINDING_KEY)
 export class UserController {
   constructor(
@@ -111,6 +111,9 @@ export class UserController {
             token: {
               type: 'string',
             },
+            user: {
+              type: 'object',
+            },
           },
         },
       },
@@ -118,14 +121,14 @@ export class UserController {
   })
   async login(
     @requestBody(CredentialsRequestBody) credentials: Credentials,
-  ): Promise<{token: string}> {
+  ): Promise<{token: string; user: object}> {
     // ensure the user exists, and the password is correct
     const user = await this.userService.verifyCredentials(credentials);
     // convert a User object into a UserProfile object (reduced set of properties)
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
-    return {token};
+    return {token, user: userProfile};
   }
 
   @post('auth/facebook')
@@ -139,21 +142,24 @@ export class UserController {
             token: {
               type: 'string',
             },
+            user: {
+              type: 'object',
+            },
           },
         },
       },
     },
   })
   async loginOrSignupWithFacebook(
-    @requestBody(CredentialsRequestBody) credentials: Credentials,
-  ): Promise<{token: string}> {
+    @requestBody() requestBody: {code: string},
+  ): Promise<{token: string; user: object}> {
     // ensure the user exists, and the password is correct
-    const user = await this.userService.verifyCredentials(credentials);
-    // convert a User object into a UserProfile object (reduced set of properties)
-    const userProfile = this.userService.convertToUserProfile(user);
-    // create a JSON Web Token based on the user profile
-    const token = await this.jwtService.generateToken(userProfile);
-    return {token};
+    // const user = await this.userService.verifyCredentials(credentials);
+    // // convert a User object into a UserProfile object (reduced set of properties)
+    // const userProfile = this.userService.convertToUserProfile(user);
+    // // create a JSON Web Token based on the user profile
+    // const token = await this.jwtService.generateToken(userProfile);
+    return {token: 'a', user: {name: 'a'}};
   }
 
   @post('auth/google')
@@ -167,8 +173,8 @@ export class UserController {
             token: {
               type: 'string',
             },
-            newUser: {
-              type: 'boolean',
+            user: {
+              type: 'object',
             },
           },
         },
@@ -176,10 +182,11 @@ export class UserController {
     },
   })
   async loginOrSignupWithGoogle(
-    @requestBody() code: string,
-  ): Promise<{token: string; newUser: boolean}> {
-    const {email, sub: googleUserId} = await this.googleService.getUser(code);
-
+    @requestBody() requestBody: {code: string},
+  ): Promise<{token: string; user: object}> {
+    const {email, sub: googleUserId} = await this.googleService.getUser(
+      requestBody.code,
+    );
     const {user, newUser} = await this.userService.loginOrSignupUser({
       email,
       googleUserId,
@@ -187,7 +194,7 @@ export class UserController {
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
-    return {token, newUser};
+    return {token, user: userProfile};
   }
 
   @authenticate('jwt')
@@ -211,6 +218,7 @@ export class UserController {
     return pick(currentUser, ['id', 'name', 'email', 'phone', 'roles']);
   }
 
+  @intercept(ValidateEmailInterceptor.BINDING_KEY)
   @post('/auth/register')
   @response(200, {
     description: 'Register new user',
@@ -288,7 +296,6 @@ export class UserController {
     }
     user.resetPasswordToken = resetKey;
     await this.userRepository.save(user);
-    // await this.userRepository. (user, {resetPasswordToken: resetKey});
     await this.emailService.sendResetPasswordMail(user, token);
     //send email
     return 'Reset password link sending to email';

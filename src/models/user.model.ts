@@ -45,6 +45,9 @@ export class User extends Entity {
     index: true,
     jsonSchema: {
       format: 'email',
+      errorMessage: {
+        format: 'Email is invalid',
+      },
     },
   })
   email?: string;
@@ -97,7 +100,8 @@ export class User extends Entity {
   emailVerified?: boolean;
 
   @property({
-    type: 'string',
+    type: 'array',
+    itemType: 'string',
     default: [ROLES.USER],
     jsonSchema: {
       enum: Object.values(ROLES),

@@ -8,6 +8,7 @@ import {
 } from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {HttpErrors} from '@loopback/rest';
+import IsEmail from 'isemail';
 import {UserRepository} from '../repositories';
 
 @injectable({tags: {key: ValidateEmailInterceptor.BINDING_KEY}})
@@ -43,6 +44,9 @@ export class ValidateEmailInterceptor implements Provider<Interceptor> {
     // Add pre-invocation logic here
     if (invocationCtx.methodName === 'register') {
       const {email} = invocationCtx.args[0];
+      if (!IsEmail.validate(email)) {
+        throw new HttpErrors.UnprocessableEntity('Email is invalid');
+      }
       const emailAlreadyExist = await this.userRepository.find({
         where: {email},
       });
