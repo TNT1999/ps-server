@@ -1,5 +1,6 @@
 import {authenticate} from '@loopback/authentication';
 import {
+  TokenObject,
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
@@ -27,11 +28,15 @@ import {
   Credentials,
   EmailService,
   EmailServiceBindings,
+  FacebookBindings,
+  FacebookService,
   GoogleBindings,
   GoogleService,
   JWTService,
+  MyRefreshTokenServiceBindings,
   MyUserService,
   MyUserServiceBindings,
+  RefreshTokenService,
 } from '../services';
 const CredentialsSchema: SchemaObject = {
   type: 'object',
@@ -98,6 +103,10 @@ export class UserController {
     public emailService: EmailService,
     @inject(GoogleBindings.GOOGLE_SERVICE)
     public googleService: GoogleService,
+    @inject(FacebookBindings.FACEBOOK_SERVICE)
+    public facebookService: FacebookService,
+    @inject(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE)
+    private refreshTokenService: RefreshTokenService,
   ) {}
 
   @post('auth/login')
@@ -108,7 +117,10 @@ export class UserController {
         schema: {
           type: 'object',
           properties: {
-            token: {
+            accessToken: {
+              type: 'string',
+            },
+            refreshToken: {
               type: 'string',
             },
             user: {
@@ -121,14 +133,25 @@ export class UserController {
   })
   async login(
     @requestBody(CredentialsRequestBody) credentials: Credentials,
-  ): Promise<{token: string; user: object}> {
+  ): Promise<{
+    accessToken?: string | undefined;
+    refreshToken?: string | undefined;
+    user: object;
+  }> {
     // ensure the user exists, and the password is correct
     const user = await this.userService.verifyCredentials(credentials);
     // convert a User object into a UserProfile object (reduced set of properties)
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
-    return {token, user: userProfile};
+    const result = await this.refreshTokenService.generateToken(
+      userProfile,
+      token,
+    );
+    return {
+      ...result,
+      user: userProfile,
+    };
   }
 
   @post('auth/facebook')
@@ -139,7 +162,10 @@ export class UserController {
         schema: {
           type: 'object',
           properties: {
-            token: {
+            accessToken: {
+              type: 'string',
+            },
+            refreshToken: {
               type: 'string',
             },
             user: {
@@ -152,14 +178,29 @@ export class UserController {
   })
   async loginOrSignupWithFacebook(
     @requestBody() requestBody: {code: string},
-  ): Promise<{token: string; user: object}> {
-    // ensure the user exists, and the password is correct
-    // const user = await this.userService.verifyCredentials(credentials);
-    // // convert a User object into a UserProfile object (reduced set of properties)
-    // const userProfile = this.userService.convertToUserProfile(user);
-    // // create a JSON Web Token based on the user profile
-    // const token = await this.jwtService.generateToken(userProfile);
-    return {token: 'a', user: {name: 'a'}};
+  ): Promise<{
+    accessToken?: string | undefined;
+    refreshToken?: string | undefined;
+    user: object;
+  }> {
+    const {email, sub: facebookUserId} = await this.facebookService.getUser(
+      requestBody.code,
+    );
+    const {user, newUser} = await this.userService.loginOrSignupUser({
+      email,
+      facebookUserId,
+    } as User);
+    const userProfile = this.userService.convertToUserProfile(user);
+    // create a JSON Web Token based on the user profile
+    const token = await this.jwtService.generateToken(userProfile);
+    const result = await this.refreshTokenService.generateToken(
+      userProfile,
+      token,
+    );
+    return {
+      ...result,
+      user: userProfile,
+    };
   }
 
   @post('auth/google')
@@ -170,7 +211,10 @@ export class UserController {
         schema: {
           type: 'object',
           properties: {
-            token: {
+            accessToken: {
+              type: 'string',
+            },
+            refreshToken: {
               type: 'string',
             },
             user: {
@@ -183,7 +227,11 @@ export class UserController {
   })
   async loginOrSignupWithGoogle(
     @requestBody() requestBody: {code: string},
-  ): Promise<{token: string; user: object}> {
+  ): Promise<{
+    accessToken?: string | undefined;
+    refreshToken?: string | undefined;
+    user: object;
+  }> {
     const {email, sub: googleUserId} = await this.googleService.getUser(
       requestBody.code,
     );
@@ -194,7 +242,14 @@ export class UserController {
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
     const token = await this.jwtService.generateToken(userProfile);
-    return {token, user: userProfile};
+    const result = await this.refreshTokenService.generateToken(
+      userProfile,
+      token,
+    );
+    return {
+      ...result,
+      user: userProfile,
+    };
   }
 
   @authenticate('jwt')
@@ -240,6 +295,26 @@ export class UserController {
     const urlVerifyEmail = `http://localhost:8000/api/auth/verify-email?token=${verifyEmailToken}`;
     await this.emailService.sendVerifyEmailRegister(savedUser, urlVerifyEmail);
     return omit(savedUser, 'password', 'roles');
+  }
+
+  @post('/auth/refreshToken')
+  @response(200, {
+    description: 'Refresh new token',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+        },
+      },
+    },
+  })
+  async refreshToken(
+    @requestBody() requestBody: {refreshToken: string},
+  ): Promise<Partial<TokenObject>> {
+    const result = await this.refreshTokenService.refreshToken(
+      requestBody.refreshToken,
+    );
+    return result;
   }
 
   @get('/auth/verify-email')

@@ -3,4 +3,5 @@ export * from './email.service';
 export * from './facebook.service';
 export * from './google.service';
 export * from './jwt.service';
+export * from './refreshtoken.service';
 export * from './user.service';

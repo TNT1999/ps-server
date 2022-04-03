@@ -1,0 +1,6926 @@
+[
+  {
+    "id": "5fc4b8bcd859f4eaa9dca778",
+    "slug": "vsmart-aris-pro",
+    "name": "Vsmart Aris Pro",
+    "lname": "vsmart aris pro",
+    "reviewCount": 3,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/1/1/11_1_8.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Vsmart"
+      },
+      {
+        "name": "Kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Amoled, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.39 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1620 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, VOS 3.0"
+      },
+      {
+        "name": "Chipset",
+        "value": "Snapdragon 730G 8 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "Qualcomm® Kryo™ 470"
+      },
+      {
+        "name": "GPU",
+        "value": "Qualcomm® Adreno™ 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64MP + 8MP + 8MP + 2MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "20MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, cảm biến sáng, con quay hồi chuyển, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "4,000mAh, sạc nhanh Quick Charge 3.0 18W"
+      }
+    ],
+    "createdAt": "2020-11-22T13:10:03.196Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "9990000",
+    "isMainProduct": true,
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fbd3a45e7099fcc051e3a5d"
+  },
+  {
+    "id": "5fcf0a1f0a53f27326ab5a57",
+    "slug": "iphone-12-pro-max",
+    "name": "IPhone 12 Pro Max",
+    "lname": "iphone 12 pro max",
+    "reviewCount": 142,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/p/h/photo_2020-10-13_22-12-24.jpg_1_2.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "160.8 x 78.1 x 7.4 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "228g"
+      },
+      {
+        "name": "Bộ nhớ đêm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại Sim",
+        "value": "Dual SIM (nano‑SIM and eSIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR OLED, HDR10, Dolby Vision, Wide color gamut, True-tone"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.7 inches"
+      },
+      {
+        "name": "Độ Phân giải màn hình",
+        "value": "1284 x 2778 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 14"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A14 Bionic (5 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Hexa-core"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (4-core graphics)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP + 12MP + 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "mmWave, Sub-6 GHz"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "Lightning, USB 2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Face ID, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, cảm biên sáng"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Ion, sạc nhanh 18W, sạc không dây 15W, USB Power Delivery 2.0"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.583Z",
+    "ratingValue": 3,
+    "hasVariants": true,
+    "price": "33590000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fcf0cff7ed7a2f6491a5bcb",
+      "price": 33590000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3820c8382c08a0c44b48"
+  },
+  {
+    "id": "5fcf16dc0a53f27326ab5a58",
+    "slug": "iphone-11-pro-max-512gb",
+    "name": "IPhone 11 Pro Max 512 GB",
+    "lname": "iphone 11 pro max 512gb",
+    "reviewCount": 5,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-white_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.0mm - 77.8mm - 8.1mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "226g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "512 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "Nano-SIM + eSIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "2688 x 1242 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 13"
+      },
+      {
+        "name": "ChipSet",
+        "value": "A13 Bionic"
+      },
+      {
+        "name": "CPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "GPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Camera sau",
+        "value": "3 Camera 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "4G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "5G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11ax Wi‑Fi 6 with 2x2 MIMO"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "GPS/GNSS"
+      },
+      {
+        "name": "USB",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "FaceID, Con quay hồi chuyển, Gia tốc kế, Cảm biến tiệm cận, Cảm biến ánh sáng xung quanh"
+      },
+      {
+        "name": "Pin",
+        "value": "\t3969 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.625Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "36990000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 512,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 36990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf1d0c7ed7a2f6491a5bd2"
+  },
+  {
+    "id": "5fcf29ec86e9a4067006807d",
+    "slug": "iphone-x-64gb",
+    "name": "IPhone X 64GB",
+    "lname": "iphone x 64gb",
+    "reviewCount": 3,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-x-final_1_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "150,9 x 75,7 x 8,3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "174 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "64 GB, 3 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "\tNano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Liquid Retina LCD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.1 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1792 x 828 pixel"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "iOS 12"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A12 Bionic"
+      },
+      {
+        "name": "GPU",
+        "value": " lõi"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "7MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11 a/b/g/n/ac, 2 ăng-ten, điểm truy cập cá nhân"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "v5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "Pin",
+        "value": "2942mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.680Z",
+    "ratingValue": 0,
+    "hasVariants": true,
+    "price": "19000000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 5.8,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 19000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf2d2cc8382c08a0c44b36"
+  },
+  {
+    "id": "5fcf30c486e9a40670068081",
+    "slug": "iphone-xs-64gb",
+    "name": "IPhone XS 64GB",
+    "lname": "iphone xs 64gb",
+    "reviewCount": 2,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_xs_max_silver_8.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "143.6 x 70.9 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "177g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "64 GB, 4 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina OLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.8 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1125 x 2436 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "iOS 12"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A12 Bionic 6 nhân"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU 4 nhân"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP"
+      },
+      {
+        "name": "Camera Trước",
+        "value": "7MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "LE, A2DP, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.722Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "22000000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 5.8,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 22000000
+    },
+    "colorOptions": [
+      {
+        "id": "sdsdsdsd",
+        "name": "iphone xs",
+        "amount": "1212",
+        "price": "12121212",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf36b5c8382c08a0c44b45"
+  },
+  {
+    "id": "5fcf32a586e9a40670068083",
+    "slug": "iphone-8-plus-128gb",
+    "name": "Iphone 8 Plus 128GB",
+    "lname": "iphone 8 plus 128gb",
+    "reviewCount": 13,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": " Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.4 x 78.1 x 7.5 mm (6.24 x 3.07 x 0.30 in)"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "202 g (7.13 oz)"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Cảm ứng điện dung LED-backlit IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1920 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "11"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A11 Bionic APL1W72"
+      },
+      {
+        "name": "CPU",
+        "value": "2x 2.39 GHz Monsoon & 4x 2.39 GHz Mistral"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (3 lõi đồ họa)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP (f/1.8, 28mm, OIS) + 12 MP (f/2.8, 57mm), tự động lấy nét nhận diện theo giai đoạn, zoom quang 2x, 4 LED flash (2 tone)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "7 MP, f/2.2, 1080p@30fps, 720p@240fps, nhận diện khuôn mặt, HDR, panorama"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetoth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Vân tay, gia tốc, la bàn, khoảng cách, con quay quy hồi, phong vũ biểu"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-ion 2691 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.778Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "13500000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 5.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 13500000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3338c8382c08a0c44b42"
+  },
+  {
+    "id": "5fcf34ee86e9a40670068087",
+    "slug": "samsung-a71",
+    "name": "Samsung A71",
+    "lname": "samsung a71",
+    "reviewCount": 32,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/7/a71_bac_3.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "\tSamsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "163.6 x 76 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "\t179 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "\t128 GB, 8 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Amoled"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "\t6.7 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10"
+      },
+      {
+        "name": "Chipset",
+        "value": "Qualcomm Snapdragon 730"
+      },
+      {
+        "name": "CPU",
+        "value": "2 Nhân 2.2Ghz,6 nhân 1.8Ghz"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "MicroSD 1 TB"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Camera chính 64MP Camera góc siêu rộng 12MP 2 Camera góc rộng 5MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "Type C"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "4500 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.821Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "8050000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 8050000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf371895da4d611dbd8b52",
+    "slug": "samsung-galaxy-note-20",
+    "name": "Samsung galaxy Note 20",
+    "lname": "samsung galaxy note 20",
+    "reviewCount": 8,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/m/i/mint_final.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "161.6 x 75.2 x 8.3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super AMOLED Plus, Corning Gorilla Glass 5, HDR10+, Always-on display"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "\t6.7 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, One UI 2.5"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 990 (7 nm+)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G77 MP11"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "Không"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP, f/1.8, 26mm (wide), 1/1.76\", 1.8µm, Dual Pixel PDAF, OIS 64 MP, f/2.0, (telephoto), 1/1.72\", 0.8µm, PDAF, OIS, 3x hybrid optical zoom 12 MP, f/2.2, 120˚, 13mm (ultrawide), 1/2.55\", 1.4µm"
+      },
+      {
+        "name": "Pin",
+        "value": "Non-removable Li-Ion 4300 mAh battery Fast charging 25W USB Power Delivery 3.0 Fast Qi/PMA wireless charging Reverse wireless charging 9W"
+      },
+      {
+        "name": "Camera trước",
+        "value": "10 MP, f/2.2, 26mm (wide), 1/3.2\", 1.22µm, Dual Pixel PDAF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "\tLTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX"
+      },
+      {
+        "name": "GPS",
+        "value": "\tA-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "3.2, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay siêu âm, cảm biến gia tốc, con quay hồi chuyển, cảm biến tiệm cận, la bàn, cảm biến áp kế"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.871Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "17500000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 17500000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fd51957be001f92f7fd2dfd"
+  },
+  {
+    "id": "5fcf386986e9a4067006808b",
+    "slug": "samsung-galaxy-s20-ultra",
+    "name": "Samsung Galaxy S20 Ultra",
+    "lname": "samsung galaxy s20 ultra",
+    "reviewCount": 7,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637170935875912528_ss-s20-ultra-den-1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "166.9 x 76 x 8.8 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "222 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "12 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Dynamic AMOLED 2X, 120Hz(1080p), HDR10+, Gorilla Glass 6"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.9 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "3200 x 1440 pixel"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; One UI 2"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 990 (7 nm+)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.73 GHz Mongoose M5 & 2x2.60 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G77 MP11"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "microSDXC hỗ trợ lên đến 1TB"
+      },
+      {
+        "name": "Camera sau",
+        "value": "\tCamera chính: 108 MP, f/1.8, 26mm (wide), PDAF, OIS Camera siêu rộng:12 MP, f/2.2, 13mm (ultrawide), 1.4µm, AF, Super Steady video Camera Zoom: 48 MP, f/3.6, 102mm (telephoto), 1/2\", 0.8µm, PDAF, OIS, 10x hybrid optical zoom Camera TOF: 0.3 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "40 MP, f/2.2, 26mm (wide), PDAF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/ax, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "3.2, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay siêu âm trong màn hình, cảm biến tiệm cận, cảm biến gia tốc, con quay hồi chuyển, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh, Sạc nhanh 45W, Sạc không dây 15W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.917Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "26000000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 12,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.9,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 21900000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf38fa86e9a4067006808e",
+    "slug": "samsung-galaxy-a51",
+    "name": "Samsung Galaxy A51",
+    "lname": "samsung galaxy a51",
+    "reviewCount": 31,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/5/a51_bac.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "128 GB, 6 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super AMOLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2340 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "10"
+      },
+      {
+        "name": "CPU",
+        "value": "Exynos 9611"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali GPU"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "512GB"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Triple Rear Camera (48MP + 12MP + 5MP)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32MP"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "Có"
+      },
+      {
+        "name": "Pin",
+        "value": "4000 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:34.971Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "6700000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 6700000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf392d86e9a4067006808f",
+    "slug": "samsung-galaxy-a21s",
+    "name": "Samsung Galaxy A21S",
+    "lname": "samsung galaxy a21s",
+    "reviewCount": 4,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/2/a21s_0002_layer_1_2.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "163.6 x 75.3 x 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "32 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "TFT LCD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1600 pixel"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, One UI 2.0"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 850"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (4x2.0 GHz & 4x2.0 GHz)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G71 MP2"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "microSDXC"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP, f/2.0, 26mm (wide), 1/2.0\", 0.8µm, PDAF 8 MP, f/2.2, (ultrawide), 1/4.0\", 1.12µm 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "13 MP, f/2.2, (wide), 1/3.1\", 1.12µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 b/g/n, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh battery, Fast charging 15W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.018Z",
+    "ratingValue": 4,
+    "hasVariants": true,
+    "price": "4250000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": "4250000"
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf393dc8382c08a0c44b4e"
+  },
+  {
+    "id": "5fcf396395da4d611dbd8b53",
+    "slug": "samsung-galaxy-a31",
+    "name": "Samsung Galaxy A31",
+    "lname": "samsung galaxy a31",
+    "reviewCount": 7,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/3/_/3_48_27.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "159.1 x 73.1 x 8.54 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "185 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super AMOLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.4 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10"
+      },
+      {
+        "name": "Chipset",
+        "value": "MediaTek MT6768 8 nhân (Helio P65)"
+      },
+      {
+        "name": "CPU",
+        "value": "2 nhân 2.0 GHz & 6 nhân 1.7 GHz"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G52 MC2"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "MicroSD, hỗ trợ tối đa 512 GB"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP + 8 MP + 5 MP + 5 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "20 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi Direct, Wi-Fi hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "LE, A2DP, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "USB Type-C"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Nhận diện khuôn mặt, vân tay"
+      },
+      {
+        "name": "Pin",
+        "value": "5.000 mAh - Tiết kiệm pin, Sạc pin nhanh 15W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.069Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "5950000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.4,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 5950000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3aec95da4d611dbd8b56",
+    "slug": "xiaomi-mi-note-10",
+    "name": "Xiaomi Mi Note 10",
+    "lname": "xiaomi mi note 10 ",
+    "reviewCount": 10,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/2/0/20191108175723_44202.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "Kích thước",
+        "value": "157.8 x 74.2 x 9.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "\t208 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "128 GB, 6 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.47 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2340 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie); MIUI 11"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SDM730 Snapdragon 730G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "108 MP f/1.7 12 MP f/2.0 5 MP f/2.0 20 MP f/2.2 2 MP f/2.4"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP f/2.0"
+      },
+      {
+        "name": "3G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "4G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "5G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "Yes, with A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5260 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.123Z",
+    "ratingValue": 10,
+    "hasVariants": true,
+    "price": "8700000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.47,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 8700000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3b491bf2dfb90bdc3a96"
+  },
+  {
+    "id": "5fcf3b9c95da4d611dbd8b59",
+    "slug": "xiaomi-mi-redmi-note-9",
+    "name": "Xiaomi Mi Redmi Note 9",
+    "lname": "xiaomi mi redmi note 9",
+    "reviewCount": 10,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/r/e/redmi_note_9_0002_layer_1_2_3.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "Kích thước",
+        "value": "162.3 x 77.2 x 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "198 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "\t128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.53 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1920 x 1080 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; MIUI 11"
+      },
+      {
+        "name": "ChipSet",
+        "value": "MediaTek Helio G85"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core"
+      },
+      {
+        "name": "Khe Cắm thẻ nhớ",
+        "value": "microSDXC"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP, f/1.8, 26mm (wide), 1/2.0\", 0.8µm, PDAF 8 MP, f/2.2, 13mm (ultrawide), 1/4.0\", 1.12µm 5 MP, f/2.4, (macro), 1.12µm 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "13 MP, (wide)"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, EDR"
+      },
+      {
+        "name": "GPS",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "5020 mAh battery, Fast charging 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.166Z",
+    "ratingValue": 4.7,
+    "hasVariants": true,
+    "price": "4450000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.53,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 4450000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3bb81bf2dfb90bdc3a99"
+  },
+  {
+    "id": "5fcf3c1195da4d611dbd8b5b",
+    "slug": "xiaomi-mi-redmi-note-8-64gb",
+    "name": "Xiaomi Mi Redmi Note 8 64GB",
+    "lname": "xiaomi mi redmi note 8 64gb",
+    "reviewCount": 11,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637060410960077373_xiaomi-redmi-note-8-xanh-1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "LCD FULL HD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.3 inches"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm Snapdragon 665"
+      },
+      {
+        "name": "Camera sau",
+        "value": "4 camera, camera chính 48MP (f/1.7)"
+      },
+      {
+        "name": "Pin",
+        "value": ""
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.230Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "4490000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 6.3,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 4490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3c461bf2dfb90bdc3a9b"
+  },
+  {
+    "id": "5fcf3c8195da4d611dbd8b5c",
+    "slug": "oppo-reno4",
+    "name": "Oppo Reno4",
+    "lname": "oppo reno4",
+    "reviewCount": 5,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/_/0/_0003_combo_-_reno4_-_blue_-_full_check.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "OPPO"
+      },
+      {
+        "name": "kích thước",
+        "value": "160.3 x 73.9 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Khoảng 165g (Bao gồm pin)"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED, 60GHz, Gorilla Glass 3+, 1080 x 2400 (FHD+), 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.4 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "ColorOS 7.2, nền tảng Android 10"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM7125 Snapdragon 720G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.3 GHz Kryo 465 Gold & 6x1.8 GHz Kryo 465 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP (IMX586) + 8 MP + 2 MP + 2 MP, 4 camera"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP (IMX616) + Cảm biến thông minh AI"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "Yes, with dual-band A-GPS, GLONASS, BDS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, cảm biến sáng, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4015 mAh battery, Fast charging 30W, 60% in 15 min, 100% in 36 min SuperVOOC 2.0"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.272Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "8190000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.4,
+      "brand": "5fc4f6be56a82f3b6c571288",
+      "price": 8190000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3ca61bf2dfb90bdc3a9d"
+  },
+  {
+    "id": "5fcf3cf695da4d611dbd8b5d",
+    "slug": "oppo-a92",
+    "name": "Oppo A92",
+    "lname": "oppo a92",
+    "reviewCount": 7,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo_a92_trang.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "OPPO"
+      },
+      {
+        "name": "kích thước",
+        "value": "162 x 75.5 x 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "\t8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, ColorOS 7.1"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM6125 Snapdragon 665 (11 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (4x2.0 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 610"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Camera chính: 48 MP, f/1.7, (wide), 1/2.0\", 0.8µm, PDAF Camera siêu rộng: 8 MP, f/2.2, 119° (ultrawide), 1/4.0\", 1.12µm Camera xoá phông: 2 MP, f/2.4, (depth) Camera B/W: 2 MP B/W, f/2.4"
+      },
+      {
+        "name": "Camera trước",
+        "value": "16 MP, f/2.0, (wide), 1/3.1, 1.0µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh, Fast charging 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.317Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "6490000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f6be56a82f3b6c571288",
+      "price": 6490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3d6f95da4d611dbd8b60",
+    "slug": "oppo-a12-3gb",
+    "name": "Oppo A12 3GB",
+    "lname": "oppo a12 3gb",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo-a12_1_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "OPPO"
+      },
+      {
+        "name": "kích thước",
+        "value": "Dài 155.9 mm - Ngang 75.5 mm - Dày 8.3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "165 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD , HD+"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": ""
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "6.22 inches"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "720 x 1560 pixes"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "ColorOS 6.1 (Android 9.0)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "MediaTek Helio P35 8 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "4 nhân 2.35 GHz & 4 nhân 1.9 GHz"
+      },
+      {
+        "name": "GPU",
+        "value": "PowerVR GE8320"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Chính 13 MP & Phụ 2 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "5 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, DLNA, Wi-Fi Direct, Wi-Fi hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "A2DP, LE, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "BDS, A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "Micro USB"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Mở khóa bằng vân tay, Mở khoá khuôn mặt"
+      },
+      {
+        "name": "Pin",
+        "value": "4230 mAh - Tiết kiệm pin, Sạc pin nhanh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.363Z",
+    "ratingValue": 0,
+    "hasVariants": true,
+    "price": "2800000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.22,
+      "brand": "5fc4f6be56a82f3b6c571288",
+      "price": 2800000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3d921bf2dfb90bdc3aa5"
+  },
+  {
+    "id": "5fcf3e2895da4d611dbd8b64",
+    "slug": "nokia-8.3-5g",
+    "name": "Nokia 8.3 5G",
+    "lname": "nokia 8.3 5g",
+    "reviewCount": 4,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/n/o/nokia_8.3.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Nokia"
+      },
+      {
+        "name": "Kích thước",
+        "value": "171.9 x 78.6 x 9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "220 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD capacitive touchscreen, 16M colors"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.8 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, Android One"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SDM765 Snapdragon 765G (7 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (1x2.4 GHz Kryo 475 Prime & 1x2.2 GHz Kryo 475 Gold & 6x1.8 GHz Kryo 475 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 620"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64 MP, f/1.9, (wide), PDAF 12 MP, f/2.2, 13mm (ultrawide), AF 2 MP, (macro) 2 MP, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "24 MP, f/2.0, (wide)"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "mmWave, Sub-6 GHz"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, EDR, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, cảm biến sáng, con quay hồi chuyển, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4500 mAh battery, Fast charging 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.423Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "10890000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.8,
+      "brand": "5fceff420a53f27326ab5a49",
+      "price": 10890000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3e4d95da4d611dbd8b65",
+    "slug": "nokia-3.4",
+    "name": "Nokia 3.4",
+    "lname": "nokia 3.4",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/n/o/nokia-34_1_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Nokia"
+      },
+      {
+        "name": "kích thước",
+        "value": "161 x 76 x 8.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "180 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD capacitive touchscreen, 16M colors"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.39 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1560 pixes"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 11, Android One"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM4250 Snapdragon 460 (11 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (4x1.8 GHz Cortex-A73 & 4x1.8 GHz Cortex-A53)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 610"
+      },
+      {
+        "name": "Camera sau",
+        "value": "13 MP, (wide), PDAF 5 MP, (ultrawide) 2 MP, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "8 MP, (wide)"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 b/g/n, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "4.1, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "USB Type-C 2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4000 mAh, sạc nhanh 10W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.479Z",
+    "ratingValue": 0,
+    "hasVariants": false,
+    "price": "3390000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 6.39,
+      "brand": "5fceff420a53f27326ab5a49",
+      "price": 3390000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3e7895da4d611dbd8b66",
+    "slug": "nokia-c2",
+    "name": "Nokia C2",
+    "lname": "nokia c2",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/n/o/nokia_c2-den1-removebg-preview.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Nokia"
+      },
+      {
+        "name": "kích thước",
+        "value": "Dài 154.8 mm - Ngang 75.6 mm - Dày 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "161 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "1 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "16 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD , HD+"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "5.7 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1440 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9 Pie (Go Edition)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Spreadtrum SC7731E 4 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "4 nhân 1.4 GHz"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-400MP1"
+      },
+      {
+        "name": "Camera sau",
+        "value": "5 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "5 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 b/g/n, Wi-Fi hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "LE, A2DP, v4.2"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến ánh sáng xung quanh, Cảm biến tiệm cận, Gia tốc kế (Cảm biến G)"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-on 2800 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.525Z",
+    "ratingValue": 0,
+    "hasVariants": false,
+    "price": "1590000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 1,
+      "storage_gb": 16,
+      "storage_tb": -1,
+      "display_size_inches": 5.7,
+      "brand": "5fceff420a53f27326ab5a49",
+      "price": 1590000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3ede95da4d611dbd8b69",
+    "slug": "realme-c3",
+    "name": "Realme C3",
+    "lname": "realme c3",
+    "reviewCount": 22,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/p/h/photo_2020-02-27_09-31-18.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Realme"
+      },
+      {
+        "name": "kích thước",
+        "value": "164.4 x 75 x 9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "195 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "32 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1600 pixel"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; realme UI 1.0"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Mediatek Helio G70 (12 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.0 GHz Cortex-A75 & 6x1.7 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G52 2EEMC2"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Camera chính: 12 MP, f/1.8, 28mm (wide), 1/2.8\", 1.25µm, PDAF Camera Macro: 2 MP Camera đo chiều sâu:2 MP, f/2.4"
+      },
+      {
+        "name": "Camera trước",
+        "value": "Camera trước: 5 MP, f/2.4, 27mm (wide), 1/5\", 1.12µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (2CA) Cat6 300/50 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 b/g/n, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.0, A2DP, LE, aptX"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "microUSB 2.0, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.567Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "2790000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fcf002c0a53f27326ab5a4e",
+      "price": 2790000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3f2095da4d611dbd8b6a",
+    "slug": "realme-c15",
+    "name": "Realme C15",
+    "lname": "realme c15",
+    "reviewCount": 11,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637400868092278961_realme-c15-xanh-1_2.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Realme"
+      },
+      {
+        "name": "kích thước",
+        "value": "164.1 x 75.5 x 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "188 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 90Hz"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1600 pixel"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM4250 Snapdragon 460 (11 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (4x1.8 GHz Kryo 240 & 4x1.6 GHz Kryo 240)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 610"
+      },
+      {
+        "name": "Camera sau",
+        "value": "13 MP, f/2.2, (wide), 1/3.06\", 1.12µm, PDAF 8 MP, f/2.2, 119˚ (ultrawide), 1/4.0\", 1.12µm 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "8 MP, f/2.0, (wide), 1/4.0\", 1.12µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "USB Type-C 2.0, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh, sạc nhanh 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.615Z",
+    "ratingValue": 0,
+    "hasVariants": false,
+    "price": "5290000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fcf002c0a53f27326ab5a4e",
+      "price": 5290000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf3fcc95da4d611dbd8b6e",
+    "slug": "asus-phone-3",
+    "name": "ASUS Phone 3",
+    "lname": "asus phone 3",
+    "reviewCount": 26,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_3.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "ASUS"
+      },
+      {
+        "name": "Kích thước",
+        "value": "171 x 78 x 9.9 mm (6.73 x 3.07 x 0.39 in)"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "240 g (8.47 oz)"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "12 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "512 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED 1B colors, Corning Gorilla Glass 6, HDR10+, 144Hz refresh rate650 nits max. brightness"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.59 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2340 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, ROG UI"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM8250 Snapdragon 865+ (7 nm+)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (1x3.1 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.8 GHz Kryo 585)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 650"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64 MP, f/1.8, 26mm (wide), 1/1.72\", 0.8µm, PDAF 13 MP, f/2.4, 125˚, 11mm (ultrawide) 5 MP, f/2.0, (macro)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "24 MP, f/2.0, 27mm (wide), 0.9µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "mmWave, Sub-6 GHz"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD, aptX Adaptive"
+      },
+      {
+        "name": "GPS",
+        "value": "dual-band A-GPS, GLONASS, BDS, GALILEO, QZSS, GNSS"
+      },
+      {
+        "name": "USB",
+        "value": "Two (side 3.1, bottom 2.0) Type-C 1.0 reversible connector; accessory connector"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến ánh sáng, Cảm biến tiệm cận, Gia tốc kế, La bàn, Con quay hồi chuyển , Trên màn hình , Dấu vân tay."
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 6000 mAh battery, Fast charging 30W, Power Delivery 3.0, Quick Charge 4.0, 3.0, Reverse charging 10W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.670Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "19990000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 12,
+      "storage_gb": 512,
+      "storage_tb": -1,
+      "display_size_inches": 6.59,
+      "brand": "5fceffe20a53f27326ab5a4c",
+      "price": 21900000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf401795da4d611dbd8b70",
+    "slug": "asus-phone-2-512gb",
+    "name": "ASUS Phone 2 512GB",
+    "lname": "asus phone 2 512gb",
+    "reviewCount": 30,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/_/6/_600x600__crop_600_asus_rog_phone2_min_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "ASUS"
+      },
+      {
+        "name": "Kích thước",
+        "value": "171.99 mm - 77.6 mm - 9.48 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "240 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "12 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "512 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED Tấm nền cảm ứng điện dung đa điểm 10 ngón (hỗ trợ chế độ găng tay)"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.59 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2340 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Snapdragon 855 Plus Mobile Platform"
+      },
+      {
+        "name": "CPU",
+        "value": "64-bit Octa-core"
+      },
+      {
+        "name": "GPU",
+        "value": "Qualcomm Adreno 640"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP + 13 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "24 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11a/b/g/n/ac (2x2 MIMO) WLAN 802.11ad 60GHz"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "V 5.0 (BR/EDR+LE), hỗ trợ Qualcomm® aptX Adaptive"
+      },
+      {
+        "name": "GPS",
+        "value": "GPS (L1+L5), GLO, BDS, GAL (E1+E5a), QZSS (L1+L5)"
+      },
+      {
+        "name": "USB",
+        "value": "USB Type-C"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay trong màn hình, Nhận diện khuôn mặt, Gia tốc kế, E-Compass, Con quay hồi chuyển, Cảm biên tiệm cận, Cảm biến Hall, Cảm biến ánh sáng, Cảm biến siêu âm cho AirTrigger II và tính năng grip press, Hệ thống rung kép"
+      },
+      {
+        "name": "Pin",
+        "value": "6000mAh, hỗ trợ Quick Charge 4.0 và PD Charging"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.723Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "20500000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 12,
+      "storage_gb": 512,
+      "storage_tb": -1,
+      "display_size_inches": 6.59,
+      "brand": "5fceffe20a53f27326ab5a4c",
+      "price": 20500000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf413c95da4d611dbd8b76",
+    "slug": "huawei-mate-30-pro",
+    "name": "Huawei Mate 30 Pro",
+    "lname": "huawei mate 30 pro",
+    "reviewCount": 9,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/m/a/mate30__0006_layer_4.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Huawei"
+      },
+      {
+        "name": "kích thước",
+        "value": "158.1 x 73.1 x 8.8 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "198 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "OLED, 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.53 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1176 x 2400 pixel"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; EMUI 10"
+      },
+      {
+        "name": "ChipSet",
+        "value": "HiSilicon Kirin 990 (7 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.86 GHz Cortex-A76 & 2x2.09 GHz Cortex-A76 & 4x1.86 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G76 MP16"
+      },
+      {
+        "name": "Camera sau",
+        "value": "NM (Nano Memory), hỗ trợ tối đa 256 GB"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP, f/2.0, 26mm (wide), 1/2.8\", 0.8µm I TOF 3D"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, DLNA, Wi-Fi Direct, hotspotWi-Fi 802.11 a/b/g/n/ac, dual-band, DLNA, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, aptX HD, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "dual-band A-GPS, GLONASS, BDS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Face ID, cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, la bàn, gia tốc kế"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4500 mAh, sạc nhanh 40W, sạc không dây 27W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.765Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "14490000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.53,
+      "brand": "5fceff660a53f27326ab5a4a",
+      "price": 14490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf417b95da4d611dbd8b77",
+    "slug": "huawei-nova-7i",
+    "name": "Huawei Nova 7i",
+    "lname": "huawei nova 7i",
+    "reviewCount": 9,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637187431541640460_huawei-nova-7i-1_2.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Huawei"
+      },
+      {
+        "name": "kích thước",
+        "value": "159.2 x 76.3 x 8.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "183 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "LTPS IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.4 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2310 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; EMUI 10"
+      },
+      {
+        "name": "ChipSet",
+        "value": "HiSilicon Kirin 810 (7 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.27 GHz Cortex-A76 & 6x1.88 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G52 MP6"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Camera góc rộng: 48 MP, f/1.8, 26mm (wide), 1/2.0\", 0.8µm, PDAF Camera siêu rộng: 8 MP, f/2.4, (ultrawide) Camera macro: 2 MP, f/2.4, 27mm (macro), 1/5.0\", 1.75µm Cảm biến chiều sâu: 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "16 MP, f/2.0, (wide), 1/3.1\", 1.0µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (2CA) Cat13 600/100 Mbps"
+      },
+      {
+        "value": ""
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, BDS, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4200 mAh, sạc nhanh 40W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.812Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "6990000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.4,
+      "brand": "5fceff660a53f27326ab5a4a",
+      "price": 6990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fcf41ef95da4d611dbd8b7a",
+    "slug": "vivo-v20",
+    "name": "Vivo V20",
+    "lname": "vivo v20",
+    "reviewCount": 11,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/v/i/vivo-v20_1_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Vivo"
+      },
+      {
+        "name": "kích thước",
+        "value": "161.3 x 74.2 x 7.4 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "171 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED, 16 triệu màu, HDR10"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.44 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 11, Funtouch 10.5"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM7125 Snapdragon 720G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.3 GHz Kryo 465 Gold & 6x1.8 GHz Kryo 465 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64 MP, f/1.9, 26mm (wide), 1/1.72\", 0.8µm, PDAF 8 MP, f/2.2, 120˚, 16mm (ultrawide), 1/4.0\", 1.12µm 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "44 MP, f/2.0, (wide), AF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4000 mAh, sạc nhanh 33W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.865Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "7190000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.44,
+      "brand": "5fceff7e0a53f27326ab5a4b",
+      "price": 7190000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fd0708f87dc7e017ea9a5f6",
+    "slug": "vivo-v19",
+    "name": "Vivo V19",
+    "lname": "vivo v19",
+    "reviewCount": 11,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/v/i/vivo-v19-_4.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Vivo"
+      },
+      {
+        "name": "kích thước",
+        "value": "161.3 x 74.2 x 7.4 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "171 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED, 16 triệu màu, HDR10"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.44 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 11, Funtouch 10.5"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM7125 Snapdragon 720G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.3 GHz Kryo 465 Gold & 6x1.8 GHz Kryo 465 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64 MP, f/1.9, 26mm (wide), 1/1.72\", 0.8µm, PDAF 8 MP, f/2.2, 120˚, 16mm (ultrawide), 1/4.0\", 1.12µm 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "44 MP, f/2.0, (wide), AF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4000 mAh, sạc nhanh 33W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:35.946Z",
+    "ratingValue": 5,
+    "hasVariants": false,
+    "price": "6990000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.44,
+      "brand": "5fceff7e0a53f27326ab5a4b",
+      "price": 6990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5fd384cb89ac500f06e9764d",
+    "slug": "vsmart-aris-8gb-128gb",
+    "name": "Vsmart Aris 8GB | 128GB",
+    "lname": "vsmart aris 8gb 128gb",
+    "reviewCount": 1,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/1/1/11_3_1_1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Vsmart"
+      },
+      {
+        "name": "Kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Amoled, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.39 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1620 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, VOS 3.0"
+      },
+      {
+        "name": "Chipset",
+        "value": "Snapdragon 730G 8 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "Qualcomm® Kryo™ 470"
+      },
+      {
+        "name": "GPU",
+        "value": "Qualcomm® Adreno™ 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64MP + 8MP + 8MP + 2MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "20MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, cảm biến sáng, con quay hồi chuyển, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "4,000mAh, sạc nhanh Quick Charge 3.0 18W"
+      }
+    ],
+    "createdAt": "2020-11-22T13:10:03.196Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "7490000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.39,
+      "brand": "5fbd3636e7099fcc051e3a5a",
+      "price": 7490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fbd3a45e7099fcc051e3a5d"
+  },
+  {
+    "id": "5fd3876589ac500f06e9764f",
+    "slug": "vsmart-aris-6gb-64gb",
+    "name": "Vsmart Aris 6GB | 64GB",
+    "lname": "vsmart aris 6gb 64gb",
+    "reviewCount": 36,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/1/1/11_1_4.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Vsmart"
+      },
+      {
+        "name": "Kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Amoled, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.39 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1620 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, VOS 3.0"
+      },
+      {
+        "name": "Chipset",
+        "value": "Snapdragon 730G 8 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "Qualcomm® Kryo™ 470"
+      },
+      {
+        "name": "GPU",
+        "value": "Qualcomm® Adreno™ 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "64MP + 8MP + 8MP + 2MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "20MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, cảm biến sáng, con quay hồi chuyển, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "4,000mAh, sạc nhanh Quick Charge 3.0 18W"
+      }
+    ],
+    "createdAt": "2020-11-22T13:10:03.196Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "6490000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 6.39,
+      "brand": "5fbd3636e7099fcc051e3a5a",
+      "price": 6490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fbd3a45e7099fcc051e3a5d"
+  },
+  {
+    "id": "5fd38afe89ac500f06e97651",
+    "slug": "iphone-12-pro-max-256gb",
+    "name": "IPhone 12 Pro Max 256GB",
+    "lname": "iphone 12 pro max 256gb",
+    "reviewCount": 1,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/p/h/photo_2020-10-13_22-12-24.jpg_1_2_1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "160.8 x 78.1 x 7.4 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "228g"
+      },
+      {
+        "name": "Bộ nhớ đêm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại Sim",
+        "value": "Dual SIM (nano‑SIM and eSIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR OLED, HDR10, Dolby Vision, Wide color gamut, True-tone"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.7 inches"
+      },
+      {
+        "name": "Độ Phân giải màn hình",
+        "value": "1284 x 2778 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 14"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A14 Bionic (5 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Hexa-core"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (4-core graphics)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP + 12MP + 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "mmWave, Sub-6 GHz"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "Lightning, USB 2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Face ID, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, cảm biên sáng"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Ion, sạc nhanh 18W, sạc không dây 15W, USB Power Delivery 2.0"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.088Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "35000000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fcf0cff7ed7a2f6491a5bcb",
+      "price": 35000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3820c8382c08a0c44b48"
+  },
+  {
+    "id": "5fd38bea89ac500f06e97652",
+    "slug": "iphone-12-pro-max-512gb",
+    "name": "IPhone 12 Pro Max 512GB",
+    "lname": "iphone 12 pro max 512gb",
+    "reviewCount": 2,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/p/h/photo_2020-10-13_22-12-24.jpg_1_2_1_1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "160.8 x 78.1 x 7.4 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "228g"
+      },
+      {
+        "name": "Bộ nhớ đêm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "512 GB"
+      },
+      {
+        "name": "Loại Sim",
+        "value": "Dual SIM (nano‑SIM and eSIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR OLED, HDR10, Dolby Vision, Wide color gamut, True-tone"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.7 inches"
+      },
+      {
+        "name": "Độ Phân giải màn hình",
+        "value": "1284 x 2778 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 14"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A14 Bionic (5 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Hexa-core"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (4-core graphics)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP + 12MP + 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "5G",
+        "value": "mmWave, Sub-6 GHz"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "Lightning, USB 2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Face ID, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, cảm biên sáng"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Ion, sạc nhanh 18W, sạc không dây 15W, USB Power Delivery 2.0"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.153Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "41990000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 512,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fcf0cff7ed7a2f6491a5bcb",
+      "price": 41990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3820c8382c08a0c44b48"
+  },
+  {
+    "id": "5fd38c9e89ac500f06e97654",
+    "slug": "iphone-11-pro-max",
+    "name": "IPhone 11 Pro Max",
+    "lname": "iphone 11 pro max",
+    "reviewCount": 22,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-white_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.0mm - 77.8mm - 8.1mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "226g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "Nano-SIM + eSIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "2688 x 1242 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 13"
+      },
+      {
+        "name": "ChipSet",
+        "value": "A13 Bionic"
+      },
+      {
+        "name": "CPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "GPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Camera sau",
+        "value": "3 Camera 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "4G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "5G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11ax Wi‑Fi 6 with 2x2 MIMO"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "GPS/GNSS"
+      },
+      {
+        "name": "USB",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "FaceID, Con quay hồi chuyển, Gia tốc kế, Cảm biến tiệm cận, Cảm biến ánh sáng xung quanh"
+      },
+      {
+        "name": "Pin",
+        "value": "\t3969 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.240Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "27900000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 27900000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf1d0c7ed7a2f6491a5bd2"
+  },
+  {
+    "id": "5fd38d6c89ac500f06e97655",
+    "slug": "iphone-11-pro-max-256gb",
+    "name": "IPhone 11 Pro Max 256GB",
+    "lname": "iphone 11 pro max 256gb",
+    "reviewCount": 1,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-white_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.0mm - 77.8mm - 8.1mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "226g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "Nano-SIM + eSIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina XDR"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "2688 x 1242 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "IOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "IOS 13"
+      },
+      {
+        "name": "ChipSet",
+        "value": "A13 Bionic"
+      },
+      {
+        "name": "CPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "GPU",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Camera sau",
+        "value": "3 Camera 12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "12MP"
+      },
+      {
+        "name": "3G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "4G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "5G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11ax Wi‑Fi 6 with 2x2 MIMO"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "GPS/GNSS"
+      },
+      {
+        "name": "USB",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "FaceID, Con quay hồi chuyển, Gia tốc kế, Cảm biến tiệm cận, Cảm biến ánh sáng xung quanh"
+      },
+      {
+        "name": "Pin",
+        "value": "\t3969 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.293Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "32000000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 32000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf1d0c7ed7a2f6491a5bd2"
+  },
+  {
+    "id": "5fd3910389ac500f06e97657",
+    "slug": "iphone-x-256gb",
+    "name": "IPhone X 256GB",
+    "lname": "iphone x 256gb",
+    "reviewCount": 5,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-x-final_1_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "150,9 x 75,7 x 8,3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "174 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "256 GB, 3 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "\tNano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Liquid Retina LCD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.1 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1792 x 828 pixel"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "iOS 12"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A12 Bionic"
+      },
+      {
+        "name": "GPU",
+        "value": " lõi"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "7MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "802.11 a/b/g/n/ac, 2 ăng-ten, điểm truy cập cá nhân"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "v5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "Pin",
+        "value": "2942mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.356Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "22000000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 5.8,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 22000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf2d2cc8382c08a0c44b36"
+  },
+  {
+    "id": "5fd393be89ac500f06e97659",
+    "slug": "iphone-xs-256gb",
+    "name": "IPhone XS 256GB",
+    "lname": "iphone xs 256gb",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_xs_512gb.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "143.6 x 70.9 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "177g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "256 GB, 4 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina OLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.8 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1125 x 2436 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "iOS 12"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A12 Bionic 6 nhân"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU 4 nhân"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP"
+      },
+      {
+        "name": "Camera Trước",
+        "value": "7MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "LE, A2DP, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.396Z",
+    "ratingValue": 0,
+    "hasVariants": true,
+    "price": "28000000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 5.8,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 28000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf36b5c8382c08a0c44b45"
+  },
+  {
+    "id": "5fd3949589ac500f06e9765c",
+    "slug": "iphone-xs-512gb",
+    "name": "IPhone XS 512GB",
+    "lname": "iphone xs 512gb",
+    "reviewCount": 2,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_xs_512gb.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "143.6 x 70.9 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "177g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "512 GB, 4 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "512 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super Retina OLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.8 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1125 x 2436 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "iOS 12"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A12 Bionic 6 nhân"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU 4 nhân"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12MP"
+      },
+      {
+        "name": "Camera Trước",
+        "value": "7MP"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "LE, A2DP, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.441Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "24590000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 512,
+      "storage_tb": -1,
+      "display_size_inches": 5.8,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 24590000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf36b5c8382c08a0c44b45"
+  },
+  {
+    "id": "5fd396f589ac500f06e9765e",
+    "slug": "iphone-8-plus-64gb",
+    "name": "Iphone 8 Plus 64GB",
+    "lname": "iphone 8 plus 64gb",
+    "reviewCount": 13,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/350x/9df78eab33525d08d6e5fb8d27136e95/i/m/img-apple-main_copy_2_8.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": " Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.4 x 78.1 x 7.5 mm (6.24 x 3.07 x 0.30 in)"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "202 g (7.13 oz)"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Cảm ứng điện dung LED-backlit IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1920 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "11"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A11 Bionic APL1W72"
+      },
+      {
+        "name": "CPU",
+        "value": "2x 2.39 GHz Monsoon & 4x 2.39 GHz Mistral"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (3 lõi đồ họa)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP (f/1.8, 28mm, OIS) + 12 MP (f/2.8, 57mm), tự động lấy nét nhận diện theo giai đoạn, zoom quang 2x, 4 LED flash (2 tone)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "7 MP, f/2.2, 1080p@30fps, 720p@240fps, nhận diện khuôn mặt, HDR, panorama"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetoth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Vân tay, gia tốc, la bàn, khoảng cách, con quay quy hồi, phong vũ biểu"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-ion 2691 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.483Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "12000000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 5.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 12000000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3338c8382c08a0c44b42"
+  },
+  {
+    "id": "5fd3977b89ac500f06e97660",
+    "slug": "iphone-8-plus-256gb",
+    "name": "Iphone 8 Plus 256GB",
+    "lname": "iphone 8 plus 256gb",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": " Hãng sản xuất",
+        "value": "Apple"
+      },
+      {
+        "name": "Kích thước",
+        "value": "158.4 x 78.1 x 7.5 mm (6.24 x 3.07 x 0.30 in)"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "202 g (7.13 oz)"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "3 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "Nano-SIM"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Cảm ứng điện dung LED-backlit IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "5.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 1920 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "iOS"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "11"
+      },
+      {
+        "name": "Chipset",
+        "value": "Apple A11 Bionic APL1W72"
+      },
+      {
+        "name": "CPU",
+        "value": "2x 2.39 GHz Monsoon & 4x 2.39 GHz Mistral"
+      },
+      {
+        "name": "GPU",
+        "value": "Apple GPU (3 lõi đồ họa)"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP (f/1.8, 28mm, OIS) + 12 MP (f/2.8, 57mm), tự động lấy nét nhận diện theo giai đoạn, zoom quang 2x, 4 LED flash (2 tone)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "7 MP, f/2.2, 1080p@30fps, 720p@240fps, nhận diện khuôn mặt, HDR, panorama"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot"
+      },
+      {
+        "name": "Bluetoth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "2.0"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Vân tay, gia tốc, la bàn, khoảng cách, con quay quy hồi, phong vũ biểu"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-ion 2691 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.529Z",
+    "ratingValue": 0,
+    "hasVariants": true,
+    "price": "19990000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 3,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 5.5,
+      "brand": "5fc4f61a92b68438aaa26083",
+      "price": 19990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3338c8382c08a0c44b42"
+  },
+  {
+    "id": "5fd39b7789ac500f06e97664",
+    "slug": "samsung-galaxy-note-20-ultra",
+    "name": "Samsung Galaxy Note 20 Ultra",
+    "lname": "samsung galaxy note 20 ultra",
+    "reviewCount": 4,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/b/l/black_final.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "161.6 x 75.2 x 8.3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super AMOLED Plus, Corning Gorilla Glass 5, HDR10+, Always-on display"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "\t6.7 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, One UI 2.5"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 990 (7 nm+)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G77 MP11"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "Không"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP, f/1.8, 26mm (wide), 1/1.76\", 1.8µm, Dual Pixel PDAF, OIS 64 MP, f/2.0, (telephoto), 1/1.72\", 0.8µm, PDAF, OIS, 3x hybrid optical zoom 12 MP, f/2.2, 120˚, 13mm (ultrawide), 1/2.55\", 1.4µm"
+      },
+      {
+        "name": "Pin",
+        "value": "Non-removable Li-Ion 4300 mAh battery Fast charging 25W USB Power Delivery 3.0 Fast Qi/PMA wireless charging Reverse wireless charging 9W"
+      },
+      {
+        "name": "Camera trước",
+        "value": "10 MP, f/2.2, 26mm (wide), 1/3.2\", 1.22µm, Dual Pixel PDAF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "\tLTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX"
+      },
+      {
+        "name": "GPS",
+        "value": "\tA-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "3.2, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay siêu âm, cảm biến gia tốc, con quay hồi chuyển, cảm biến tiệm cận, la bàn, cảm biến áp kế"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.583Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "24990000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.7,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 24990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fd51957be001f92f7fd2dfd"
+  },
+  {
+    "id": "5fd39ccc89ac500f06e97666",
+    "slug": "samsung-galaxy-note-20-ultra-5g",
+    "name": "Samsung Galaxy Note 20 Ultra 5G",
+    "lname": "samsung galaxy note 20 ultra 5g",
+    "reviewCount": 2,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/m/i/mint_final.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "161.6 x 75.2 x 8.3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "12 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "Super AMOLED Plus, Corning Gorilla Glass 5, HDR10+, Always-on display"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "\t6.7 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, One UI 2.5"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 990 (7 nm+)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G77 MP11"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "Không"
+      },
+      {
+        "name": "Camera sau",
+        "value": "12 MP, f/1.8, 26mm (wide), 1/1.76\", 1.8µm, Dual Pixel PDAF, OIS 64 MP, f/2.0, (telephoto), 1/1.72\", 0.8µm, PDAF, OIS, 3x hybrid optical zoom 12 MP, f/2.2, 120˚, 13mm (ultrawide), 1/2.55\", 1.4µm"
+      },
+      {
+        "name": "Pin",
+        "value": "Non-removable Li-Ion 4300 mAh battery Fast charging 25W USB Power Delivery 3.0 Fast Qi/PMA wireless charging Reverse wireless charging 9W"
+      },
+      {
+        "name": "Camera trước",
+        "value": "10 MP, f/2.2, 26mm (wide), 1/3.2\", 1.22µm, Dual Pixel PDAF"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "\tLTE-A (4CA) Cat16 1024/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX"
+      },
+      {
+        "name": "GPS",
+        "value": "\tA-GPS, GLONASS, BDS, GALILEO"
+      },
+      {
+        "name": "USB",
+        "value": "3.2, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay siêu âm, cảm biến gia tốc, con quay hồi chuyển, cảm biến tiệm cận, la bàn, cảm biến áp kế"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.628Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "25600000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 12,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.9,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 25600000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fd51957be001f92f7fd2dfd"
+  },
+  {
+    "id": "5fd3a3db89ac500f06e97669",
+    "slug": "samsung-galaxy-a21s-6gb",
+    "name": "Samsung Galaxy A21S 6GB",
+    "lname": "samsung galaxy a21s 6gb",
+    "reviewCount": 4,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/2/a21s_0002_layer_1_2.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Samsung"
+      },
+      {
+        "name": "Kích thước",
+        "value": "163.6 x 75.3 x 8.9 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "192 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "32 GB"
+      },
+      {
+        "name": "Loại SIM",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "TFT LCD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.5 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "720 x 1600 pixel"
+      },
+      {
+        "name": "Hệ điều hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10, One UI 2.0"
+      },
+      {
+        "name": "Chipset",
+        "value": "Exynos 850"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (4x2.0 GHz & 4x2.0 GHz)"
+      },
+      {
+        "name": "GPU",
+        "value": "Mali-G71 MP2"
+      },
+      {
+        "name": "Khe cắm thẻ nhớ",
+        "value": "microSDXC"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP, f/2.0, 26mm (wide), 1/2.0\", 0.8µm, PDAF 8 MP, f/2.2, (ultrawide), 1/4.0\", 1.12µm 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "13 MP, f/2.2, (wide), 1/3.1\", 1.12µm"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 b/g/n, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "GPS",
+        "value": "A-GPS"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5000 mAh battery, Fast charging 15W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.675Z",
+    "ratingValue": 4,
+    "hasVariants": true,
+    "price": "4750000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.5,
+      "brand": "5fc4f6a256a82f3b6c571287",
+      "price": 4750000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf393dc8382c08a0c44b4e"
+  },
+  {
+    "id": "5fd3af9489ac500f06e9766b",
+    "slug": "xiaomi-mi-note-10-pro",
+    "name": "Xiaomi Mi Note 10 Pro",
+    "lname": "xiaomi mi note 10 pro",
+    "reviewCount": 1,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/m/i/mi-cc9-pro-blue_1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "Kích thước",
+        "value": "157.8 x 74.2 x 9.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "\t208 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "256 GB, 8 GB RAM"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "256 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.47 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2340 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie); MIUI 11"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SDM730 Snapdragon 730G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "108 MP f/1.7 12 MP f/2.0 5 MP f/2.0 20 MP f/2.2 2 MP f/2.4"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP f/2.0"
+      },
+      {
+        "name": "3G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "4G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "5G",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "Yes, with A-GPS, GLONASS, GALILEO, BDS"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 5260 mAh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.734Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "10300000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 256,
+      "storage_tb": -1,
+      "display_size_inches": 6.47,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 10300000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3b491bf2dfb90bdc3a96"
+  },
+  {
+    "id": "5fd506f0be001f92f7fd2de6",
+    "slug": "xiaomi-mi-redmi-note-9-pro",
+    "name": "Xiaomi Mi Redmi Note 9 Pro",
+    "lname": "xiaomi mi redmi note 9 pro",
+    "reviewCount": 9,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/_/0/_0000_pms_1589425078.08482488.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "Kích thước",
+        "value": "165.8 x 76.7 x 8.8 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "209 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "64GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.53 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1920 x 1080 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; MIUI 11"
+      },
+      {
+        "name": "ChipSet",
+        "value": "MediaTek Helio G85"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core"
+      },
+      {
+        "name": "Khe Cắm thẻ nhớ",
+        "value": "microSDXC"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP, f/1.8, 26mm (wide), 1/2.0\", 0.8µm, PDAF 8 MP, f/2.2, 13mm (ultrawide), 1/4.0\", 1.12µm 5 MP, f/2.4, (macro), 1.12µm 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "13 MP, (wide)"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, EDR"
+      },
+      {
+        "name": "GPS",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "5020 mAh battery, Fast charging 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.838Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "5450000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 64,
+      "storage_tb": -1,
+      "display_size_inches": 6.67,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 5450000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3bb81bf2dfb90bdc3a99"
+  },
+  {
+    "id": "5fd50842be001f92f7fd2de8",
+    "slug": "xiaomi-mi-redmi-note-9-pro-128gb",
+    "name": "Xiaomi Mi Redmi Note 9 Pro 128GB",
+    "lname": "xiaomi mi redmi note 9 pro 128gb",
+    "reviewCount": 8,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/x/i/xiaomi-redmi-note-9-pro-128gb-1.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "Kích thước",
+        "value": "165.8 x 76.7 x 8.8 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "209 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / Ram",
+        "value": "6 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD, 16 triệu màu"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.53 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1920 x 1080 pixels"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 10.0; MIUI 11"
+      },
+      {
+        "name": "ChipSet",
+        "value": "MediaTek Helio G85"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core"
+      },
+      {
+        "name": "Khe Cắm thẻ nhớ",
+        "value": "microSDXC"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP, f/1.8, 26mm (wide), 1/2.0\", 0.8µm, PDAF 8 MP, f/2.2, 13mm (ultrawide), 1/4.0\", 1.12µm 5 MP, f/2.4, (macro), 1.12µm 2 MP, f/2.4, (depth)"
+      },
+      {
+        "name": "Camera trước",
+        "value": "13 MP, (wide)"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "5.0, A2DP, LE, EDR"
+      },
+      {
+        "name": "GPS",
+        "value": "5.0, A2DP, LE"
+      },
+      {
+        "name": "USB",
+        "value": "2.0, Type-C 1.0 reversible connector"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+      },
+      {
+        "name": "Pin",
+        "value": "5020 mAh battery, Fast charging 18W"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.881Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "5900000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 6,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.67,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 5900000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "wewewe",
+        "name": "512GB",
+        "amount": "0",
+        "price": "121223",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3bb81bf2dfb90bdc3a99"
+  },
+  {
+    "id": "5fd509f4be001f92f7fd2dea",
+    "slug": "xiaomi-mi-redmi-note-8-128gb",
+    "name": "Xiaomi Mi Redmi Note 8 128GB",
+    "lname": "xiaomi mi redmi note 8 128gb",
+    "reviewCount": 4,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637060410960077373_xiaomi-redmi-note-8-xanh-1.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "LCD FULL HD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.3 inches"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm Snapdragon 665"
+      },
+      {
+        "name": "Camera sau",
+        "value": "4 camera, camera chính 48MP (f/1.7)"
+      },
+      {
+        "name": "Pin",
+        "value": ""
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.931Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "4490000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.3,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 4490000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3c461bf2dfb90bdc3a9b"
+  },
+  {
+    "id": "5fd50a57be001f92f7fd2ded",
+    "slug": "xiaomi-mi-redmi-note-8-32gb",
+    "name": "Xiaomi Mi Redmi Note 8 32GB",
+    "lname": "xiaomi mi redmi note 8 32gb",
+    "reviewCount": 16,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/637060418361864075_xiaomi-redmi-note-8-den-1_2.png",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "Xiaomi"
+      },
+      {
+        "name": "kích thước",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Đang cập nhật"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "32 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "LCD FULL HD"
+      },
+      {
+        "name": "Kích thước màn hình",
+        "value": "6.3 inches"
+      },
+      {
+        "name": "Hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "Android 9.0 (Pie)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm Snapdragon 665"
+      },
+      {
+        "name": "Camera sau",
+        "value": "4 camera, camera chính 48MP (f/1.7)"
+      },
+      {
+        "name": "Pin",
+        "value": ""
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:36.984Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "3990000",
+    "isMainProduct": false,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.3,
+      "brand": "5fc4f6e156a82f3b6c571289",
+      "price": 3990000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3c461bf2dfb90bdc3a9b"
+  },
+  {
+    "id": "5fd50bcabe001f92f7fd2def",
+    "slug": "oppo-reno4-pro",
+    "name": "Oppo Reno4 Pro",
+    "lname": "oppo reno4 pro",
+    "reviewCount": 5,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/_/0/_0003_combo_-_reno4_-_blue_-_full_check.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "OPPO"
+      },
+      {
+        "name": "kích thước",
+        "value": "160.3 x 73.9 x 7.7 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "Khoảng 165g (Bao gồm pin)"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "8 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "AMOLED, 60GHz, Gorilla Glass 3+, 1080 x 2400 (FHD+), 16 triệu màu"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": "6.4 inches"
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "1080 x 2400 pixels"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "Android"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "ColorOS 7.2, nền tảng Android 10"
+      },
+      {
+        "name": "ChipSet",
+        "value": "Qualcomm SM7125 Snapdragon 720G (8 nm)"
+      },
+      {
+        "name": "CPU",
+        "value": "Octa-core (2x2.3 GHz Kryo 465 Gold & 6x1.8 GHz Kryo 465 Silver)"
+      },
+      {
+        "name": "GPU",
+        "value": "Adreno 618"
+      },
+      {
+        "name": "Camera sau",
+        "value": "48 MP (IMX586) + 8 MP + 2 MP + 2 MP, 4 camera"
+      },
+      {
+        "name": "Camera trước",
+        "value": "32 MP (IMX616) + Cảm biến thông minh AI"
+      },
+      {
+        "name": "3G",
+        "value": "HSPA 42.2/5.76 Mbps, EV-DO Rev.A 3.1 Mbps"
+      },
+      {
+        "name": "4G",
+        "value": "LTE-A (4CA) Cat15 800/150 Mbps"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "5.1, A2DP, LE, aptX HD"
+      },
+      {
+        "name": "GPS",
+        "value": "Yes, with dual-band A-GPS, GLONASS, BDS, GALILEO, QZSS"
+      },
+      {
+        "name": "USB",
+        "value": "3.1, Type-C 1.0 reversible connector, USB On-The-Go"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Cảm biến vân tay, cảm biến gia tốc, cảm biến tiệm cận, con quay hồi chuyển, cảm biến sáng, la bàn"
+      },
+      {
+        "name": "Pin",
+        "value": "Li-Po 4015 mAh battery, Fast charging 30W, 60% in 15 min, 100% in 36 min SuperVOOC 2.0"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:37.039Z",
+    "ratingValue": 5,
+    "hasVariants": true,
+    "price": "11900000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 8,
+      "storage_gb": 128,
+      "storage_tb": -1,
+      "display_size_inches": 6.4,
+      "brand": "5fc4f6be56a82f3b6c571288",
+      "price": 11900000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      },
+      {
+        "id": "121212dd",
+        "name": "Iphone 8 32GB",
+        "amount": "1212",
+        "price": "1220333",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3ca61bf2dfb90bdc3a9d"
+  },
+  {
+    "id": "5fd50da8be001f92f7fd2df1",
+    "slug": "oppo-a12-4gb",
+    "name": "Oppo A12 4GB",
+    "lname": "oppo a12 4gb",
+    "reviewCount": 0,
+    "thumbnail": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo-a12_1_.jpg",
+    "isHot": true,
+    "attrs": [
+      {
+        "name": "Hãng sản xuất",
+        "value": "OPPO"
+      },
+      {
+        "name": "kích thước",
+        "value": "Dài 155.9 mm - Ngang 75.5 mm - Dày 8.3 mm"
+      },
+      {
+        "name": "Trọng lượng",
+        "value": "165 g"
+      },
+      {
+        "name": "Bộ nhớ đệm / ram",
+        "value": "4 GB"
+      },
+      {
+        "name": "Bộ nhớ trong",
+        "value": "128 GB"
+      },
+      {
+        "name": "Loại sim",
+        "value": "2 SIM (Nano-SIM)"
+      },
+      {
+        "name": "Loại màn hình",
+        "value": "IPS LCD , HD+"
+      },
+      {
+        "name": "kích thước màn hình",
+        "value": ""
+      },
+      {
+        "name": "Độ phân giải màn hình",
+        "value": "6.22 inches"
+      },
+      {
+        "name": "hệ điểu hành",
+        "value": "720 x 1560 pixes"
+      },
+      {
+        "name": "Phiên bản hệ điều hành",
+        "value": "ColorOS 6.1 (Android 9.0)"
+      },
+      {
+        "name": "ChipSet",
+        "value": "MediaTek Helio P35 8 nhân"
+      },
+      {
+        "name": "CPU",
+        "value": "4 nhân 2.35 GHz & 4 nhân 1.9 GHz"
+      },
+      {
+        "name": "GPU",
+        "value": "PowerVR GE8320"
+      },
+      {
+        "name": "Camera sau",
+        "value": "Chính 13 MP & Phụ 2 MP"
+      },
+      {
+        "name": "Camera trước",
+        "value": "5 MP"
+      },
+      {
+        "name": "WLAN",
+        "value": "Wi-Fi 802.11 a/b/g/n/ac, DLNA, Wi-Fi Direct, Wi-Fi hotspot"
+      },
+      {
+        "name": "bluetooth",
+        "value": "A2DP, LE, v5.0"
+      },
+      {
+        "name": "GPS",
+        "value": "BDS, A-GPS, GLONASS"
+      },
+      {
+        "name": "USB",
+        "value": "Micro USB"
+      },
+      {
+        "name": "Cảm biến",
+        "value": "Mở khóa bằng vân tay, Mở khoá khuôn mặt"
+      },
+      {
+        "name": "Pin",
+        "value": "4230 mAh - Tiết kiệm pin, Sạc pin nhanh"
+      }
+    ],
+    "createdAt": "2022-03-18T16:04:37.103Z",
+    "ratingValue": 0,
+    "hasVariants": true,
+    "price": "3390000",
+    "isMainProduct": true,
+    "productFields": {
+      "ram_gb": 4,
+      "storage_gb": 32,
+      "storage_tb": -1,
+      "display_size_inches": 6.22,
+      "brand": "5fc4f6be56a82f3b6c571288",
+      "price": 3390000
+    },
+    "colorOptions": [
+      {
+        "id": "121212",
+        "name": "iphone 8 64Gb",
+        "amount": "1222",
+        "price": "12000000",
+        "images": [
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg",
+          "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_8_plus_1.jpg"
+        ]
+      }
+    ],
+    "variantsId": "5fcf3d921bf2dfb90bdc3aa5"
+  }
+]

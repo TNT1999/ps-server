@@ -1,31 +1,27 @@
-import {Getter, inject} from '@loopback/core';
-import {
-  DefaultCrudRepository,
-  HasManyRepositoryFactory,
-  repository,
-} from '@loopback/repository';
-import {ProductRepository} from '.';
+import {inject} from '@loopback/core';
+import {DefaultCrudRepository} from '@loopback/repository';
 import {MongodbDataSource} from '../datasources';
-import {Product, User, Variant, VariantRelations} from '../models';
+import {Variant, VariantRelations} from '../models';
 
 export class VariantRepository extends DefaultCrudRepository<
   Variant,
   typeof Variant.prototype.id,
   VariantRelations
 > {
-  public readonly products: HasManyRepositoryFactory<
-    Product,
-    typeof Variant.prototype.id
-  >;
+  // public readonly products: HasManyRepositoryFactory<
+  //   Product,
+  //   typeof Variant.prototype.id
+  // >;
   constructor(
     @inject('datasources.mongodb') dataSource: MongodbDataSource,
-    @repository.getter('ProductRepository')
-    productRepositoryGetter: Getter<ProductRepository>,
+    // @repository.getter('ProductRepository')
+    // productRepositoryGetter: Getter<ProductRepository>,
   ) {
-    super(User, dataSource);
-    this.products = this.createHasManyRepositoryFactoryFor(
-      'products',
-      productRepositoryGetter,
-    );
+    super(Variant, dataSource);
+    // this.products = this.createHasManyRepositoryFactoryFor(
+    //   'products',
+    //   productRepositoryGetter,
+    // );
+    // this.registerInclusionResolver('products', this.products.inclusionResolver);
   }
 }

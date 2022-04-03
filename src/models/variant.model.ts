@@ -1,13 +1,5 @@
-import {Entity, hasMany, model, property} from '@loopback/repository';
-import {Product} from './product.model';
-
-export class VariantType {
-  name: string;
-  price: string;
-  slug: string;
-  product: Product;
-}
-
+import {Entity, model, property} from '@loopback/repository';
+import {VariantType} from '.';
 @model({
   settings: {
     mongodb: {collection: 'Variants'},
@@ -24,13 +16,13 @@ export class Variant extends Entity {
   })
   id: string;
 
-  @hasMany(() => Product, {keyTo: 'variantsId'})
+  @property.array(() => VariantType)
   variants?: VariantType[];
 }
 
 export interface VariantRelations {
   // describe navigational properties here
-  variants?: VariantWithRelations;
+  // variants?: VariantWithRelations;
 }
 
 export type VariantWithRelations = Variant & VariantRelations;

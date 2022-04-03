@@ -1,6 +1,7 @@
 import {AuthenticationComponent} from '@loopback/authentication';
 import {
   JWTAuthenticationComponent,
+  RefreshTokenServiceBindings,
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
@@ -20,7 +21,6 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import morgan from 'morgan';
 import path from 'path';
 import {MyAuthorizationProvider} from './authorizer';
-import {MongodbDataSource} from './datasources';
 import {loggerMiddleware} from './middleware';
 import {UserRepository} from './repositories';
 import {MySequence} from './sequence';
@@ -33,8 +33,11 @@ import {
   GoogleBindings,
   GoogleService,
   JWTService,
+  MyRefreshTokenServiceBindings,
   MyUserService,
   MyUserServiceBindings,
+  RefreshTokenService,
+  RefreshTokenServiceConstants,
 } from './services';
 export {ApplicationConfig};
 
@@ -59,7 +62,7 @@ export class PsServerApplication extends BootMixin(
     this.component(AuthenticationComponent);
     this.component(JWTAuthenticationComponent);
     this.component(AuthorizationComponent);
-    this.dataSource(MongodbDataSource, UserServiceBindings.DATASOURCE_NAME);
+    // this.dataSource(MongodbDataSource, UserServiceBindings.DATASOURCE_NAME);
     this.setupBinding();
     this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here
@@ -82,12 +85,23 @@ export class PsServerApplication extends BootMixin(
     this.bind(EmailServiceBindings.EMAIL_SERVICE).toClass(EmailService);
     // Bind jwt service
     this.bind(TokenServiceBindings.TOKEN_SERVICE).toClass(JWTService);
+    // Bind refresh token service
+    this.bind(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE).toClass(
+      RefreshTokenService,
+    );
     // Bind token constants
     this.bind(TokenServiceBindings.TOKEN_SECRET).to(
       CustomJWTServiceConstants.TOKEN_SECRET_VALUE,
     );
     this.bind(TokenServiceBindings.TOKEN_EXPIRES_IN).to(
       CustomJWTServiceConstants.TOKEN_EXPIRES_IN_VALUE,
+    );
+    // Bind refresh token contains
+    this.bind(RefreshTokenServiceBindings.REFRESH_SECRET).to(
+      RefreshTokenServiceConstants.REFRESH_SECRET_VALUE,
+    );
+    this.bind(RefreshTokenServiceBindings.REFRESH_EXPIRES_IN).to(
+      RefreshTokenServiceConstants.REFRESH_EXPIRES_IN_VALUE,
     );
     // Bind the authorizer provider
     this.bind('authorizationProviders.my-authorizer-provider')

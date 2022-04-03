@@ -1,6 +1,13 @@
-import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {
+  belongsTo,
+  Entity,
+  hasMany,
+  model,
+  property,
+} from '@loopback/repository';
 import {AttributeProduct, ColorOptionProduct} from '.';
-import {Variant} from './variant.model';
+import {Comment, CommentWithRelations} from './comment.model';
+import {Variant, VariantWithRelations} from './variant.model';
 
 enum AttrsProduct {
   HANG_SX = 'Hãng sản xuất',
@@ -16,16 +23,9 @@ enum ProductFields {
   PRICE,
 }
 
-export class ColorOptions {
-  price: string;
-  name: string;
-  amount: string;
-  images: string[];
-  id: string;
-}
 @model({
   settings: {
-    mongodb: {collection: 'products'},
+    mongodb: {collection: 'Products'},
   },
 })
 export class Product extends Entity {
@@ -74,6 +74,11 @@ export class Product extends Entity {
   })
   createdAt?: 'date';
 
+  @property({
+    type: 'date',
+  })
+  updatedAt?: 'date';
+
   @property()
   ratingValue?: number;
 
@@ -104,13 +109,18 @@ export class Product extends Entity {
   productFields?: object;
 
   @property.array(ColorOptionProduct)
-  colorOptions?: ColorOptions[];
+  colorOptions?: ColorOptionProduct[];
 
-  @belongsTo(() => Variant, {name: 'variant'})
+  @belongsTo(() => Variant, {name: 'variants'})
   variantsId?: string;
+
+  @hasMany(() => Comment, {keyTo: 'productId'})
+  comments?: Comment[];
 }
 
 export interface ProductRelations {
+  comments?: CommentWithRelations[];
+  variants?: VariantWithRelations;
   // describe navigational properties here
 }
 

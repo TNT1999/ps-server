@@ -1,0 +1,232 @@
+[
+  {
+    "id": "5fbd3a45e7099fcc051e3a5d",
+    "variants": [
+      {
+        "name": "Aris 6GB | 64GB",
+        "slug": "vsmart-aris-6gb-64gb",
+        "price": "6490000"
+      },
+      {
+        "name": "Aris Pro 8GB | 128GB",
+        "slug": "vsmart-aris-pro",
+        "price": "8990000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf1d0c7ed7a2f6491a5bd2",
+    "variants": [
+      {
+        "name": "Pro Max | 512 GB",
+        "slug": "iphone-11-pro-max-512gb",
+        "price": "36990000"
+      },
+      {
+        "name": " Pro Max | 64GB",
+        "slug": "iphone-11-pro-max",
+        "price": "27900000"
+      },
+      {
+        "name": "Pro Max | 256 GB",
+        "slug": "iphone-11-pro-max-256gb",
+        "price": "32000000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf2d2cc8382c08a0c44b36",
+    "variants": [
+      {
+        "name": "64GB",
+        "slug": "iphone-x-64gb",
+        "price": "19000000"
+      },
+      {
+        "name": "256GB",
+        "slug": "iphone-x-256gb",
+        "price": "22000000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3338c8382c08a0c44b42",
+    "variants": [
+      {
+        "name": "128GB",
+        "slug": "iphone-8-plus-128gb",
+        "price": "13500000"
+      },
+      {
+        "name": "64GB",
+        "slug": "iphone-8-plus-64gb",
+        "price": "12000000"
+      },
+      {
+        "name": "256GB",
+        "slug": "iphone-8-plus-256gb",
+        "price": "19990000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf36b5c8382c08a0c44b45",
+    "variants": [
+      {
+        "name": "64GB",
+        "slug": "iphone-xs-64gb",
+        "price": "22000000"
+      },
+      {
+        "name": "256GB",
+        "slug": "iphone-xs-256gb",
+        "price": "27900000"
+      },
+      {
+        "name": "512GB",
+        "slug": "iphone-xs-512gb",
+        "price": "24590000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3820c8382c08a0c44b48",
+    "variants": [
+      {
+        "name": "Pro Max | 128GB",
+        "slug": "iphone-12-pro-max",
+        "price": "33590000"
+      },
+      {
+        "name": "Pro Max | 256GB",
+        "slug": "iphone-12-pro-max-256gb",
+        "price": "35000000"
+      },
+      {
+        "name": "Pro Max | 512GB",
+        "slug": "iphone-12-pro-max-512gb",
+        "price": "41990000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf393dc8382c08a0c44b4e",
+    "variants": [
+      {
+        "name": "3GB | 32GB",
+        "slug": "samsung-galaxy-a21s",
+        "price": "4250000"
+      },
+      {
+        "name": "6GB | 64GB ",
+        "slug": "samsung-galaxy-a21s-6gb",
+        "price": "4750000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3b491bf2dfb90bdc3a96",
+    "variants": [
+      {
+        "name": "Mi Note 10",
+        "slug": "xiaomi-mi-note-10",
+        "price": "8700000"
+      },
+      {
+        "name": "Mi Note 10 Pro",
+        "slug": "xiaomi-mi-note-10-pro",
+        "price": "10300000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3bb81bf2dfb90bdc3a99",
+    "variants": [
+      {
+        "name": "Note 9",
+        "slug": "xiaomi-mi-redmi-note-9",
+        "price": "4450000"
+      },
+      {
+        "name": " Note 9 Pro",
+        "slug": "xiaomi-mi-redmi-note-9-pro",
+        "price": "5450000"
+      },
+      {
+        "name": " Note 9 Pro 128GB",
+        "slug": "xiaomi-mi-redmi-note-9-pro-128gb",
+        "price": "5900000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3c461bf2dfb90bdc3a9b",
+    "variants": [
+      {
+        "name": "64GB",
+        "slug": "xiaomi-mi-redmi-note-8-64gb",
+        "price": "4490000"
+      },
+      {
+        "name": "128GB",
+        "slug": "xiaomi-mi-redmi-note-8-128gb",
+        "price": "4490000"
+      },
+      {
+        "name": "32GB",
+        "slug": "xiaomi-mi-redmi-note-8-32gb",
+        "price": "3990000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3ca61bf2dfb90bdc3a9d",
+    "variants": [
+      {
+        "name": "Reno4",
+        "slug": "oppo-reno4",
+        "price": "8190000"
+      },
+      {
+        "name": "Reno 4 Pro",
+        "slug": "oppo-reno4-pro",
+        "price": "11900000"
+      }
+    ]
+  },
+  {
+    "id": "5fcf3d921bf2dfb90bdc3aa5",
+    "variants": [
+      {
+        "name": "Oppo A12 4GB",
+        "slug": "oppo-a12-4gb",
+        "price": "3390000"
+      },
+      {
+        "name": "Oppo A12 3GB",
+        "slug": "oppo-a12-3gb",
+        "price": "2800000"
+      }
+    ]
+  },
+  {
+    "id": "5fd51957be001f92f7fd2dfd",
+    "variants": [
+      {
+        "name": "Note 20",
+        "slug": "samsung-galaxy-note-20",
+        "price": "17500000"
+      },
+      {
+        "name": "Note 20 Ultra",
+        "slug": "samsung-galaxy-note-20-ultra",
+        "price": "24990000"
+      },
+      {
+        "name": " 20 Ultra 5G",
+        "slug": "samsung-galaxy-note-20-ultra-5g",
+        "price": "25600000"
+      }
+    ]
+  }
+]

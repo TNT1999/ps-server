@@ -1,58 +1,7 @@
 import {repository} from '@loopback/repository';
-import {get, param, response, SchemaObject} from '@loopback/rest';
-import {Product} from '../models';
+import {get, param, post, requestBody, response} from '@loopback/rest';
+import {Product, ProductWithRelations} from '../models';
 import {ProductRepository} from '../repositories';
-const CredentialsSchema: SchemaObject = {
-  type: 'object',
-  required: ['email', 'password'],
-  properties: {
-    email: {
-      type: 'string',
-      format: 'email',
-    },
-    password: {
-      type: 'string',
-      minLength: 6,
-      maxLength: 512,
-    },
-  },
-};
-
-export const CredentialsRequestBody = {
-  description: 'The input of login function',
-  required: true,
-  content: {
-    'application/json': {schema: CredentialsSchema},
-  },
-};
-type ChangePassword = {
-  oldPassword: string;
-  newPassword: string;
-};
-const ChangePasswordSchema: SchemaObject = {
-  type: 'object',
-  required: ['oldPassword', 'newPassword'],
-  properties: {
-    password: {
-      type: 'string',
-      minLength: 6,
-      maxLength: 512,
-    },
-    newPassword: {
-      type: 'string',
-      minLength: 6,
-      maxLength: 512,
-    },
-  },
-};
-
-export const ChangePasswordRequestBody = {
-  description: 'The input of changePassword',
-  required: true,
-  content: {
-    'application/json': {schema: ChangePasswordSchema},
-  },
-};
 
 export class ProductController {
   constructor(
@@ -71,18 +20,50 @@ export class ProductController {
     },
   })
   async getHomeProducts(): Promise<Product[]> {
-    const products = await this.productRepository.find({});
-    // products[1].attrs?.push({
-    //   name: 'a',
-    //   value: 'a',
-    // });
-    // await this.productRepository.save(products[1]);
-    // for (const product of products) {
-    //   console.log(product);
-    //   product.productFileds = undefined;
-    //   await this.productRepository.save(product);
-    // }
+    const products = await this.productRepository.find({
+      where: {
+        isMainProduct: true,
+      },
+    });
+    console.log(products.length);
     return products;
+  }
+
+  // @authenticate('jwt')
+  // @authorize({allowedRoles: [ROLES.ADMIN]})
+  @get('products/mock')
+  @response(200, {
+    description: 'Mock products',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'string',
+        },
+      },
+    },
+  })
+  async mockProducts() {
+    return 'Success';
+  }
+
+  // @authenticate('jwt')
+  // @authorize({allowedRoles: [ROLES.ADMIN]})
+  @post('products')
+  @response(200, {
+    description: 'Save all products',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async saveProducts(
+    @requestBody() products: Product[],
+  ): Promise<Product[] | string> {
+    const savedProducts = await this.productRepository.createAll(products);
+    return savedProducts;
   }
 
   @get('product/{slug}')
@@ -98,14 +79,29 @@ export class ProductController {
   })
   async getProduct(
     @param.path.string('slug') slug: string,
-  ): Promise<Product | null> {
+  ): Promise<ProductWithRelations | null> {
     const product = await this.productRepository.findOne({
       where: {slug},
+      include: [
+        {
+          relation: 'variants',
+        },
+        {
+          relation: 'comments',
+          scope: {
+            where: {
+              rootCommentId: null,
+            },
+            skip: 0,
+            limit: 20,
+            order: ['createdAt DESC'],
+            include: [
+              {relation: 'replies', scope: {order: ['createdAt DESC']}},
+            ],
+          },
+        },
+      ],
     });
-    // if (product?.variantsId) {
-    //   const variant = await this.productRepository.variant(product.id);
-    //   console.log(variant);
-    // }
     return product;
   }
 }
