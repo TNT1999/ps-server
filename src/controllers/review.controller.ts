@@ -3,34 +3,35 @@ import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
-import {Comment} from '../models';
-import {CommentRepository} from '../repositories';
+import {Review} from '../models';
+import {ReviewRepository} from '../repositories';
 
-export class CommentController {
+export class ReviewController {
   constructor(
-    @repository(CommentRepository) public commentRepository: CommentRepository,
+    @repository(ReviewRepository) public reviewRepository: ReviewRepository,
   ) {}
 
   @authenticate('jwt')
-  @post('comment')
+  @post('review')
   @response(200, {
-    description: 'Reply comment',
+    description: 'Post review product',
     content: {
       'application/json': {
         schema: {
-          'x-ts-type': Comment,
+          'x-ts-type': Review,
         },
       },
     },
   })
-  async postComment(
+  async postReview(
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
-    @requestBody() comment: Partial<Comment>,
-  ): Promise<Comment> {
+    @requestBody() review: Review,
+  ): Promise<Review> {
     const userId = currentUserProfile[securityId];
-    comment.userId = userId;
-    const savedComment = await this.commentRepository.create(comment);
-    return savedComment;
+    review.userId = userId;
+    // review.reviewer.id = userId;
+    const savedReview = await this.reviewRepository.create(review);
+    return savedReview;
   }
 }

@@ -90,16 +90,24 @@ export class ProductController {
           relation: 'comments',
           scope: {
             where: {
-              rootCommentId: null,
+              level: 0,
             },
             skip: 0,
             limit: 20,
+            // fields: {
+            //   rootCommentId: false,
+            //   replyToCommentId: false,
+            //   replyToUser: false,
+            //   deletedAt: false,
+            // },
             order: ['createdAt DESC'],
-            include: [
-              {relation: 'replies', scope: {order: ['createdAt DESC']}},
-            ],
+            // totalLimit: 1,
+            include: [{relation: 'replies', scope: {order: ['createdAt ASC']}}],
           },
         },
+        // {
+        //   relation: 'reviews',
+        // },
       ],
     });
     return product;

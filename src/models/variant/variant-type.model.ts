@@ -23,10 +23,6 @@ export class VariantType extends Model {
 
   @property()
   productId: string;
-
-  // @hasOne(() => Product, {keyTo: 'variantsId'})
-  // // @property()
-  // product: Product;
 }
 
 export interface VariantTypeRelations {

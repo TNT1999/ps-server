@@ -1,5 +1,5 @@
 import {Entity, model, property} from '@loopback/repository';
-import {VariantType} from '.';
+import {VariantType} from '..';
 @model({
   settings: {
     mongodb: {collection: 'Variants'},

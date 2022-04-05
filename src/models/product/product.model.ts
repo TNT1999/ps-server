@@ -5,9 +5,16 @@ import {
   model,
   property,
 } from '@loopback/repository';
-import {AttributeProduct, ColorOptionProduct} from '.';
-import {Comment, CommentWithRelations} from './comment.model';
-import {Variant, VariantWithRelations} from './variant.model';
+import {
+  AttributeProduct,
+  ColorOptionProduct,
+  Comment,
+  CommentWithRelations,
+  Review,
+  Variant,
+  VariantWithRelations,
+} from '..';
+import {ReviewWithRelations} from '../review/review.model';
 
 enum AttrsProduct {
   HANG_SX = 'Hãng sản xuất',
@@ -116,11 +123,15 @@ export class Product extends Entity {
 
   @hasMany(() => Comment, {keyTo: 'productId'})
   comments?: Comment[];
+
+  @hasMany(() => Review, {keyTo: 'productId'})
+  reviews?: Review[];
 }
 
 export interface ProductRelations {
   comments?: CommentWithRelations[];
   variants?: VariantWithRelations;
+  reviews?: ReviewWithRelations[];
   // describe navigational properties here
 }
 
