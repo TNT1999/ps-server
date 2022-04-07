@@ -1,3 +1,4 @@
+import {authenticate} from '@loopback/authentication';
 import {repository} from '@loopback/repository';
 import {get, param, post, requestBody, response} from '@loopback/rest';
 import {Product, ProductWithRelations} from '../models';
@@ -25,7 +26,6 @@ export class ProductController {
         isMainProduct: true,
       },
     });
-    console.log(products.length);
     return products;
   }
 
@@ -46,7 +46,7 @@ export class ProductController {
     return 'Success';
   }
 
-  // @authenticate('jwt')
+  @authenticate('jwt')
   // @authorize({allowedRoles: [ROLES.ADMIN]})
   @post('products')
   @response(200, {
@@ -63,6 +63,25 @@ export class ProductController {
     @requestBody() products: Product[],
   ): Promise<Product[] | string> {
     const savedProducts = await this.productRepository.createAll(products);
+    return savedProducts;
+  }
+
+  @authenticate('jwt')
+  // @authorize({allowedRoles: [ROLES.ADMIN]})
+  @post('product')
+  @response(200, {
+    description: 'Create product',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async savedProduct(@requestBody() product: Product): Promise<Product> {
+    console.log(product);
+    const savedProducts = await this.productRepository.create(product);
     return savedProducts;
   }
 
@@ -105,9 +124,12 @@ export class ProductController {
             include: [{relation: 'replies', scope: {order: ['createdAt ASC']}}],
           },
         },
-        // {
-        //   relation: 'reviews',
-        // },
+        {
+          relation: 'reviews',
+          scope: {
+            order: ['createdAt DESC'],
+          },
+        },
       ],
     });
     return product;

@@ -4,11 +4,12 @@ import {repository} from '@loopback/repository';
 import {post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {Review} from '../models';
-import {ReviewRepository} from '../repositories';
+import {ProductRepository, ReviewRepository} from '../repositories';
 
 export class ReviewController {
   constructor(
     @repository(ReviewRepository) public reviewRepository: ReviewRepository,
+    @repository(ProductRepository) public productRepository: ProductRepository,
   ) {}
 
   @authenticate('jwt')
@@ -30,8 +31,20 @@ export class ReviewController {
   ): Promise<Review> {
     const userId = currentUserProfile[securityId];
     review.userId = userId;
-    // review.reviewer.id = userId;
+    review.reviewer.id = userId;
     const savedReview = await this.reviewRepository.create(review);
+    console.log('zo');
+    const product = await this.productRepository.findById(review.productId);
+    const updatedProduct = await this.productRepository.updateById(
+      review.productId,
+      {
+        reviewCount: (product.reviewCount ?? 0) + 1,
+        ratingValue:
+          ((product.ratingValue ?? 0) * (product.reviewCount ?? 0) +
+            review.reviewValue) /
+          ((product.reviewCount ?? 0) + 1),
+      },
+    );
     return savedReview;
   }
 }

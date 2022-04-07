@@ -8,7 +8,6 @@ export const loggerMiddleware: Middleware = async (
 ) => {
   const {request, response} = middlewareCtx;
   const method = request.method;
-  console.time();
   console.log(
     'Request:  ' +
       (method === 'GET'
@@ -23,13 +22,11 @@ export const loggerMiddleware: Middleware = async (
     const result = await next();
     const statusCode = response.statusCode;
     console.log(chalk.green.bold(statusCode));
-    console.timeEnd();
     return result;
   } catch (err) {
     // Catch errors from downstream middleware
     const statusCode = response.statusCode;
     console.log(error.bold(statusCode));
-    console.timeEnd();
     throw err;
   }
 };

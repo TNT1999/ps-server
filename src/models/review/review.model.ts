@@ -1,5 +1,5 @@
 import {belongsTo, Entity, model, property} from '@loopback/repository';
-import {User} from '..';
+import {Reviewer, User} from '..';
 
 @model({
   settings: {
@@ -29,7 +29,7 @@ export class Review extends Entity {
   @property({
     type: 'object',
   })
-  reviewer: object;
+  reviewer: Reviewer;
 
   @property({
     type: 'string',
@@ -39,7 +39,13 @@ export class Review extends Entity {
   })
   content: string;
 
-  @property()
+  @property({
+    type: 'number',
+    jsonSchema: {
+      maximum: 5,
+      minimum: 0,
+    },
+  })
   reviewValue: number;
 
   @property({

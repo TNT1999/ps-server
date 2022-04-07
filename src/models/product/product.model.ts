@@ -21,13 +21,13 @@ enum AttrsProduct {
   BO_NHO = 'Bộ nhớ',
 }
 
-enum ProductFields {
-  RAM_GB,
-  STORAGE_GB,
-  STORAGE_TB,
-  DISPLAY_SIZE_INCHES,
-  BRAND,
-  PRICE,
+export enum ProductFields {
+  RAM_GB = 'ram_gb',
+  STORAGE_GB = 'storage_gb',
+  STORAGE_TB = 'storage_tb',
+  DISPLAY_SIZE_INCHES = 'display_size_inches',
+  BRAND = 'brand',
+  PRICE = 'price',
 }
 
 @model({
@@ -60,6 +60,7 @@ export class Product extends Entity {
 
   @property({
     type: 'number',
+    default: 0,
   })
   reviewCount?: number;
 
@@ -72,7 +73,7 @@ export class Product extends Entity {
   })
   isHot?: boolean;
 
-  @property.array(AttributeProduct)
+  @property.array(() => AttributeProduct)
   attrs?: AttributeProduct[];
 
   @property({
@@ -86,7 +87,14 @@ export class Product extends Entity {
   })
   updatedAt?: 'date';
 
-  @property()
+  @property({
+    type: 'number',
+    default: 0,
+    jsonSchema: {
+      maximum: 5,
+      minimum: 0,
+    },
+  })
   ratingValue?: number;
 
   @property({
@@ -98,7 +106,10 @@ export class Product extends Entity {
   @property()
   price?: string;
 
-  @property()
+  @property({
+    type: 'number',
+    default: 0,
+  })
   discount?: number;
 
   @property({
@@ -109,13 +120,10 @@ export class Product extends Entity {
 
   @property({
     type: 'object',
-    jsonSchema: {
-      anyOf: Object(ProductFields),
-    },
   })
-  productFields?: object;
+  productFields?: ProductFields;
 
-  @property.array(ColorOptionProduct)
+  @property.array(() => ColorOptionProduct)
   colorOptions?: ColorOptionProduct[];
 
   @belongsTo(() => Variant, {name: 'variants'})
