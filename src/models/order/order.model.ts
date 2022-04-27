@@ -1,18 +1,24 @@
 import {belongsTo, Entity, model, property} from '@loopback/repository';
-import {Product, User, UserWithRelations} from '.';
+import {OrderItem, User, UserWithRelations} from '..';
 
-enum OrderStatus {
-  UN_CONFIRMED = 'Chưa xác nhận',
+export enum OrderStatus {
   CANCELED = 'Đã huỷ',
+  UNCONFIRMED = 'Chưa xác nhận',
+  CONFIRMED = 'Đã xác nhận',
+  SHIPPING = 'Đang giao hàng',
+  SUCCESS = 'Giao hàng thành công',
 }
 
-enum PaymentType {
+export enum PaymentType {
   COD = 'cod',
   VNP = 'vnp',
   Paypal = 'paypal',
-  Momo = 'momo',
 }
-
+export enum PaymentStatus {
+  SUCCESS = 'Thành công',
+  FAILED = 'Thất bại',
+  PENDING = 'Đang xử lý',
+}
 @model({
   settings: {
     mongodb: {collection: 'Orders'},
@@ -34,6 +40,7 @@ export class Order extends Entity {
 
   @property({
     type: 'string',
+    default: OrderStatus.UNCONFIRMED,
     jsonSchema: {
       enum: Object.values(OrderStatus),
     },
@@ -43,48 +50,23 @@ export class Order extends Entity {
   @property()
   totalAmount: number;
 
-  @property()
-  payment?: string;
-
   @property({
-    type: 'object',
+    type: 'string',
+    default: PaymentStatus.PENDING,
+    jsonSchema: {
+      enum: Object.values(PaymentStatus),
+    },
   })
-  products?: Product[];
+  paymentStatus?: string;
 
-  @property({
-    type: 'boolean',
-    default: false,
-  })
-  isHot?: boolean;
-
-  @property({
-    type: 'object',
-  })
-  attrs?: object;
+  @property.array(() => OrderItem)
+  products: OrderItem[];
 
   @property({
     type: 'date',
     defaultFn: 'now',
   })
   createdAt?: 'date';
-
-  @property()
-  ratingValue?: number;
-
-  @property({
-    type: 'boolean',
-    default: false,
-  })
-  hasVariants?: boolean;
-
-  @property()
-  price?: string;
-
-  @property({
-    type: 'boolean',
-    default: false,
-  })
-  isMainProduct?: boolean;
 
   @property({
     type: 'string',
@@ -93,7 +75,7 @@ export class Order extends Entity {
       enum: Object.values(PaymentType),
     },
   })
-  paymentType?: object;
+  paymentType?: string;
 }
 
 export interface OrderRelations {

@@ -32,7 +32,13 @@ export enum ProductFields {
 
 @model({
   settings: {
-    mongodb: {collection: 'Products'},
+    mongodb: {
+      collection: 'Products',
+      // indexes: {
+      //   lname: 'text',
+      //   slug: 1,
+      // },
+    },
   },
 })
 export class Product extends Entity {
@@ -121,7 +127,8 @@ export class Product extends Entity {
   @property({
     type: 'object',
   })
-  productFields?: ProductFields;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  productFields?: Record<string, any>;
 
   @property.array(() => ColorOptionProduct)
   colorOptions?: ColorOptionProduct[];
@@ -129,10 +136,10 @@ export class Product extends Entity {
   @belongsTo(() => Variant, {name: 'variants'})
   variantsId?: string;
 
-  @hasMany(() => Comment, {keyTo: 'productId'})
+  @hasMany(() => Comment, {keyTo: 'productId', name: 'comments'})
   comments?: Comment[];
 
-  @hasMany(() => Review, {keyTo: 'productId'})
+  @hasMany(() => Review, {keyTo: 'productId', name: 'reviews'})
   reviews?: Review[];
 }
 

@@ -479,7 +479,7 @@ export class UserController {
   }
 
   @authenticate('jwt')
-  @patch('/auth/update-profile')
+  @patch('auth/update-profile')
   @response(200, {
     description: 'Update profile user',
     content: {

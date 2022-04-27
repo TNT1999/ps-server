@@ -36,6 +36,8 @@ import {
   MyRefreshTokenServiceBindings,
   MyUserService,
   MyUserServiceBindings,
+  ProductService,
+  ProductServiceBindings,
   RefreshTokenService,
   RefreshTokenServiceConstants,
 } from './services';
@@ -103,6 +105,8 @@ export class PsServerApplication extends BootMixin(
     this.bind(RefreshTokenServiceBindings.REFRESH_EXPIRES_IN).to(
       RefreshTokenServiceConstants.REFRESH_EXPIRES_IN_VALUE,
     );
+    // Bind product service
+    this.bind(ProductServiceBindings.PRODUCT_SERVICE).toClass(ProductService);
     // Bind the authorizer provider
     this.bind('authorizationProviders.my-authorizer-provider')
       .toProvider(MyAuthorizationProvider)

@@ -44,12 +44,9 @@ export class Comment extends Entity {
   level: number;
 
   @property({
-    type: 'string',
-    jsonSchema: {
-      minLength: 30,
-    },
+    type: 'object',
   })
-  content: string;
+  content: object;
 
   @property({
     type: 'date',

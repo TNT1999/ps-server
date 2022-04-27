@@ -44,6 +44,7 @@ export class Review extends Entity {
     jsonSchema: {
       maximum: 5,
       minimum: 0,
+      errorMessage: 'Value should be more than 0 and less than 5',
     },
   })
   reviewValue: number;
