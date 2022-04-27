@@ -1,3 +1,4 @@
+export * from './cart.controller';
 export * from './comment.controller';
 export * from './ping.controller';
 export * from './product.controller';

@@ -1,5 +1,5 @@
 import {Model, model, property} from '@loopback/repository';
-import {OrderItemOption} from '.';
+import {ColorOptionProduct} from '..';
 
 @model()
 export class OrderItem extends Model {
@@ -23,7 +23,7 @@ export class OrderItem extends Model {
   @property({
     type: 'object',
   })
-  option: OrderItemOption;
+  option: ColorOptionProduct;
 }
 
 export interface OrderItemRelations {

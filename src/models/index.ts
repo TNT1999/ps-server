@@ -1,3 +1,4 @@
+export * from './cart';
 export * from './comment.model';
 export * from './order';
 export * from './order/order.model';

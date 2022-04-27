@@ -56,13 +56,13 @@ export class Product extends Entity {
     type: 'string',
     index: true,
   })
-  slug?: string;
+  slug: string;
 
   @property()
-  name?: string;
+  name: string;
 
   @property()
-  lname?: string;
+  lname: string;
 
   @property({
     type: 'number',
@@ -71,7 +71,7 @@ export class Product extends Entity {
   reviewCount?: number;
 
   @property()
-  thumbnail?: string;
+  thumbnail: string;
 
   @property({
     type: 'boolean',
@@ -107,10 +107,10 @@ export class Product extends Entity {
     type: 'boolean',
     default: false,
   })
-  hasVariants?: boolean;
+  hasVariants: boolean;
 
   @property()
-  price?: string;
+  price: string;
 
   @property({
     type: 'number',
@@ -128,10 +128,10 @@ export class Product extends Entity {
     type: 'object',
   })
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  productFields?: Record<string, any>;
+  productFields: Record<string, any>;
 
   @property.array(() => ColorOptionProduct)
-  colorOptions?: ColorOptionProduct[];
+  colorOptions: ColorOptionProduct[];
 
   @belongsTo(() => Variant, {name: 'variants'})
   variantsId?: string;

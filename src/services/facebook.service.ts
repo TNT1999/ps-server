@@ -12,7 +12,7 @@ export class FacebookService {
   //exchange authorization code for access token
   async getToken(code: string): Promise<string> {
     const endpoint = 'https://graph.facebook.com/v13.0/oauth/access_token';
-    const clientId = process.env.FB_CLIENT_SECRET;
+    const clientId = process.env.FB_CLIENT_ID;
     const clientSecret = process.env.FB_CLIENT_SECRET;
 
     const params = {
