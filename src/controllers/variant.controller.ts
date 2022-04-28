@@ -1,10 +1,11 @@
 import {repository} from '@loopback/repository';
 import {get, post, requestBody, response} from '@loopback/rest';
 import {Variant} from '../models';
-import {VariantRepository} from '../repositories';
+import {ProductRepository, VariantRepository} from '../repositories';
 export class VariantController {
   constructor(
     @repository(VariantRepository) public variantRepository: VariantRepository,
+    @repository(ProductRepository) public productRepository: ProductRepository,
   ) {}
 
   // @authenticate('jwt')
@@ -61,4 +62,33 @@ export class VariantController {
     const savedVariants = await this.variantRepository.createAll(variants);
     return savedVariants;
   }
+
+  //   @get('variants/changeField/{id}')
+  //   @response(200, {
+  //     description: 'change field variants',
+  //     content: {
+  //       'application/json': {
+  //         schema: {
+  //           type: 'string',
+  //         },
+  //       },
+  //     },
+  //   })
+  //   async addfield(@param.path.string('id') id: string) {
+  //     const variants = await this.variantRepository.find({});
+  //     for (let i = 0; i < variants.length; i++) {
+  //       variants[i].variants?.forEach(variant => {
+  //         // const product = await productRepository.findOne({
+  //         //   where: {
+  //         //     slug: variant.slug,
+  //         //   },
+  //         // });
+  //         variant.price = parseInt(variant.price.toString());
+  //         variant.id = nanoid();
+  //       });
+  //       await this.variantRepository.save(variants[i]);
+  //     }
+  //     return 'Success';
+  //   }
+  // }
 }

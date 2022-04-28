@@ -110,7 +110,7 @@ export class Product extends Entity {
   hasVariants: boolean;
 
   @property()
-  price: string;
+  price: number;
 
   @property({
     type: 'number',

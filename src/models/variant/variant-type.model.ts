@@ -19,7 +19,7 @@ export class VariantType extends Model {
   slug: string;
 
   @property()
-  price: string;
+  price: number;
 
   @property()
   productId: string;

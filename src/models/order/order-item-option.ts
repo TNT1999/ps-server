@@ -14,7 +14,7 @@ export class OrderItemOption extends Model {
   name: string;
 
   @property()
-  price: string;
+  price: number;
 
   // amount in stock when buy
   @property()

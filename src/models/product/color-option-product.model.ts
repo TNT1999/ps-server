@@ -16,10 +16,10 @@ export class ColorOptionProduct extends Model {
   name: string;
 
   @property()
-  amount: string;
+  amount: number;
 
   @property()
-  price: string;
+  price: number;
 
   @property.array(String)
   images: string[];

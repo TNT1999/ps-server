@@ -242,7 +242,7 @@ export class ProductController {
     return result;
   }
 
-  // @get('addField/{slug}')
+  // @get('changeField/{slug}')
   // @response(200, {
   //   description: 'Filter product',
   //   content: {
@@ -253,47 +253,100 @@ export class ProductController {
   //     },
   //   },
   // })
-  // async addAllField() {
-  //   const product = await this.productRepository.find(
-  //     {},
-  //     {skip: 30, limit: 10},
+  // async addAllField(@param.path.string('slug') slug: string) {
+  //   const products = await this.productRepository.find(
+  //     {
+  //       // where: {slug},
+  //     },
+  //     {skip: 30, limit: 20},
   //   );
-  //   console.log(product);
-  //   for (let i = 0; i < product.length; i++) {
-  //     this.addField(product[i].slug);
+  //   console.log(products);
+  //   for (let i = 0; i < products.length; i++) {
+  //     this.addField(products[i].slug);
   //   }
+  //   // products.forEach(product => this.addField(product.slug));
   // }
 
-  // async addField(slug: string | undefined): Promise<string> {
+  // async addField(slug: string | undefined) {
   //   if (!slug) return 'a';
   //   const product = await this.productRepository.findOne({
   //     where: {slug},
   //   });
-  //   if (product?.productFields?.storage_tb) {
-  //     console.log(product?.productFields?.storage_tb);
+  //   if (!product?.price) {
+  //     return;
   //   }
-  //   if (
-  //     !product?.price ||
-  //     !product.productFields ||
-  //     !product.productFields.brand ||
-  //     !product?.lname
-  //   )
-  //     return 'a';
-  //   const result = await this.productRepository.execute(
-  //     'Product',
-  //     'findOneAndUpdate',
-  //     {slug},
-  //     {
-  //       $set: {
-  //         lname: product.lname?.toLowerCase(),
-  //         'productFields.price': parseInt(product?.price),
-  //         'productFields.storage_tb': parseInt(
-  //           product?.productFields.storage_tb,
-  //         ),
-  //         'productFields.brand': new ObjectId(product?.productFields.brand),
-  //       },
-  //     },
-  //   );
-  //   return 'a';
+
+  //   // const execute = await this.productRepository.execute(
+  //   //   'Product',
+  //   //   'updateMany',
+  //   //   {
+  //   //     slug,
+  //   //   },
+
+  //   //   [
+  //   //     {
+  //   //       $set: {
+  //   //         price: {$toDouble: '$price'},
+  //   //         // 'colorOptions.amount': '1000',
+  //   //         // 'colorOptions.price': '1000000',
+  //   //         'colorOptions.amount': {
+  //   //           $convert: {
+  //   //             input: '$colorOptions.amount',
+  //   //             to: 'double',
+  //   //             onError: '$colorOptions.amount',
+  //   //             onNull: 0,
+  //   //           },
+  //   //         },
+  //   //         'colorOptions.price': {
+  //   //           $convert: {
+  //   //             input: '$colorOptions.price',
+  //   //             to: 'double',
+  //   //             onError: '1000',
+  //   //             onNull: 0,
+  //   //           },
+  //   //         },
+  //   //       },
+  //   //     },
+  //   //   ],
+  //   // );
+
+  //   // console.log(execute);
+
+  //   // if (
+  //   //   !product?.price ||
+  //   //   !product.productFields ||
+  //   //   !product.productFields.brand ||
+  //   //   !product?.lname
+  //   // ) {
+  //   //   return 'a';
+  //   // }
+
+  //   product.price = parseInt(product.price.toString());
+
+  //   product.colorOptions.forEach(color => {
+  //     // eslint-disable-next-line no-unused-expressions
+  //     (color.amount = 1000), (color.price = parseInt(color.price.toString()));
+  //   });
+
+  //   await this.productRepository.save(product);
+
+  //   // const result = await this.productRepository.execute(
+  //   //   'Product',
+  //   //   'findOneAndUpdate',
+  //   //   {slug},
+  //   //   {
+  //   //     $set: {
+  //   //       // lname: product.lname?.toLowerCase(),
+  //   //       price: parseInt(product.price.toString()),
+  //   //       // colorOptions:
+  //   //       // 'productFields.price': parseInt(product?.price),
+  //   //       // 'productFields.storage_tb': parseInt(
+  //   //       //   product?.productFields.storage_tb,
+  //   //       // ),
+  //   //       // 'productFields.brand': new ObjectId(product?.productFields.brand),
+  //   //     },
+  //   //   },
+  //   // );
+  //   // return 'a';
   // }
 }
