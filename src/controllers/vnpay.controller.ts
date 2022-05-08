@@ -139,23 +139,21 @@ export class VNPayController {
     vnpParams['vnp_Locale'] = locale;
     vnpParams['vnp_CurrCode'] = currCode;
     vnpParams['vnp_TxnRef'] = orderId.toString();
-    // vnpParams['vnp_TxnRef'] = order.id;
     vnpParams['vnp_OrderInfo'] = 'orderInfo';
     vnpParams['vnp_OrderType'] = 'topup';
     vnpParams['vnp_Amount'] = amount * 100;
-    vnpParams['vnp_ReturnUrl'] = 'http://localhost:8080/gio-hang';
-    // `${process.env.CLIENT_URL}/vnpay_return`;
+    vnpParams['vnp_ReturnUrl'] = 'http://localhost:8080/check_out';
     vnpParams['vnp_IpAddr'] = ipAddr;
     vnpParams['vnp_CreateDate'] = createDate;
     if (bankCode != null && bankCode !== '') {
       vnpParams['vnp_BankCode'] = bankCode;
     }
     vnpParams = sortObject(vnpParams);
-    // console.log(vnp_Params,process.env.NODE_ENV)
 
     const querystring = require('qs');
-    const signData =
-      secretKey + querystring.stringify(vnpParams, {encode: false});
+    const signData = `${secretKey}${querystring.stringify(vnpParams, {
+      encode: false,
+    })}`;
 
     const sha256 = require('sha256');
 

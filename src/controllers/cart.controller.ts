@@ -3,6 +3,8 @@ import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {del, get, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import pick from 'lodash/pick';
+import {ObjectId} from 'mongodb';
 import {ShoppingCart, ShoppingCartItem} from '../models';
 import {CartRepository, ProductRepository} from '../repositories';
 
@@ -27,14 +29,79 @@ export class CartController {
   async getCart(
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
-  ): Promise<ShoppingCart | null> {
+  ): Promise<Partial<ShoppingCart> | null> {
     const userId = currentUserProfile[securityId];
     const cart = await this.cartRepository.findOne({
       where: {
         userId,
       },
     });
-    return cart;
+    if (!cart) {
+      await this.cartRepository.create({
+        userId,
+        items: [],
+      });
+      return {
+        items: [],
+      };
+    }
+
+    return pick(cart, ['items']);
+  }
+
+  @authenticate('jwt')
+  @get('cart/count')
+  @response(200, {
+    description: 'Info cart',
+    content: {
+      'application/json': {
+        schema: {
+          status: 'string',
+          result: {
+            itemsCount: 'number',
+            itemsQty: 'number',
+          },
+        },
+      },
+    },
+  })
+  async getCartCount(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+  ): Promise<{
+    status: string;
+    result?: {itemsCount: number; itemsQty: number};
+  }> {
+    const userId = currentUserProfile[securityId];
+    try {
+      const cart = await this.cartRepository.execute(
+        'ShoppingCart',
+        'aggregate',
+        [
+          {$match: {userId: new ObjectId(userId)}},
+          {
+            $project: {
+              _id: 0,
+              itemsCount: {
+                $size: '$items',
+              },
+              itemsQty: {
+                $sum: '$items.quantity',
+              },
+            },
+          },
+        ],
+      );
+      const result = await cart.toArray();
+      return {
+        status: 'success',
+        result: result[0],
+      };
+    } catch (err) {
+      return {
+        status: 'failure',
+      };
+    }
   }
 
   @authenticate('jwt')
@@ -61,7 +128,7 @@ export class CartController {
   ): Promise<{status: string; items?: Partial<ShoppingCartItem>}> {
     if (item.quantity < 1) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     const userId = currentUserProfile[securityId];
@@ -72,11 +139,12 @@ export class CartController {
     });
     const product = await this.productRepository.findById(item.productId);
     const optionItemCart = product.colorOptions?.find(
-      color => (color.id = item.optionId),
+      color => color.id === item.optionId,
     );
+    console.log(optionItemCart);
     if (!optionItemCart)
       return {
-        status: 'failed',
+        status: 'failure',
       };
     const itemCart: Partial<ShoppingCartItem> = {
       productId: item.productId,
@@ -85,6 +153,7 @@ export class CartController {
       slug: product.slug,
       option: optionItemCart,
     };
+    console.log(itemCart);
     if (!cart?.items) {
       const cart = await this.cartRepository.create({
         userId,
@@ -127,7 +196,7 @@ export class CartController {
   ): Promise<{status: string; qty?: number}> {
     if (item.quantity < 1) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     const userId = currentUserProfile[securityId];
@@ -138,7 +207,7 @@ export class CartController {
     });
     if (!cart?.items) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     const itemCartIndex = cart.items.findIndex(
@@ -148,7 +217,7 @@ export class CartController {
     );
     if (itemCartIndex === -1) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     cart.items[itemCartIndex].quantity = item.quantity;
@@ -189,7 +258,7 @@ export class CartController {
     });
     if (!cart?.items) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     if (!item.optionId && !item.productId) {
@@ -209,7 +278,7 @@ export class CartController {
     );
     if (itemCartIndex === -1) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     cart.items[itemCartIndex].selected = item.selected;
@@ -227,7 +296,7 @@ export class CartController {
     content: {
       'application/json': {
         schema: {
-          'x-ts-type': ShoppingCartItem,
+          status: 'string',
         },
       },
     },
@@ -249,11 +318,11 @@ export class CartController {
     });
     if (!cart?.items) {
       return {
-        status: 'failed',
+        status: 'failure',
       };
     }
     if (!item.optionId && !item.productId) {
-      cart.items = [];
+      cart.items = cart.items.filter(itemCart => itemCart.selected === false);
       await this.cartRepository.save(cart);
       return {
         status: 'success',

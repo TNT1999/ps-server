@@ -16,7 +16,7 @@ export enum PaymentType {
 }
 export enum PaymentStatus {
   SUCCESS = 'Thành công',
-  FAILED = 'Thất bại',
+  FAILURE = 'Thất bại',
   PENDING = 'Đang xử lý',
 }
 @model({

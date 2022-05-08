@@ -258,9 +258,10 @@ export class ProductController {
   //     {
   //       // where: {slug},
   //     },
-  //     {skip: 30, limit: 20},
+  //     // {skip: 40, limit: 20},
   //   );
   //   console.log(products);
+  //   // eslint-disable-next-line @typescript-eslint/prefer-for-of
   //   for (let i = 0; i < products.length; i++) {
   //     this.addField(products[i].slug);
   //   }
@@ -272,60 +273,13 @@ export class ProductController {
   //   const product = await this.productRepository.findOne({
   //     where: {slug},
   //   });
-  //   if (!product?.price) {
-  //     return;
+
+  //   if (!product) {
+  //     return 'a';
   //   }
 
-  //   // const execute = await this.productRepository.execute(
-  //   //   'Product',
-  //   //   'updateMany',
-  //   //   {
-  //   //     slug,
-  //   //   },
-
-  //   //   [
-  //   //     {
-  //   //       $set: {
-  //   //         price: {$toDouble: '$price'},
-  //   //         // 'colorOptions.amount': '1000',
-  //   //         // 'colorOptions.price': '1000000',
-  //   //         'colorOptions.amount': {
-  //   //           $convert: {
-  //   //             input: '$colorOptions.amount',
-  //   //             to: 'double',
-  //   //             onError: '$colorOptions.amount',
-  //   //             onNull: 0,
-  //   //           },
-  //   //         },
-  //   //         'colorOptions.price': {
-  //   //           $convert: {
-  //   //             input: '$colorOptions.price',
-  //   //             to: 'double',
-  //   //             onError: '1000',
-  //   //             onNull: 0,
-  //   //           },
-  //   //         },
-  //   //       },
-  //   //     },
-  //   //   ],
-  //   // );
-
-  //   // console.log(execute);
-
-  //   // if (
-  //   //   !product?.price ||
-  //   //   !product.productFields ||
-  //   //   !product.productFields.brand ||
-  //   //   !product?.lname
-  //   // ) {
-  //   //   return 'a';
-  //   // }
-
-  //   product.price = parseInt(product.price.toString());
-
   //   product.colorOptions.forEach(color => {
-  //     // eslint-disable-next-line no-unused-expressions
-  //     (color.amount = 1000), (color.price = parseInt(color.price.toString()));
+  //     color.id = nanoid(8);
   //   });
 
   //   await this.productRepository.save(product);
@@ -347,6 +301,6 @@ export class ProductController {
   //   //     },
   //   //   },
   //   // );
-  //   // return 'a';
+  //   return 'a';
   // }
 }

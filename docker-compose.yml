@@ -1,0 +1,23 @@
+version: '3'
+services:
+  my-redis:
+    container_name: redis-container
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'
+  # my-lb4:
+  #   container_name: lb4-container
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   restart: on-failure:5
+  #   volumes:
+  #     - ./:/home/node/app
+  #   environment:
+  #     - REDIS_HOST=redis
+  #   # env_file:
+  #   #   - .env
+  #   ports:
+  #     - '80:8000'
+  #   depends_on:
+  #     - my-redis
