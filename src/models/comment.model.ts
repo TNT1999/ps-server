@@ -43,10 +43,8 @@ export class Comment extends Entity {
   })
   level: number;
 
-  @property({
-    type: 'object',
-  })
-  content: object;
+  @property()
+  content: string;
 
   @property({
     type: 'date',
