@@ -142,7 +142,8 @@ export class VNPayController {
     vnpParams['vnp_OrderInfo'] = 'orderInfo';
     vnpParams['vnp_OrderType'] = 'topup';
     vnpParams['vnp_Amount'] = amount * 100;
-    vnpParams['vnp_ReturnUrl'] = 'http://localhost:8080/check_out';
+    vnpParams['vnp_ReturnUrl'] =
+      `${process.env.SITE_URL}/check_out` || 'http://localhost:8080/check_out';
     vnpParams['vnp_IpAddr'] = ipAddr;
     vnpParams['vnp_CreateDate'] = createDate;
     if (bankCode != null && bankCode !== '') {

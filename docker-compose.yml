@@ -5,19 +5,17 @@ services:
     image: 'redis:alpine'
     ports:
       - '6379:6379'
-  # my-lb4:
-  #   container_name: lb4-container
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   restart: on-failure:5
-  #   volumes:
-  #     - ./:/home/node/app
-  #   environment:
-  #     - REDIS_HOST=redis
-  #   # env_file:
-  #   #   - .env
-  #   ports:
-  #     - '80:8000'
-  #   depends_on:
-  #     - my-redis
+  my-lb4:
+    container_name: lb4-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure:5
+    environment:
+      - REDIS_HOST=my-redis
+    env_file:
+      - .env.production
+    ports:
+      - '8000:8000'
+    depends_on:
+      - my-redis

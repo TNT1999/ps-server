@@ -294,7 +294,7 @@ export class UserController {
     const verifyEmailToken =
       await this.jwtService.generateVerificationEmailToken(savedUser.id);
 
-    const urlVerifyEmail = `http://localhost:8000/api/auth/verify-email?token=${verifyEmailToken}`;
+    const urlVerifyEmail = `${process.env.SITE_URL}/api/auth/verify-email?token=${verifyEmailToken}`;
     await this.emailService.sendVerifyEmailRegister(savedUser, urlVerifyEmail);
     return omit(savedUser, 'password', 'roles');
   }

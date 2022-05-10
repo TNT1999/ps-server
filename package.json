@@ -33,8 +33,8 @@
     "preopenapi-spec": "yarn run build",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "yarn run rebuild",
-    "dev:watch": "tsc-watch --target es2017 --outDir ./dist --onSuccess \"node -r dotenv/config .\"",
-    "start": "node -r dotenv/config -r source-map-support/register .",
+    "dev:watch": "tsc-watch --target es2017 --outDir ./dist --onSuccess \"node -r dotenv/config . dotenv_config_path=.env.development\"",
+    "start": "node -r dotenv/config -r source-map-support/register . dotenv_config_path=.env.production",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
     "rebuild": "yarn run clean && yarn run build"
   },
