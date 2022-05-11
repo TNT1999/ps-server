@@ -481,6 +481,28 @@ export class UserController {
   }
 
   @authenticate('jwt')
+  @get('auth/profile')
+  @response(200, {
+    description: 'Get profile user',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': User,
+        },
+      },
+    },
+  })
+  async getProfileUser(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile, // need include @authenticate
+  ): Promise<User> {
+    const userId = currentUserProfile[securityId];
+    const userProfile = await this.userRepository.findById(userId);
+
+    return userProfile;
+  }
+
+  @authenticate('jwt')
   @patch('auth/update-profile')
   @response(200, {
     description: 'Update profile user',

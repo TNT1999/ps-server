@@ -28,7 +28,6 @@ export class User extends Entity {
   @property({
     type: 'string',
     index: true,
-    hidden: true,
     jsonSchema: {
       pattern: '\\d+',
     },
