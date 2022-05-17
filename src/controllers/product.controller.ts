@@ -13,6 +13,7 @@ import {
 import {Product, ProductWithRelations} from '../models';
 import {ProductRepository} from '../repositories';
 import {ProductService, ProductServiceBindings} from '../services';
+const fs = require('fs');
 
 export class ProductController {
   constructor(
@@ -242,6 +243,63 @@ export class ProductController {
     return result;
   }
 
+  // @get('abc')
+  // @response(200, {
+  //   description: 'Filter product',
+  //   content: {
+  //     'application/json': {
+  //       schema: {
+  //         'x-ts-type': Product,
+  //       },
+  //     },
+  //   },
+  // })
+  // async abc() {
+  //   const result = [];
+  //   for (let i = 0; i < Wards.length; i++) {
+  //     console.log(i);
+  //     const province = Wards[i] as any;
+  //     // delete item.code;
+  //     delete province.codename;
+  //     delete province.division_type;
+  //     // delete item.name;
+  //     delete province.phone_code;
+  //     province.districts.forEach((district: any) => {
+  //       // delete district.code;
+  //       delete district.codename;
+  //       delete district.division_type;
+  //       // delete district.name;
+  //       delete district.short_codename;
+  //       district.wards.forEach((ward: any) => {
+  //         delete ward.codename;
+  //         delete ward.division_type;
+  //         delete ward.short_codename;
+  //         ward.ward_id = ward.code;
+  //         ward.district_id = district.code;
+  //         ward.province_id = province.code;
+  //         delete ward.code;
+  //       });
+  //       district.province_id = province.code;
+  //       district.district_id = district.code;
+  //       delete district.code;
+  //     });
+  //     delete province.code;
+  //     delete province.name;
+  //     // if (i === 1) break;
+  //     result.push(...province.districts);
+  //     // console.log('p', province.districts);
+  //   }
+  //   console.log('result', result);
+  //   const jsonString = JSON.stringify(result);
+  //   fs.writeFile('./src/mocks/address/wards.json', jsonString, (err: any) => {
+  //     if (err) {
+  //       console.log('Error writing file', err);
+  //     } else {
+  //       console.log('Successfully wrote file');
+  //     }
+  //   });
+  // }
+
   // @get('changeField/{slug}')
   // @response(200, {
   //   description: 'Filter product',
@@ -302,5 +360,4 @@ export class ProductController {
   //   //   },
   //   // );
   //   return 'a';
-  // }
 }

@@ -34,10 +34,6 @@ export enum ProductFields {
   settings: {
     mongodb: {
       collection: 'Products',
-      // indexes: {
-      //   lname: 'text',
-      //   slug: 1,
-      // },
     },
   },
 })
