@@ -1,3 +1,4 @@
+export * from './address.repository';
 export * from './cart.repository';
 export * from './comment.repository';
 export * from './order.repository';

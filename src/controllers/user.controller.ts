@@ -10,8 +10,8 @@ import {
   get,
   HttpErrors,
   param,
-  patch,
   post,
+  put,
   requestBody,
   response,
   SchemaObject,
@@ -272,7 +272,7 @@ export class UserController {
   ): Promise<Partial<User>> {
     const userId = currentUserProfile[securityId];
     const currentUser = await this.userService.findUserById(userId);
-    return pick(currentUser, ['id', 'name', 'email', 'phone', 'roles']);
+    return currentUser;
   }
 
   @intercept(ValidateEmailInterceptor.BINDING_KEY)
@@ -296,7 +296,7 @@ export class UserController {
 
     const urlVerifyEmail = `${process.env.SITE_URL}/api/auth/verify-email?token=${verifyEmailToken}`;
     await this.emailService.sendVerifyEmailRegister(savedUser, urlVerifyEmail);
-    return omit(savedUser, 'password', 'roles');
+    return savedUser;
   }
 
   @post('/auth/refreshToken')
@@ -503,7 +503,7 @@ export class UserController {
   }
 
   @authenticate('jwt')
-  @patch('auth/update-profile')
+  @put('auth/update-profile')
   @response(200, {
     description: 'Update profile user',
     content: {

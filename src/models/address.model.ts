@@ -9,6 +9,7 @@ export enum AddressType {
 @model({
   settings: {
     mongodb: {collection: 'Address'},
+    hiddenProperties: ['userId', 'createdAt'],
   },
 })
 export class Address extends Entity {
@@ -45,10 +46,10 @@ export class Address extends Entity {
   district: string;
 
   @property()
-  cityId: number;
+  provinceId: number;
 
   @property()
-  city: string;
+  province: string;
 
   @property()
   wardId: number;
@@ -72,7 +73,7 @@ export class Address extends Entity {
       enum: Object.values(AddressType),
     },
   })
-  addressType?: string;
+  addressType: string;
 
   @property({
     type: 'date',

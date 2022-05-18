@@ -1,12 +1,31 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+import {authenticate} from '@loopback/authentication';
 import {inject} from '@loopback/core';
-import {get, param, Request, response, RestBindings} from '@loopback/rest';
+import {repository} from '@loopback/repository';
+import {
+  del,
+  get,
+  param,
+  post,
+  put,
+  Request,
+  requestBody,
+  response,
+  RestBindings,
+} from '@loopback/rest';
+import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import omit from 'lodash/omit';
+import {ObjectId} from 'mongodb';
 import Districts from '../mocks/address/districts.json';
 import Provinces from '../mocks/address/provinces.json';
 import Wards from '../mocks/address/wards.json';
-
+import {Address} from '../models';
+import {AddressRepository} from '../repositories';
 export class AddressController {
-  constructor(@inject(RestBindings.Http.REQUEST) private req: Request) {}
+  constructor(
+    @inject(RestBindings.Http.REQUEST) private req: Request,
+    @repository(AddressRepository) public addressRepository: AddressRepository,
+  ) {}
 
   @get('/address/province')
   @response(200, {
@@ -91,5 +110,111 @@ export class AddressController {
   async getWards(@param.query.number('district_id') districtId: number) {
     const result = Wards.find(ward => ward.district_id === districtId);
     return result;
+  }
+
+  @authenticate('jwt')
+  @post('address')
+  @response(200, {
+    description: 'Add new address',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Address,
+        },
+      },
+    },
+  })
+  async saveAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @requestBody()
+    address: Address,
+  ) {
+    const userId = currentUserProfile[securityId];
+    address.userId = userId;
+    const savedAddress = await this.addressRepository.create(address);
+    return savedAddress;
+  }
+
+  @authenticate('jwt')
+  @get('address')
+  @response(200, {
+    description: 'Get address',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Address,
+        },
+      },
+    },
+  })
+  async getAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const address = await this.addressRepository.find({
+      where: {
+        userId,
+      },
+    });
+    return address;
+  }
+
+  @authenticate('jwt')
+  @put('address')
+  @response(200, {
+    description: 'Edit address',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Address,
+        },
+      },
+    },
+  })
+  async editAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @requestBody() updateAddress: Partial<Address>,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const editedAddress = await this.addressRepository.execute(
+      'Address',
+      'findOneAndUpdate',
+      {userId: new ObjectId(userId)},
+      {
+        $set: omit(updateAddress, 'createdAt', 'userId', '_id'),
+      },
+      {
+        returnDocument: 'after',
+      },
+    );
+    return editedAddress.value;
+  }
+
+  @authenticate('jwt')
+  @del('address')
+  @response(200, {
+    description: 'Delete address',
+    content: {
+      'application/json': {
+        schema: {
+          status: 'string',
+        },
+      },
+    },
+  })
+  async deleteAddress(@requestBody() body: {addressId: string}) {
+    try {
+      await this.addressRepository.deleteById(body.addressId);
+    } catch (e) {
+      return {
+        status: 'failure',
+      };
+    }
+    return {
+      status: 'success',
+    };
   }
 }

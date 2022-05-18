@@ -9,6 +9,13 @@ export enum ROLES {
 @model({
   settings: {
     mongodb: {collection: 'Users'},
+    hiddenProperties: [
+      'password',
+      'createdAt',
+      'facebookUserId',
+      'googleUserId',
+      'resetPasswordToken',
+    ],
     // scope: {
     //   where: {isActive: false},
     // },
