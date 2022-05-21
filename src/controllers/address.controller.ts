@@ -162,9 +162,36 @@ export class AddressController {
   }
 
   @authenticate('jwt')
-  @put('address')
+  @get('address/{id}')
   @response(200, {
-    description: 'Edit address',
+    description: 'Get address',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Address,
+        },
+      },
+    },
+  })
+  async getAddressById(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') id: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const address = await this.addressRepository.findOne({
+      where: {
+        id,
+        userId,
+      },
+    });
+    return address;
+  }
+
+  @authenticate('jwt')
+  @put('address/{id}')
+  @response(200, {
+    description: 'Update address',
     content: {
       'application/json': {
         schema: {
@@ -177,20 +204,21 @@ export class AddressController {
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
     @requestBody() updateAddress: Partial<Address>,
+    @param.path.string('id') id: string,
   ) {
     const userId = currentUserProfile[securityId];
     const editedAddress = await this.addressRepository.execute(
       'Address',
       'findOneAndUpdate',
-      {userId: new ObjectId(userId)},
+      {userId: new ObjectId(userId), _id: new ObjectId(id)},
       {
-        $set: omit(updateAddress, 'createdAt', 'userId', '_id'),
+        $set: omit(updateAddress, 'createdAt', 'userId', 'id'),
       },
       {
         returnDocument: 'after',
       },
     );
-    return editedAddress.value;
+    return editedAddress;
   }
 
   @authenticate('jwt')

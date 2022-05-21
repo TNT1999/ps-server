@@ -185,11 +185,14 @@ export class UserController {
     refreshToken?: string | undefined;
     user: object;
   }> {
-    const {email, sub: facebookUserId} = await this.facebookService.getUser(
-      requestBody.code,
-    );
+    const {
+      email,
+      sub: facebookUserId,
+      name,
+    } = await this.facebookService.getUser(requestBody.code);
     const {user, newUser} = await this.userService.loginOrSignupUser({
       email,
+      name,
       facebookUserId,
     } as User);
     const userProfile = this.userService.convertToUserProfile(user);
@@ -234,11 +237,14 @@ export class UserController {
     refreshToken?: string | undefined;
     user: object;
   }> {
-    const {email, sub: googleUserId} = await this.googleService.getUser(
-      requestBody.code,
-    );
+    const {
+      email,
+      name,
+      sub: googleUserId,
+    } = await this.googleService.getUser(requestBody.code);
     const {user, newUser} = await this.userService.loginOrSignupUser({
       email,
+      name,
       googleUserId,
     } as User);
     const userProfile = this.userService.convertToUserProfile(user);
@@ -525,7 +531,7 @@ export class UserController {
       'findOneAndUpdate',
       {_id: new ObjectId(userId)},
       {
-        $set: omit(updateProfile, 'password', 'roles', '_id'),
+        $set: omit(updateProfile, 'password', 'roles', 'id'),
       },
       {
         returnDocument: 'after',
