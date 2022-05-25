@@ -189,6 +189,32 @@ export class AddressController {
   }
 
   @authenticate('jwt')
+  @get('address/default')
+  @response(200, {
+    description: 'Get default address',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Address,
+        },
+      },
+    },
+  })
+  async getDefaultAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const address = await this.addressRepository.findOne({
+      where: {
+        userId,
+        isDefault: true,
+      },
+    });
+    return address;
+  }
+
+  @authenticate('jwt')
   @put('address/{id}')
   @response(200, {
     description: 'Update address',
@@ -207,17 +233,37 @@ export class AddressController {
     @param.path.string('id') id: string,
   ) {
     const userId = currentUserProfile[securityId];
-    const editedAddress = await this.addressRepository.execute(
-      'Address',
-      'findOneAndUpdate',
-      {userId: new ObjectId(userId), _id: new ObjectId(id)},
-      {
-        $set: omit(updateAddress, 'createdAt', 'userId', 'id'),
-      },
-      {
-        returnDocument: 'after',
-      },
+    const isDefault = updateAddress.isDefault;
+    const updateRequest: Promise<unknown>[] = [];
+    if (isDefault) {
+      updateRequest.push(
+        this.addressRepository.execute(
+          'Address',
+          'findOneAndUpdate',
+          {userId: new ObjectId(userId), isDefault: true},
+          {
+            $set: {isDefault: false},
+          },
+          {
+            returnDocument: 'after',
+          },
+        ),
+      );
+    }
+    updateRequest.push(
+      this.addressRepository.execute(
+        'Address',
+        'findOneAndUpdate',
+        {userId: new ObjectId(userId), _id: new ObjectId(id)},
+        {
+          $set: omit(updateAddress, 'createdAt', 'userId', 'id'),
+        },
+        {
+          returnDocument: 'after',
+        },
+      ),
     );
+    const [_, editedAddress] = await Promise.all(updateRequest);
     return editedAddress;
   }
 
