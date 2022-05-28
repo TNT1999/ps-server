@@ -3,7 +3,7 @@ import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {del, get, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
-import pick from 'lodash/pick';
+import omit from 'lodash/omit';
 import {ObjectId} from 'mongodb';
 import {ShoppingCart, ShoppingCartItem} from '../models';
 import {CartRepository, ProductRepository} from '../repositories';
@@ -17,7 +17,7 @@ export class CartController {
   @authenticate('jwt')
   @get('cart')
   @response(200, {
-    description: 'Add to cart',
+    description: 'Get cart',
     content: {
       'application/json': {
         schema: {
@@ -32,9 +32,12 @@ export class CartController {
   ): Promise<Partial<ShoppingCart> | null> {
     const userId = currentUserProfile[securityId];
     const cart = await this.cartRepository.findOne({
-      where: {
-        userId,
-      },
+      where: {userId},
+      include: [
+        {
+          relation: 'shippingAddress',
+        },
+      ],
     });
     if (!cart) {
       await this.cartRepository.create({
@@ -45,8 +48,7 @@ export class CartController {
         items: [],
       };
     }
-
-    return pick(cart, ['items']);
+    return omit(cart, ['userId', 'id']);
   }
 
   @authenticate('jwt')
@@ -231,7 +233,7 @@ export class CartController {
   @authenticate('jwt')
   @patch('cart/updateSelect')
   @response(200, {
-    description: 'Quantity item in cart',
+    description: 'Update select item in cart',
     content: {
       'application/json': {
         schema: {
@@ -287,6 +289,54 @@ export class CartController {
       status: 'success',
       selected: item.selected,
     };
+  }
+
+  @authenticate('jwt')
+  @patch('cart/address')
+  @response(200, {
+    description: 'Change address shipping in cart',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            status: {type: 'string'},
+            shippingAddressId: {type: 'string'},
+          },
+        },
+      },
+    },
+  })
+  async updateShippingAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @requestBody()
+    body: {
+      addressId: string;
+    },
+  ) {
+    const userId = currentUserProfile[securityId];
+    try {
+      await this.cartRepository.execute(
+        'ShoppingCart',
+        'findOneAndUpdate',
+        {userId: new ObjectId(userId)},
+        {
+          $set: {shippingAddressId: body.addressId},
+        },
+        {
+          returnDocument: 'after',
+        },
+      );
+      return {
+        status: 'success',
+        shippingAddressId: body.addressId,
+      };
+    } catch (err) {
+      return {
+        status: 'failure',
+      };
+    }
   }
 
   @authenticate('jwt')

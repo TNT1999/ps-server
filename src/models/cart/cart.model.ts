@@ -1,5 +1,11 @@
 import {belongsTo, Entity, model, property} from '@loopback/repository';
-import {ShoppingCartItem, User, UserWithRelations} from '..';
+import {
+  Address,
+  AddressWithRelations,
+  ShoppingCartItem,
+  User,
+  UserWithRelations,
+} from '..';
 
 @model({
   settings: {
@@ -24,11 +30,15 @@ export class ShoppingCart extends Entity {
    */
   @property.array(() => ShoppingCartItem)
   items?: Partial<ShoppingCartItem>[];
+
+  @belongsTo(() => Address, {name: 'shippingAddress'})
+  shippingAddressId: string;
 }
 
 export interface ShoppingCartRelations {
   // describe navigational properties here
   user?: UserWithRelations;
+  shippingAddress: AddressWithRelations;
 }
 
 export type ShoppingCartWithRelations = ShoppingCart & ShoppingCartRelations;

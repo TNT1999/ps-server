@@ -143,7 +143,10 @@ export class AddressController {
     content: {
       'application/json': {
         schema: {
-          'x-ts-type': Address,
+          type: 'array',
+          items: {
+            'x-ts-type': Address,
+          },
         },
       },
     },
@@ -157,8 +160,9 @@ export class AddressController {
       where: {
         userId,
       },
+      order: ['isDefault DESC'],
     });
-    return address;
+    return address || [];
   }
 
   @authenticate('jwt')

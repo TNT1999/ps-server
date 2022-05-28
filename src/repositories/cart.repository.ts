@@ -4,9 +4,9 @@ import {
   DefaultCrudRepository,
   repository,
 } from '@loopback/repository';
-import {UserRepository} from '.';
+import {AddressRepository, UserRepository} from '.';
 import {MongodbDataSource} from '../datasources';
-import {ShoppingCart, ShoppingCartRelations, User} from '../models';
+import {Address, ShoppingCart, ShoppingCartRelations, User} from '../models';
 
 export class CartRepository extends DefaultCrudRepository<
   ShoppingCart,
@@ -18,12 +18,27 @@ export class CartRepository extends DefaultCrudRepository<
     typeof ShoppingCart.prototype.id
   >;
 
+  public readonly shippingAddress: BelongsToAccessor<
+    Address,
+    typeof ShoppingCart.prototype.id
+  >;
+
   constructor(
     @inject('datasources.mongodb') dataSource: MongodbDataSource,
     @repository.getter('CustomerRepository')
     userRepositoryGetter: Getter<UserRepository>,
+    @repository.getter('AddressRepository')
+    addressRepository: Getter<AddressRepository>,
   ) {
     super(ShoppingCart, dataSource);
     this.user = this.createBelongsToAccessorFor('user', userRepositoryGetter);
+    this.shippingAddress = this.createBelongsToAccessorFor(
+      'shippingAddress',
+      addressRepository,
+    );
+    this.registerInclusionResolver(
+      'shippingAddress',
+      this.shippingAddress.inclusionResolver,
+    );
   }
 }
