@@ -52,7 +52,7 @@ export class Address extends Entity {
   province: string;
 
   @property()
-  wardId: number;
+  wardCode: string;
 
   @property()
   ward: string;

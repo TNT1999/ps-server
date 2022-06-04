@@ -50,6 +50,9 @@ export class Order extends Entity {
   @property()
   totalAmount: number;
 
+  @property()
+  shippingFee: number;
+
   @property({
     type: 'string',
     default: PaymentStatus.PENDING,

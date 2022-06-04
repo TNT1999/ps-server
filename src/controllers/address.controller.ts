@@ -14,11 +14,12 @@ import {
   RestBindings,
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import axios from 'axios';
 import omit from 'lodash/omit';
 import {ObjectId} from 'mongodb';
-import Districts from '../mocks/address/districts.json';
-import Provinces from '../mocks/address/provinces.json';
-import Wards from '../mocks/address/wards.json';
+import Districts from '../mocks/address/ghnDistrict.json';
+import Provinces from '../mocks/address/ghnProvince.json';
+// import Wards from '../mocks/address/wards.json'
 import {Address} from '../models';
 import {AddressRepository} from '../repositories';
 export class AddressController {
@@ -44,6 +45,15 @@ export class AddressController {
   })
   async getProvince() {
     return Provinces;
+    // const province = await axios.get(
+    //   'https://online-gateway.ghn.vn/shiip/public-api/master-data/province',
+    //   {
+    //     headers: {
+    //       token: 'f047137e-df82-11ec-b912-56b1b0c59a25',
+    //     },
+    //   },
+    // );
+    // return province.data.data;
   }
 
   @get('/address/district')
@@ -76,6 +86,16 @@ export class AddressController {
     const result = Districts.find(
       district => district.province_id === provinceId,
     );
+    // const district = await axios.get(
+    //   `https://online-gateway.ghn.vn/shiip/public-api/master-data/district?province_id=${provinceId}`,
+    //   {
+    //     headers: {
+    //       token: 'f047137e-df82-11ec-b912-56b1b0c59a25',
+    //     },
+    //   },
+    // );
+    // return district.data.data;
+
     return result;
   }
 
@@ -108,8 +128,16 @@ export class AddressController {
     },
   })
   async getWards(@param.query.number('district_id') districtId: number) {
-    const result = Wards.find(ward => ward.district_id === districtId);
-    return result;
+    // const result = Wards.find(ward => ward.district_id === districtId);
+    const wards = await axios.get(
+      `https://online-gateway.ghn.vn/shiip/public-api/master-data/ward?district_id=${districtId}`,
+      {
+        headers: {
+          token: 'f047137e-df82-11ec-b912-56b1b0c59a25',
+        },
+      },
+    );
+    return wards.data.data;
   }
 
   @authenticate('jwt')
@@ -128,12 +156,52 @@ export class AddressController {
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
     @requestBody()
-    address: Address,
+    createAddress: Address,
   ) {
     const userId = currentUserProfile[securityId];
-    address.userId = userId;
-    const savedAddress = await this.addressRepository.create(address);
-    return savedAddress;
+    createAddress.userId = userId;
+    const isDefault = createAddress.isDefault;
+    const countAddress = await this.addressRepository.count({
+      userId,
+    });
+    if (countAddress.count === 0) {
+      createAddress.isDefault = true;
+      const result = await this.addressRepository.create(createAddress);
+      return {
+        message: 'success',
+        data: result,
+      };
+    }
+    const createRequest: Promise<unknown>[] = [];
+    if (isDefault) {
+      createRequest.push(
+        this.addressRepository.execute(
+          'Address',
+          'findOneAndUpdate',
+          {userId: new ObjectId(userId), isDefault: true},
+          {
+            $set: {isDefault: false},
+          },
+        ),
+      );
+    }
+    createRequest.push(this.addressRepository.create(createAddress));
+    try {
+      const result = await Promise.all(createRequest);
+      return isDefault
+        ? {
+            message: 'success',
+            data: result[1],
+          }
+        : {
+            message: 'success',
+            data: result[0],
+          };
+    } catch {
+      return {
+        message: 'fail',
+      };
+    }
   }
 
   @authenticate('jwt')
@@ -238,6 +306,16 @@ export class AddressController {
   ) {
     const userId = currentUserProfile[securityId];
     const isDefault = updateAddress.isDefault;
+    const countAddress = await this.addressRepository.count({
+      userId,
+    });
+    if (countAddress.count === 1 && !updateAddress.isDefault) {
+      return {
+        message: 'fail',
+        err: 'at least 1 address default',
+      };
+    }
+
     const updateRequest: Promise<unknown>[] = [];
     if (isDefault) {
       updateRequest.push(
@@ -247,9 +325,6 @@ export class AddressController {
           {userId: new ObjectId(userId), isDefault: true},
           {
             $set: {isDefault: false},
-          },
-          {
-            returnDocument: 'after',
           },
         ),
       );
@@ -267,8 +342,22 @@ export class AddressController {
         },
       ),
     );
-    const [_, editedAddress] = await Promise.all(updateRequest);
-    return editedAddress;
+    try {
+      const result = await Promise.all(updateRequest);
+      return isDefault
+        ? {
+            message: 'success',
+            data: result[1],
+          }
+        : {
+            message: 'success',
+            data: result[0],
+          };
+    } catch {
+      return {
+        message: 'fail',
+      };
+    }
   }
 
   @authenticate('jwt')
@@ -283,7 +372,22 @@ export class AddressController {
       },
     },
   })
-  async deleteAddress(@requestBody() body: {addressId: string}) {
+  async deleteAddress(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @requestBody() body: {addressId: string},
+  ) {
+    const userId = currentUserProfile[securityId];
+    const countAddress = await this.addressRepository.count({
+      userId,
+    });
+    if (countAddress.count === 0) {
+      return {
+        message: 'fail',
+        data: 'at least 1 address or cant delete default address',
+      };
+    }
+
     try {
       await this.addressRepository.deleteById(body.addressId);
     } catch (e) {

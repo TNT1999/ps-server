@@ -1,17 +1,25 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import {authenticate} from '@loopback/authentication';
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
-import {post, requestBody, response} from '@loopback/rest';
+import {get, param, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {Order} from '../models';
 import {OrderRepository} from '../repositories';
-import {ProductService, ProductServiceBindings} from '../services';
+import {
+  ProductService,
+  ProductServiceBindings,
+  ShippingService,
+  ShippingServiceBindings,
+} from '../services';
 
 export class OrderController {
   constructor(
     @repository(OrderRepository) public orderRepository: OrderRepository,
     @inject(ProductServiceBindings.PRODUCT_SERVICE)
     public productService: ProductService,
+    @inject(ShippingServiceBindings.SHIPPING_SERVICE)
+    public shippingService: ShippingService,
   ) {}
 
   @authenticate('jwt')
@@ -32,9 +40,102 @@ export class OrderController {
     @requestBody() order: Order,
   ): Promise<Order> {
     const userId = currentUserProfile[securityId];
-
+    order.userId = userId;
     const savedOrder = await this.orderRepository.create(order);
     // decreate product with option color
     return savedOrder;
+  }
+
+  @authenticate('jwt')
+  @get('orders')
+  @response(200, {
+    description: 'Get order',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: {
+            'x-ts-type': Order,
+          },
+        },
+      },
+    },
+  })
+  async getOrders(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.query.string('status') status: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const orders = await this.orderRepository.find({
+      where: {
+        userId,
+        orderStatus: status,
+      },
+    });
+    return orders;
+  }
+
+  @authenticate('jwt')
+  @post('order/shipping')
+  @response(200, {
+    description: 'Get shipping free',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Order,
+        },
+      },
+    },
+  })
+  async shippingFee(
+    @requestBody()
+    shippingInfo: {
+      storeId: number;
+      to_district: number;
+      to_ward: string;
+    },
+  ) {
+    try {
+      const available_services = await this.shippingService.getService({
+        from_district: 1442, //q1
+        to_district: shippingInfo.to_district,
+      });
+      const promises = available_services.map(service => {
+        const expected_time = this.shippingService.getExpectedTime({
+          from_district_id: 1442, // q1
+          from_ward_code: '20110', // tân định
+          service_id: service.service_id,
+          service_type_id: null,
+          to_district_id: shippingInfo.to_district,
+          to_ward_code: shippingInfo.to_ward,
+        });
+        const shipping_fee = this.shippingService.getShippingFee({
+          from_district_id: 1442, //q1
+          to_district_id: shippingInfo.to_district,
+          to_ward_code: shippingInfo.to_ward,
+          service_id: service.service_id,
+          service_type_id: null,
+          height: 10,
+          length: 20,
+          weight: 500,
+          width: 10,
+          insurance_value: 10000,
+          coupon: null,
+        });
+        return Promise.all([shipping_fee, expected_time, service]);
+      });
+      const result = await Promise.all(promises);
+      const transformResult = result.map(serviceResult => {
+        return {
+          ...serviceResult[0],
+          ...serviceResult[1],
+          ...serviceResult[2],
+        };
+      });
+      return transformResult;
+    } catch (e) {
+      console.log(e);
+    }
   }
 }
