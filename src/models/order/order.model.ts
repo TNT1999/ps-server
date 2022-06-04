@@ -2,11 +2,11 @@ import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {OrderItem, User, UserWithRelations} from '..';
 
 export enum OrderStatus {
-  CANCELED = 'Đã huỷ',
-  UNCONFIRMED = 'Chưa xác nhận',
-  CONFIRMED = 'Đã xác nhận',
+  WAIT_CONFIRMED = 'Chờ xác nhận',
+  PROCESSING = 'Đang xử lý',
   SHIPPING = 'Đang giao hàng',
   SUCCESS = 'Giao hàng thành công',
+  CANCELED = 'Đã huỷ',
 }
 
 export enum PaymentType {
@@ -17,7 +17,7 @@ export enum PaymentType {
 export enum PaymentStatus {
   SUCCESS = 'Thành công',
   FAILURE = 'Thất bại',
-  PENDING = 'Đang xử lý',
+  PROCESSING = 'Đang xử lý',
 }
 @model({
   settings: {
@@ -40,7 +40,7 @@ export class Order extends Entity {
 
   @property({
     type: 'string',
-    default: OrderStatus.UNCONFIRMED,
+    default: OrderStatus.WAIT_CONFIRMED,
     jsonSchema: {
       enum: Object.values(OrderStatus),
     },
@@ -55,7 +55,7 @@ export class Order extends Entity {
 
   @property({
     type: 'string',
-    default: PaymentStatus.PENDING,
+    default: PaymentStatus.PROCESSING,
     jsonSchema: {
       enum: Object.values(PaymentStatus),
     },
