@@ -13,6 +13,7 @@ import {
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import dayjs from 'dayjs';
+import {customAlphabet} from 'nanoid';
 import {PaymentStatus, PaymentType} from '../models';
 import {OrderRepository} from '../repositories';
 
@@ -68,14 +69,22 @@ export class VNPayController {
 
     const createDate = dayjs(date).format('YYYYMMDDHHmmss');
 
+    const nanoid = customAlphabet('0123456789', 10);
+    const orderId = nanoid(12);
+
+    // generate id for order product item
+    body.products.map((product: any) => {
+      product.id = nanoid(8);
+      return product;
+    });
     const order = await this.orderRepository.create({
       // products: body.products,
       ...body,
+      orderId,
       userId: currentUserProfile[securityId],
       paymentType: PaymentType.VNP,
     });
 
-    const orderId = order.id;
     // const bankCode = body.bankCode;
 
     // const orderInfo = body.orderDescription;
@@ -139,7 +148,7 @@ export class VNPayController {
     vnpParams['vnp_TxnRef'] = orderId.toString();
     vnpParams['vnp_OrderInfo'] = 'orderInfo';
     vnpParams['vnp_OrderType'] = 'topup';
-    vnpParams['vnp_Amount'] = body.totalAmount * 100;
+    vnpParams['vnp_Amount'] = body.finalTotal * 100;
     vnpParams['vnp_ReturnUrl'] =
       `${process.env.SITE_URL}/check_out` || 'http://localhost:8080/check_out';
     vnpParams['vnp_IpAddr'] = ipAddr;
@@ -200,10 +209,18 @@ export class VNPayController {
       const rspCode = vnpParams['vnp_ResponseCode'];
       //Kiem tra du lieu co hop le khong, cap nhat trang thai don hang va gui ket qua cho VNPAY theo dinh dang duoi
 
-      await this.orderRepository.updateById(orderId, {
-        paymentStatus: PaymentStatus.SUCCESS,
-      });
-
+      await this.orderRepository.execute(
+        'Order',
+        'findOneAndUpdate',
+        {
+          orderId,
+        },
+        {
+          $set: {
+            paymentStatus: PaymentStatus.SUCCESS,
+          },
+        },
+      );
       return {RspCode: '00', Message: 'success'};
     } else {
       console.log('invalid');

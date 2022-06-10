@@ -4,7 +4,8 @@ import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {get, param, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
-import {Order} from '../models';
+import {customAlphabet} from 'nanoid';
+import {Order, OrderItem} from '../models';
 import {OrderRepository} from '../repositories';
 import {
   ProductService,
@@ -40,8 +41,21 @@ export class OrderController {
     @requestBody() order: Order,
   ): Promise<Order> {
     const userId = currentUserProfile[securityId];
-    order.userId = userId;
-    const savedOrder = await this.orderRepository.create(order);
+
+    const nanoid = customAlphabet('0123456789', 10);
+    const orderId = nanoid(12);
+    // generate id for order product item
+    order.products.map((product: OrderItem) => {
+      product.id = nanoid(8);
+      return product;
+    });
+    const savedOrder = await this.orderRepository.create({
+      // products: body.products,
+      ...order,
+      orderId,
+      userId,
+    });
+    // const savedOrder = await this.orderRepository.create(order);
     // decreate product with option color
     return savedOrder;
   }
@@ -49,7 +63,7 @@ export class OrderController {
   @authenticate('jwt')
   @get('orders')
   @response(200, {
-    description: 'Get order',
+    description: 'Get orders',
     content: {
       'application/json': {
         schema: {
@@ -77,6 +91,36 @@ export class OrderController {
   }
 
   @authenticate('jwt')
+  @get('order/{id}')
+  @response(200, {
+    description: 'Get order',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: {
+            'x-ts-type': Order,
+          },
+        },
+      },
+    },
+  })
+  async getOrder(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const order = await this.orderRepository.findOne({
+      where: {
+        userId,
+        orderId,
+      },
+    });
+    return order;
+  }
+
+  @authenticate('jwt')
   @post('order/shipping')
   @response(200, {
     description: 'Get shipping free',
@@ -98,13 +142,13 @@ export class OrderController {
   ) {
     try {
       const available_services = await this.shippingService.getService({
-        from_district: 1442, //q1
+        from_district: 3695, //thu duc
         to_district: shippingInfo.to_district,
       });
       const promises = available_services.map(service => {
         const expected_time = this.shippingService.getExpectedTime({
-          from_district_id: 1442, // q1
-          from_ward_code: '20110', // tân định
+          from_district_id: 3695, // thu duc
+          from_ward_code: '90765', // an phu
           service_id: service.service_id,
           service_type_id: null,
           to_district_id: shippingInfo.to_district,

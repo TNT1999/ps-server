@@ -5,6 +5,7 @@ import {del, get, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import omit from 'lodash/omit';
 import {ObjectId} from 'mongodb';
+import {nanoid} from 'nanoid';
 import {ShoppingCart, ShoppingCartItem} from '../models';
 import {CartRepository, ProductRepository} from '../repositories';
 
@@ -149,10 +150,12 @@ export class CartController {
         status: 'failure',
       };
     const itemCart: Partial<ShoppingCartItem> = {
+      id: nanoid(8),
       productId: item.productId,
       name: product.name,
       quantity: item.quantity,
       slug: product.slug,
+      discount: product.discount,
       option: optionItemCart,
     };
     console.log(itemCart);

@@ -10,6 +10,7 @@ import {User} from '.';
 @model({
   settings: {
     mongodb: {collection: 'Comments'},
+    hiddenProperties: ['userId', 'deletedAt'],
   },
 })
 export class Comment extends Entity {

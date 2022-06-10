@@ -40,6 +40,8 @@ import {
   ProductServiceBindings,
   RefreshTokenService,
   RefreshTokenServiceConstants,
+  S3Service,
+  S3ServiceBindings,
   ShippingService,
   ShippingServiceBindings,
 } from './services';
@@ -114,12 +116,13 @@ export class PsServerApplication extends BootMixin(
       .toProvider(MyAuthorizationProvider)
       .tag(AuthorizationTags.AUTHORIZER);
 
-    // binding google, facebook and shipping service through @injectable
+    // binding google, facebook, shipping and S3 Storage service through @injectable
     this.bind(GoogleBindings.GOOGLE_SERVICE).toInjectable(GoogleService);
     this.bind(FacebookBindings.FACEBOOK_SERVICE).toInjectable(FacebookService);
     this.bind(ShippingServiceBindings.SHIPPING_SERVICE).toInjectable(
       ShippingService,
     );
+    this.bind(S3ServiceBindings.S3_SERVICE).toInjectable(S3Service);
   }
 
   private setupLogging() {

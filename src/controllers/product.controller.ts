@@ -45,6 +45,17 @@ export class ProductController {
       where: {
         isMainProduct: true,
       },
+      fields: {
+        attrs: false,
+        lname: false,
+        variantsId: false,
+        productFields: false,
+        createdAt: false,
+        colorOptions: false,
+        hasVariants: false,
+        isHot: false,
+        isMainProduct: false,
+      },
     });
     return products;
   }

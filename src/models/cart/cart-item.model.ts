@@ -9,6 +9,9 @@ export class ShoppingCartItem extends Model {
   /**
    * Product id
    */
+  @property()
+  id: string;
+
   @property({
     type: 'string',
   })
@@ -34,6 +37,9 @@ export class ShoppingCartItem extends Model {
     default: false,
   })
   selected: boolean;
+
+  @property()
+  discount: number;
 
   @property({
     type: 'object',

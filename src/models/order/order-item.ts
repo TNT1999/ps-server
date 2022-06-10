@@ -6,19 +6,23 @@ export class OrderItem extends Model {
   constructor(data?: Partial<OrderItem>) {
     super(data);
   }
-  @property({
-    type: 'string',
-  })
+  @property()
   id: string;
 
   @property()
   name: string;
 
   @property()
+  productId: string;
+
+  @property()
   slug: string;
 
   @property()
   quantity: number;
+
+  @property()
+  discount: number;
 
   @property({
     type: 'object',

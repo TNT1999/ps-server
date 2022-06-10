@@ -2,11 +2,11 @@ import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {OrderItem, User, UserWithRelations} from '..';
 
 export enum OrderStatus {
-  WAIT_CONFIRMED = 'Chờ xác nhận',
-  PROCESSING = 'Đang xử lý',
-  SHIPPING = 'Đang giao hàng',
-  SUCCESS = 'Giao hàng thành công',
-  CANCELED = 'Đã huỷ',
+  WAIT_CONFIRMED = 'wait_confirm',
+  PROCESSING = 'processing',
+  SHIPPING = 'shipping',
+  SUCCESS = 'success',
+  CANCELED = 'cancel',
 }
 
 export enum PaymentType {
@@ -15,13 +15,14 @@ export enum PaymentType {
   Paypal = 'paypal',
 }
 export enum PaymentStatus {
-  SUCCESS = 'Thành công',
-  FAILURE = 'Thất bại',
-  PROCESSING = 'Đang xử lý',
+  SUCCESS = 'success',
+  FAILURE = 'failure',
+  PROCESSING = 'processing',
 }
 @model({
   settings: {
     mongodb: {collection: 'Orders'},
+    hiddenProperties: ['userId'],
   },
 })
 export class Order extends Entity {
@@ -38,6 +39,9 @@ export class Order extends Entity {
   @belongsTo(() => User, {name: 'user'})
   userId?: string;
 
+  @property()
+  orderId: string;
+
   @property({
     type: 'string',
     default: OrderStatus.WAIT_CONFIRMED,
@@ -48,10 +52,17 @@ export class Order extends Entity {
   orderStatus?: string;
 
   @property()
-  totalAmount: number;
+  finalTotal: number;
 
-  @property()
-  shippingFee: number;
+  @property({
+    type: 'object',
+  })
+  shippingInfo: object;
+
+  @property({
+    type: 'object',
+  })
+  shippingAddress: object;
 
   @property({
     type: 'string',

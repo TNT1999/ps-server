@@ -1,9 +1,10 @@
 import {belongsTo, Entity, model, property} from '@loopback/repository';
-import {Reviewer, User} from '..';
+import {ReviewContent, Reviewer, User} from '..';
 
 @model({
   settings: {
     mongodb: {collection: 'Reviews'},
+    hiddenProperties: ['userId', 'deletedAt'],
   },
 })
 export class Review extends Entity {
@@ -32,12 +33,9 @@ export class Review extends Entity {
   reviewer: Reviewer;
 
   @property({
-    type: 'string',
-    jsonSchema: {
-      minLength: 30,
-    },
+    type: 'object',
   })
-  content: string;
+  content: ReviewContent;
 
   @property({
     type: 'number',
