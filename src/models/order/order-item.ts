@@ -28,6 +28,12 @@ export class OrderItem extends Model {
     type: 'object',
   })
   option: ColorOptionProduct;
+
+  @property({
+    type: 'boolean',
+    default: false,
+  })
+  reviewed: boolean;
 }
 
 export interface OrderItemRelations {

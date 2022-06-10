@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {authenticate} from '@loopback/authentication';
 import {inject} from '@loopback/core';
@@ -251,12 +248,10 @@ export class ProductController {
     //   return products;
     // }
     const queryMongo = this.productService.filter2mongoQuery(query);
-    // console.dir(JSON.stringify(queryMongo));
     const product = await this.productRepository.execute('Product', 'find', {
       $and: queryMongo,
     });
     const result = await product.toArray();
-    // console.log(result);
     return result;
   }
 

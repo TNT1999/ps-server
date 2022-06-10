@@ -33,7 +33,6 @@ export class ReviewController {
     review.userId = userId;
     review.reviewer.id = userId;
     const savedReview = await this.reviewRepository.create(review);
-    console.log('zo');
     const product = await this.productRepository.findById(review.productId);
     const updatedProduct = await this.productRepository.updateById(
       review.productId,
