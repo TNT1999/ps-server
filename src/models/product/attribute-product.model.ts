@@ -10,6 +10,8 @@ export class AttributeProduct extends Model {
 
   @property()
   value: string;
+
+  [key: string]: unknown;
 }
 
 export interface AttributeProductRelations {

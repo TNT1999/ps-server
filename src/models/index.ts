@@ -1,4 +1,5 @@
 export * from './address.model';
+export * from './brand.model';
 export * from './cart';
 export * from './comment.model';
 export * from './order';

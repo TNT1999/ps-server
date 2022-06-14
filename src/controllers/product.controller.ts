@@ -226,6 +226,22 @@ export class ProductController {
     return result;
   }
 
+  @post('product')
+  @response(200, {
+    description: 'Post product',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async postProduct(@requestBody() product: Product): Promise<Product> {
+    const savedProduct = await this.productRepository.create(product);
+    return savedProduct;
+  }
+
   @get('filterProduct')
   @response(200, {
     description: 'Filter product',

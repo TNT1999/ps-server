@@ -2,10 +2,11 @@
 import {authenticate} from '@loopback/authentication';
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
-import {get, param, post, requestBody, response} from '@loopback/rest';
+import {get, param, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import {ObjectId} from 'mongodb';
 import {customAlphabet} from 'nanoid';
-import {Order, OrderItem} from '../models';
+import {Order, OrderItem, OrderStatus} from '../models';
 import {OrderRepository} from '../repositories';
 import {
   ProductService,
@@ -118,6 +119,140 @@ export class OrderController {
       },
     });
     return order;
+  }
+
+  @authenticate('jwt')
+  @patch('order/success/{id}')
+  @response(200, {
+    description: 'Make order finish delivery',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            status: {
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+  })
+  async finishDelivery(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    try {
+      await this.orderRepository.execute(
+        'Order',
+        'findOneAndUpdate',
+        {userId: new ObjectId(userId), orderId},
+        {
+          $set: {
+            'shippingInfo.deliveredAt': new Date(),
+            orderStatus: OrderStatus.SUCCESS,
+          },
+        },
+      );
+      return {
+        status: 'success',
+      };
+    } catch (e) {
+      return {
+        status: 'failure',
+      };
+    }
+  }
+
+  @authenticate('jwt')
+  @patch('order/shipping/{id}')
+  @response(200, {
+    description: 'Make order shipping delivery',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            status: {
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+  })
+  async startDelivery(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    try {
+      await this.orderRepository.execute(
+        'Order',
+        'findOneAndUpdate',
+        {userId: new ObjectId(userId), orderId},
+        {
+          $set: {
+            'shippingInfo.shippingAt': new Date(),
+            orderStatus: OrderStatus.SHIPPING,
+          },
+        },
+      );
+      return {
+        status: 'success',
+      };
+    } catch (e) {
+      return {
+        status: 'failure',
+      };
+    }
+  }
+
+  @authenticate('jwt')
+  @patch('order/cancel/{id}')
+  @response(200, {
+    description: 'Cancel order',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          properties: {
+            status: {
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+  })
+  async cancelOrder(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    try {
+      await this.orderRepository.execute(
+        'Order',
+        'findOneAndUpdate',
+        {userId: new ObjectId(userId), orderId},
+        {
+          $set: {
+            orderStatus: OrderStatus.CANCELED,
+          },
+        },
+      );
+      return {
+        status: 'success',
+      };
+    } catch (e) {
+      return {
+        status: 'failure',
+      };
+    }
   }
 
   @authenticate('jwt')
