@@ -1,6 +1,10 @@
 import {Model, model, property} from '@loopback/repository';
 
-@model()
+@model({
+  settings: {
+    strict: false,
+  },
+})
 export class AttributeProduct extends Model {
   constructor(data?: Partial<AttributeProduct>) {
     super(data);
@@ -11,7 +15,8 @@ export class AttributeProduct extends Model {
   @property()
   value: string;
 
-  [key: string]: unknown;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [prop: string]: any;
 }
 
 export interface AttributeProductRelations {

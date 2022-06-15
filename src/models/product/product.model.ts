@@ -10,6 +10,7 @@ import {
   ColorOptionProduct,
   Comment,
   CommentWithRelations,
+  ProductFields,
   Review,
   Variant,
   VariantWithRelations,
@@ -21,14 +22,14 @@ enum AttrsProduct {
   BO_NHO = 'Bộ nhớ',
 }
 
-export enum ProductFields {
-  RAM_GB = 'ram_gb',
-  STORAGE_GB = 'storage_gb',
-  STORAGE_TB = 'storage_tb',
-  DISPLAY_SIZE_INCHES = 'display_size_inches',
-  BRAND = 'brand',
-  PRICE = 'price',
-}
+// export enum ProductFields {
+//   RAM_GB = 'ram_gb',
+//   STORAGE_GB = 'storage_gb',
+//   STORAGE_TB = 'storage_tb',
+//   DISPLAY_SIZE_INCHES = 'display_size_inches',
+//   BRAND = 'brand',
+//   PRICE = 'price',
+// }
 
 @model({
   settings: {
@@ -123,8 +124,7 @@ export class Product extends Entity {
   @property({
     type: 'object',
   })
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  productFields: Record<string, any>;
+  productFields: ProductFields;
 
   @property.array(() => ColorOptionProduct)
   colorOptions: ColorOptionProduct[];

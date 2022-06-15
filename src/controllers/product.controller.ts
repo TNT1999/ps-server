@@ -12,6 +12,7 @@ import {
   RestBindings,
 } from '@loopback/rest';
 import axios from 'axios';
+import {ObjectId} from 'mongodb';
 // import d from '../../src/d.json';
 import {Product, ProductWithRelations} from '../models';
 import {ProductRepository} from '../repositories';
@@ -238,6 +239,7 @@ export class ProductController {
     },
   })
   async postProduct(@requestBody() product: Product): Promise<Product> {
+    product.productFields.brand = new ObjectId(product.productFields.brand);
     const savedProduct = await this.productRepository.create(product);
     return savedProduct;
   }
