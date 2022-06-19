@@ -1,5 +1,10 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {authenticate} from '@loopback/authentication';
+import {
+  TokenServiceBindings,
+  UserServiceBindings,
+} from '@loopback/authentication-jwt';
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {
@@ -11,20 +16,33 @@ import {
   response,
   RestBindings,
 } from '@loopback/rest';
-import axios from 'axios';
+import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {ObjectId} from 'mongodb';
 // import d from '../../src/d.json';
-import {Product, ProductWithRelations} from '../models';
-import {ProductRepository} from '../repositories';
-import {ProductService, ProductServiceBindings} from '../services';
+import {
+  Product,
+  ProductWithRelations,
+  RecentProduct,
+  RecentProductItem,
+} from '../models';
+import {ProductRepository, UserRepository} from '../repositories';
+import {RecentProductRepository} from '../repositories/recent-product.repository';
+import {JWTService, ProductService, ProductServiceBindings} from '../services';
+
 const fs = require('fs');
 
 export class ProductController {
   constructor(
     @repository(ProductRepository) public productRepository: ProductRepository,
+    @repository(RecentProductRepository)
+    public recentProductRepository: RecentProductRepository,
     @inject(RestBindings.Http.REQUEST) public request: Request,
     @inject(ProductServiceBindings.PRODUCT_SERVICE)
     public productService: ProductService,
+    @inject(UserServiceBindings.USER_REPOSITORY)
+    public userRepository: UserRepository,
+    @inject(TokenServiceBindings.TOKEN_SERVICE)
+    public jwtService: JWTService,
   ) {}
 
   @get('products')
@@ -55,6 +73,57 @@ export class ProductController {
         isMainProduct: false,
       },
     });
+    return products;
+  }
+
+  @get('allProduct')
+  @response(200, {
+    description: 'Product all for training',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async getAllProducts(): Promise<Product[]> {
+    const p = await this.productRepository.execute('Product', 'aggregate', [
+      {
+        $addFields: {
+          // productId: '$_id',
+          // ram_gb: '$productFields.ram_gb',
+          // brand: '$productFields.brand',
+          // price: '$productFields.price',
+          // display_size_inches: '$productFields.display_size_inches',
+          // storage_gb: '$productFields.storage_gb',
+          // storage_tb: '$productFields.storage_tb',
+        },
+      },
+      {
+        $project: {
+          reviewCount: false,
+          _id: false,
+          thumbnail: false,
+          createdAt: false,
+          slug: false,
+          colorOptions: false,
+          hasVariants: false,
+          isHot: false,
+          isMainProduct: false,
+          lname: false,
+          variantsId: false,
+          'attrs.id': false,
+          'attrs.name': false,
+          ratingValue: false,
+          price: false,
+          discount: false,
+          productFields: false,
+        },
+      },
+    ]);
+
+    const products = await p.toArray();
     return products;
   }
 
@@ -285,87 +354,380 @@ export class ProductController {
     },
   })
   async abc() {
-    const getWard = async (id: string): Promise<any[]> => {
-      const wards = await axios.get(
-        `https://online-gateway.ghn.vn/shiip/public-api/master-data/ward?${id}`,
-        {
-          headers: {
-            token: 'f047137e-df82-11ec-b912-56b1b0c59a25',
-          },
-        },
-      );
-      return wards.data.data;
-    };
+    // const getWard = async (id: string): Promise<any[]> => {
+    //   const wards = await axios.get(
+    //     `https://online-gateway.ghn.vn/shiip/public-api/master-data/ward?${id}`,
+    //     {
+    //       headers: {
+    //         token: 'f047137e-df82-11ec-b912-56b1b0c59a25',
+    //       },
+    //     },
+    //   );
+    //   return wards.data.data;
 
-    // W.forEach((wardFile:any) => {
-    //   wardFile.wards((ward:any) => {
+    const email = [
+      'vuonggia_ngo80@hotmail.com',
+      'thuydung.vuong@gmail.com',
+      'monghoa_mai32@yahoo.com',
+      'ngocquynh76@gmail.com',
+      'diemloc_lam@yahoo.com',
+      'thientheu_lam2@hotmail.com',
+      'hoangkim27@yahoo.com',
+      'vinhquoc.mai@hotmail.com',
+      'khanhtrang_bui90@hotmail.com',
+      'hieukhanh.ha36@hotmail.com',
+      'hongson_vu@hotmail.com',
+      'dangminh55@hotmail.com',
+      'hungcuong46@yahoo.com',
+      'tuanminh_pham@gmail.com',
+      'kiengiang.tang@yahoo.com',
+      'huuhiep.nguyen58@yahoo.com',
+      'mytrang.ly5@hotmail.com',
+      'trangnha.duong@hotmail.com',
+      'myhiep_duong@hotmail.com',
+      'vantien_duong@yahoo.com',
+      // 'thuymy.dao0@gmail.com',
+      // 'minhphuong.phan@gmail.com',
+      // 'thaiduy_tang65@hotmail.com',
+      // 'khuclan.truong@gmail.com',
+      // 'hoangyen.duong@yahoo.com',
+      // 'bichha.le@yahoo.com',
+      // 'quangha65@gmail.com',
+      // 'baoquoc.lam@yahoo.com',
+      // 'hamtho.mai@yahoo.com',
+      // 'minhhung.ly53@hotmail.com',
+      // 'bachdu.tran84@gmail.com',
+      // 'huongtien5@yahoo.com',
+      // 'hanhmy_do@yahoo.com',
+      // 'tonle_vuong7@hotmail.com',
+      // 'chuankhoa41@yahoo.com',
+      // 'hongthuy.doan@gmail.com',
+      // 'minhdanh.tang18@yahoo.com',
+      // 'locuyen_trinh@yahoo.com',
+      // 'maichi.ha75@hotmail.com',
+      // 'vietduong.phung53@yahoo.com',
+      // 'toanthang.trinh82@yahoo.com',
+      // 'thucdoan_truong93@yahoo.com',
+      // 'hami.tang@hotmail.com',
+      // 'thulinh_dinh49@yahoo.com',
+      // 'lapthanh47@hotmail.com',
+      // 'daingoc_tran@yahoo.com',
+      // 'truongnam_ngo@hotmail.com',
+      // 'minhhang10@gmail.com',
+      // 'lamdung73@hotmail.com',
+      // 'baoquyen_ho66@gmail.com',
+      // 'ductri.vu26@gmail.com',
+      // 'thanhnga7@hotmail.com',
+      // 'ngoccuong.ho39@yahoo.com',
+      // 'khuyenhoc71@hotmail.com',
+      // 'vuminh31@yahoo.com',
+      // 'conghau.dao@hotmail.com',
+      // 'minhvu.hoang65@hotmail.com',
+      // 'truongthanh.doan15@gmail.com',
+      // 'buutoai.to@gmail.com',
+      // 'lamtuong0@yahoo.com',
+      // 'khactrong84@yahoo.com',
+      // 'tuongphat.tang@hotmail.com',
+      // 'duyngon.duong70@yahoo.com',
+      // 'vietvo_tang@hotmail.com',
+      // 'mytram.truong64@gmail.com',
+      // 'anhkhoa12@hotmail.com',
+      // 'quyetthang.phan60@yahoo.com',
+      // 'huuminh42@yahoo.com',
+      // 'haison99@gmail.com',
+      // 'myphuong.ho@yahoo.com',
+      // 'vietthong_mai81@hotmail.com',
+      // 'lanngoc29@hotmail.com',
+      // 'thanhyen74@gmail.com',
+      // 'anhquoc.ngo@gmail.com',
+      // 'monglan88@yahoo.com',
+      // 'ducquyen.do75@hotmail.com',
+      // 'hoaiphuong.pham51@hotmail.com',
+      // 'tuankiet20@yahoo.com',
+      // 'kimngan.tang43@yahoo.com',
+      // 'quynhgiao.do@gmail.com',
+      // 'theson34@gmail.com',
+      // 'haiduong10@gmail.com',
+      // 'congthanh.ly71@gmail.com',
+      // 'hoangviet_duong@hotmail.com',
+      // 'kienbinh.trinh@gmail.com',
+      // 'thaonguyen_to@gmail.com',
+      // 'minhthang_do85@gmail.com',
+      // 'huutam_vu@yahoo.com',
+      // 'phuocson.doan46@gmail.com',
+      // 'kimthu_vu39@hotmail.com',
+      // 'dinhloc7@yahoo.com',
+      // 'ngochoan.ngo26@gmail.com',
+      // 'phuongquyen12@hotmail.com',
+      // 'honglam94@yahoo.com',
+      // 'bachvan1@gmail.com',
+      // 'hoami.duong0@hotmail.com',
+      // 'trangnha.phung@hotmail.com',
+      // 'huunam8@yahoo.com',
+      // 'quocbao36@gmail.com',
+      // 'kimxuan_do@gmail.com',
+    ];
 
-    //   })
-    // })
+    const name = [
+      'Phạm Trung Hải',
+      'Phạm Ngọc Khôi',
+      'Phạm Xuân Thiện',
+      'Phạm Nhật Minh',
+      'Phạm Gia Cảnh',
+      'Phạm Việt An',
+      'Phạm Đức Cao',
+      'Phạm Quang Đạt',
+      'Phạm Tường Lĩnh',
+      'Phạm Ðức Hòa',
+      'Phạm Dũng Việt',
+      'Phạm Trí Hào',
+      'Phạm Gia Anh',
+      'Phạm Trường Phúc',
+      'Phạm Phước An',
+      'Phạm Khải Tâm',
+      'Phạm Quang Linh',
+      'Phạm Công Tuấn',
+      'Phạm Thiệu Tước',
+      'Phạm Duy Trác',
+      'Đặng Phương Thảo',
+      'Đặng Huyền Trang',
+      'Đặng Đông Nghi',
+      'Đặng Thanh Hà',
+      'Đặng Tuyết Loan',
+      'Đặng Bích Hằng',
+      'Đặng Quỳnh Chi',
+      'Đặng Kiều Vân Giang',
+      'Đặng Bích Thủy',
+      'Đặng Phương Liên',
+      'Đặng Việt Khuê',
+      'Đặng Kim Đan',
+      'Đặng Bảo Dương',
+      'Đặng Cam Thảo',
+      'Đặng Thi Thi',
+      'Đặng Trang Anh',
+      'Đặng Tú Ly',
+      'Đặng Thảo Quyên',
+      'Đặng Vy Bảo Thoa',
+      'Đặng Thanh Phương',
+      'Nguyễn Bích Hậu',
+      'Nguyễn Anh Ðào',
+      'Nguyễn Thúy Huyền',
+      'Nguyễn Vân Tiên',
+      'Nguyễn Ngọc Uyên',
+      'Nguyễn Bích Thảo',
+      'Nguyễn Như Quỳnh',
+      'Nguyễn Uyên Thư',
+      'Nguyễn Thiên Khánh',
+      'Nguyễn Uyên',
+      'Nguyễn Kiều Hương Giang',
+      'Nguyễn Tố Quyên',
+      'Nguyễn Kiều Dung',
+      'Nguyễn Hạnh',
+      'Nguyễn Ngọc Hạ',
+      'Nguyễn Thúy Ngân',
+      'Nguyễn Xuân Thảo',
+      'Nguyễn Thúy Mai',
+      'Nguyễn Thụy Khanh',
+      'Nguyễn Ngọc Vy',
+      'Trần Khánh Nam',
+      'Trần Tấn Lợi',
+      'Trần Liên Kiệt',
+      'Trần Xuân Nam',
+      'Trần Minh Ðan',
+      'Trần Bảo Nam',
+      'Trần Xuân Huy',
+      'Trần Hùng Cường',
+      'Trần Thanh Hậu',
+      'Trần Ngọc Quang',
+      'Trần Quang Tú',
+      'Trần An Khang',
+      'Trần Phi Cường',
+      'Trần Mạnh Nghiêm',
+      'Trần Gia Huấn',
+      'Trần Chí Bảo',
+      'Trần Phúc Nguyên',
+      'Trần Khôi Vĩ',
+      'Trần Khánh Huy',
+      'Trần Nhật Quang',
+      'Lê Hoàng Hiệp',
+      'Lê Tấn Tài',
+      'Lê Thành Nhân',
+      'Lê Ðức Ân',
+      'Lê Nam Hưng',
+      'Lê Hữu Toàn',
+      'Lê Huy Thông',
+      'Lê Hùng Phương',
+      'Lê Thành Tín',
+      'Lê Bảo Toàn',
+      'Lê Nam Dương',
+      'Lê Quang Đông',
+      'Lê Ðinh Lộc',
+      'Lê Minh Ðức',
+      'Lê Anh Thái',
+      'Lê Việt Long',
+      'Lê Minh Thiện',
+      'Lê Đức Hoà',
+      'Lê Trọng Khánh',
+      'Lê Xuân Ninh',
+    ];
 
-    // const result: any = [];
-    // for (let i = 0; i < D.length; i++) {
-    //   const districtsItem = D[i] as any;
-    //   for (let f = 0; f < districtsItem.districts.length; f++) {
-    //     const districts = districtsItem.districts[f];
-    //     console.log(i, districts.name);
-    //     const item = final.find(
-    //       (i: any) =>
-    //         i.DistrictName.toLowerCase() === districts.name.toLowerCase(),
-    //     );
-    //     if (!item) {
-    //       result.push({
-    //         type: 'err',
-    //         name: districts.name,
-    //       });
-    //       continue;
-    //     }
-    //     districtsItem.province_id = item.ProvinceID;
-    //     districts.province_id = item.ProvinceID;
-    //     districts.district_id = item.DistrictID;
-    //     districts.name = item.DistrictName;
-    //   }
-    // delete item.code;
-    // delete province.codename;
-    // delete province.division_type;
-    // // delete item.name;
-    // delete province.phone_code;
-    // province.districts.forEach((district: any) => {
-    //   // delete district.code;
-    //   delete district.codename;
-    //   delete district.division_type;
-    //   // delete district.name;
-    //   delete district.short_codename;
-    //   district.wards.forEach((ward: any) => {
-    //     delete ward.codename;
-    //     delete ward.division_type;
-    //     delete ward.short_codename;
-    //     ward.ward_id = ward.code;
-    //     ward.district_id = district.code;
-    //     ward.province_id = province.code;
-    //     delete ward.code;
+    // const a = await this.userRepository.createAll(
+    //   email.map((item, index) => ({
+    //     email: item,
+    //     name: name[index],
+    //     password: '123456',
+    //     emailVerified: true,
+    //     isActive: true,
+    //   })),
+    // );
+
+    // return a.map(a => a.id);
+    const uids = [
+      '62acb8c1c2cfdd23dce875aa',
+      '62acb8c1c2cfdd23dce875ab',
+      '62acb8c1c2cfdd23dce875ac',
+      '62acb8c1c2cfdd23dce875ad',
+      '62acb8c1c2cfdd23dce875ae',
+      '62acb8c1c2cfdd23dce875af',
+      '62acb8c1c2cfdd23dce875b0',
+      '62acb8c1c2cfdd23dce875b1',
+      '62acb8c1c2cfdd23dce875b2',
+      '62acb8c1c2cfdd23dce875b3',
+      '62acb8c1c2cfdd23dce875b4',
+      '62acb8c1c2cfdd23dce875b5',
+      '62acb8c1c2cfdd23dce875b6',
+      '62acb8c1c2cfdd23dce875b7',
+      '62acb8c1c2cfdd23dce875b8',
+      '62acb8c1c2cfdd23dce875b9',
+      '62acb8c1c2cfdd23dce875ba',
+      '62acb8c1c2cfdd23dce875bb',
+      '62acb8c1c2cfdd23dce875bc',
+      '62acb8c1c2cfdd23dce875bd',
+    ];
+    const listPro = await this.productRepository.find({});
+
+    const listIdProduct = listPro.map(p => p.id);
+
+    // email.forEach(async i => {
+    //   return this.userRepository.deleteAll({
+    //     email: i,
     //   });
-    //   district.province_id = province.code;
-    //   district.district_id = district.code;
-    //   delete district.code;
     // });
-    // delete province.code;
-    // delete province.name;
-    // // if (i === 1) break;
-    // result.push(...province.districts);
-    // console.log('p', province.districts);
-    // result.push(districtsItem);
-    // }
-    // console.log('result', result);
-    // const jsonString = JSON.stringify(result);
-    // fs.writeFile('./src/d.json', jsonString, (err: any) => {
-    //   if (err) {
-    //     console.log('Error writing file', err);
-    //   } else {
-    //     console.log('Successfully wrote file');
-    //   }
-    // });
+
+    // const list = a.map(r => r.id);
+    // console.log(list);
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+    uids.forEach(async uid => {
+      let a = await this.recentProductRepository.findOne({
+        where: {
+          userId: uid,
+        },
+      });
+      if (!a) {
+        a = await this.recentProductRepository.create({
+          userId: uid,
+          recentProduct: [],
+        });
+      }
+
+      const getRandonNumberFrom0To = (end: number) => {
+        return Math.random() * end;
+      };
+      const length = Math.round(
+        listIdProduct.length - 35 - getRandonNumberFrom0To(3),
+      );
+      console.log(length);
+      const numberProductRecentApplyToUser = new Array(length).fill(0);
+
+      const ListRandomProductId = numberProductRecentApplyToUser.map(() => {
+        const index = Math.floor(getRandonNumberFrom0To(listIdProduct.length));
+        return listIdProduct[index];
+      });
+      const removedDuplicate = [...new Set(ListRandomProductId)];
+      const abc = removedDuplicate.map((i: string) => {
+        return {
+          productId: i,
+          count: Math.ceil(getRandonNumberFrom0To(4)),
+        };
+      });
+      console.log('-----------------------------', abc.length, '\n');
+      a.recentProduct = abc as unknown as RecentProductItem[];
+      await this.recentProductRepository.save(a);
+    });
+
+    // const recentPro = await this.recentProductRepository.findById();
+
+    // return list;
   }
+
+  // W.forEach((wardFile:any) => {
+  //   wardFile.wards((ward:any) => {
+
+  //   })
+  // })
+
+  // const result: any = [];
+  // for (let i = 0; i < D.length; i++) {
+  //   const districtsItem = D[i] as any;
+  //   for (let f = 0; f < districtsItem.districts.length; f++) {
+  //     const districts = districtsItem.districts[f];
+  //     console.log(i, districts.name);
+  //     const item = final.find(
+  //       (i: any) =>
+  //         i.DistrictName.toLowerCase() === districts.name.toLowerCase(),
+  //     );
+  //     if (!item) {
+  //       result.push({
+  //         type: 'err',
+  //         name: districts.name,
+  //       });
+  //       continue;
+  //     }
+  //     districtsItem.province_id = item.ProvinceID;
+  //     districts.province_id = item.ProvinceID;
+  //     districts.district_id = item.DistrictID;
+  //     districts.name = item.DistrictName;
+  //   }
+  // delete item.code;
+  // delete province.codename;
+  // delete province.division_type;
+  // // delete item.name;
+  // delete province.phone_code;
+  // province.districts.forEach((district: any) => {
+  //   // delete district.code;
+  //   delete district.codename;
+  //   delete district.division_type;
+  //   // delete district.name;
+  //   delete district.short_codename;
+  //   district.wards.forEach((ward: any) => {
+  //     delete ward.codename;
+  //     delete ward.division_type;
+  //     delete ward.short_codename;
+  //     ward.ward_id = ward.code;
+  //     ward.district_id = district.code;
+  //     ward.province_id = province.code;
+  //     delete ward.code;
+  //   });
+  //   district.province_id = province.code;
+  //   district.district_id = district.code;
+  //   delete district.code;
+  // });
+  // delete province.code;
+  // delete province.name;
+  // // if (i === 1) break;
+  // result.push(...province.districts);
+  // console.log('p', province.districts);
+  // result.push(districtsItem);
+  // }
+  // console.log('result', result);
+  // const jsonString = JSON.stringify(result);
+  // fs.writeFile('./src/d.json', jsonString, (err: any) => {
+  //   if (err) {
+  //     console.log('Error writing file', err);
+  //   } else {
+  //     console.log('Successfully wrote file');
+  //   }
+  // });
 
   // @get('changeField/{slug}')
   // @response(200, {
@@ -427,4 +789,129 @@ export class ProductController {
   //   //   },
   //   // );
   //   return 'a';
+
+  @authenticate('jwt')
+  @get('{pid}/viewed')
+  @response(200, {
+    description: 'Track product recent of User',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': RecentProduct,
+        },
+      },
+    },
+  })
+  async trackRecent(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('pid') pid: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+
+    let productRecent = await this.recentProductRepository.findOne({
+      where: {
+        userId,
+      },
+    });
+
+    if (!productRecent) {
+      const productRecentCreate = await this.recentProductRepository.create({
+        userId,
+        recentProduct: [],
+      });
+      // return;
+      productRecent = productRecentCreate;
+    }
+    if (!productRecent.recentProduct) {
+      productRecent.recentProduct = [];
+    }
+
+    const index = productRecent.recentProduct.findIndex(
+      productItem => productItem.productId === pid,
+    );
+    if (index === -1) {
+      productRecent.recentProduct.unshift({
+        productId: pid,
+        count: 1,
+      } as RecentProductItem);
+    } else {
+      productRecent.recentProduct[index].count += 1;
+    }
+    productRecent.recentProduct = productRecent.recentProduct.slice(0, 20);
+    await this.recentProductRepository.update(productRecent);
+    // const a = await this.recentProductRepository.create({
+    //   userId,
+    //   recentProduct: [body],
+    // });
+    // return a;
+    //   try {
+    //     await this.recentProductRepository.execute('RecentProduct', 'aggregate', [
+    //       {
+    //         userId,
+    //       },
+    //       {
+    //         $set: {
+    //           recentProduct: {
+    //             $cond: [
+    //               {$in: [productId, '$recentProduct.productId']},
+    //               {
+    //                 $map: {
+    //                   input: '$recentProduct',
+    //                   in: {
+    //                     $cond: [
+    //                       {
+    //                         $eq: ['$$this.productId', productId],
+    //                       },
+    //                       {
+    //                         productId: '$$this.productId',
+    //                         timeSpend: timeSpend,
+    //                       },
+    //                       '$$this',
+    //                     ],
+    //                   },
+    //                 },
+    //               },
+    //               {
+    //                 $concatArrays: ['$stock', [body]],
+    //               },
+    //             ],
+    //           },
+    //         },
+    //       },
+    //     ]);
+    //   } catch (e) {
+    //     console.log(e);
+    //   }
+  }
+
+  @get('allView')
+  @response(200, {
+    description: 'Get All View product recent of User',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async AllViewRecent() {
+    // currentUserProfile: UserProfile, // @inject(SecurityBindings.USER)
+    const allRecent = await this.recentProductRepository.find({});
+    const result: any[] = [];
+
+    allRecent.forEach(recentByUser => {
+      recentByUser.recentProduct?.forEach(pro =>
+        result.push({
+          userId: recentByUser.userId,
+          productId: pro.productId,
+          count: pro.count,
+        }),
+      );
+    });
+
+    return result;
+  }
+  // const userId = currentUserProfile[securityId];
 }

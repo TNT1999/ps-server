@@ -25,8 +25,8 @@ export class FileController {
       },
     },
   })
-  async getPresignedUrl() // @requestBody() file: {fileName: string; prefix: string},
-  {
+  async getPresignedUrl() {
+    // @requestBody() file: {fileName: string; prefix: string},
     const result = await this.S3Service.buildPresignedUrl();
     return result;
   }

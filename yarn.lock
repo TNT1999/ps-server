@@ -1709,6 +1709,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cookie-parser@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/cookie-parser/-/cookie-parser-1.4.3.tgz#3a01df117c5705cf89a84c876b50c5a1fd427a21"
+  integrity sha512-CqSKwFwefj4PzZ5n/iwad/bow2hTCh0FlNAeWLtQM3JA/NX/iYagIpWG2cf1bQKQ2c9gU2log5VUCrn7LDOs0w==
+  dependencies:
+    "@types/express" "*"
+
 "@types/cookiejar@*":
   version "2.1.2"
   resolved "https://registry.npmjs.org/@types/cookiejar/-/cookiejar-2.1.2.tgz"
@@ -1740,7 +1747,7 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.16.0", "@types/express@^4.17.13":
+"@types/express@*", "@types/express@^4.16.0", "@types/express@^4.17.13":
   version "4.17.13"
   resolved "https://registry.npmjs.org/@types/express/-/express-4.17.13.tgz"
   integrity sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==
@@ -2656,6 +2663,14 @@ convert-string@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/convert-string/-/convert-string-0.1.0.tgz#79ce41a9bb0d03bcf72cdc6a8f3c56fbbc64410a"
   integrity sha1-ec5BqbsNA7z3LNxqjzxW+7xkQQo=
+
+cookie-parser@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/cookie-parser/-/cookie-parser-1.4.6.tgz#3ac3a7d35a7a03bbc7e365073a26074824214594"
+  integrity sha512-z3IzaNjdwUC2olLIB5/ITd0/setiaFMLYiZJle7xg5Fe9KWAceil7xszYfHHBtDFYLSgJduS2Ty0P1uJdPDJeA==
+  dependencies:
+    cookie "0.4.1"
+    cookie-signature "1.0.6"
 
 cookie-signature@1.0.6:
   version "1.0.6"
