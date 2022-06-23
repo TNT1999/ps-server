@@ -83,6 +83,12 @@ export class Comment extends Entity {
   })
   rootCommentId?: string;
 
+  @property({
+    type: 'boolean',
+    default: false,
+  })
+  isAdmin?: boolean;
+
   @hasMany(() => Comment, {keyTo: 'rootCommentId', name: 'replies'})
   replies?: Comment[];
 }

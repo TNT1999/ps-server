@@ -29,7 +29,9 @@ export class CommentController {
     @requestBody() comment: Partial<Comment>,
   ): Promise<Comment> {
     const userId = currentUserProfile[securityId];
+    const isAdmin = currentUserProfile.roles.includes('admin');
     comment.userId = userId;
+    comment.isAdmin = isAdmin;
     const savedComment = await this.commentRepository.create(comment);
     return savedComment;
   }

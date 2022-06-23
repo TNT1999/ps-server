@@ -5,7 +5,8 @@ import {
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
 import {authorize} from '@loopback/authorization';
-import {inject, intercept} from '@loopback/core';
+import {inject} from '@loopback/core';
+import {FilterBuilder} from '@loopback/repository';
 import {
   get,
   HttpErrors,
@@ -21,7 +22,6 @@ import {compare, genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
 import {ObjectId} from 'mongodb';
-import {ValidateEmailInterceptor} from '../interceptors';
 import {Order, ROLES, User} from '../models';
 import {UserRepository} from '../repositories';
 import {
@@ -281,7 +281,7 @@ export class UserController {
     return currentUser;
   }
 
-  @intercept(ValidateEmailInterceptor.BINDING_KEY)
+  // @intercept(ValidateEmailInterceptor.BINDING_KEY)
   @post('/auth/register')
   @response(200, {
     description: 'Register new user',
@@ -300,7 +300,7 @@ export class UserController {
     const verifyEmailToken =
       await this.jwtService.generateVerificationEmailToken(savedUser.id);
 
-    const urlVerifyEmail = `${process.env.SITE_URL}/api/auth/verify-email?token=${verifyEmailToken}`;
+    const urlVerifyEmail = `${process.env.SITE_URL}/verify-email?token=${verifyEmailToken}`;
     await this.emailService.sendVerifyEmailRegister(savedUser, urlVerifyEmail);
     return savedUser;
   }
@@ -585,5 +585,38 @@ export class UserController {
       .orders(currentUserProfile[securityId])
       .create(order);
     return savedOrder;
+  }
+
+  // @authenticate('jwt')
+  @get('/users')
+  @response(200, {
+    description: 'Get all user for dashboard',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: User,
+        },
+      },
+    },
+  })
+  async getUser(
+    // @inject(SecurityBindings.USER)
+    // currentUserProfile: UserProfile,
+    @param.query.number('page') page: number,
+  ): Promise<User[]> {
+    if (page <= 0) {
+      return [];
+    }
+    const filterBuilder = new FilterBuilder<User>();
+    const reviewPerPage = 10;
+    const filter = filterBuilder
+      .limit(reviewPerPage)
+      .offset((page - 1) * reviewPerPage)
+      .order('createdAt DESC')
+      .build();
+
+    const users = await this.userRepository.find(filter);
+    return users;
   }
 }

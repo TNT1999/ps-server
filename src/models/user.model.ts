@@ -11,7 +11,7 @@ export enum ROLES {
     mongodb: {collection: 'Users'},
     hiddenProperties: [
       'password',
-      'createdAt',
+      // 'createdAt',
       'facebookUserId',
       'googleUserId',
       'resetPasswordToken',

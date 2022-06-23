@@ -102,13 +102,19 @@ export class ProductService {
         //có trên 256gb
         if (filter.storage.length === 1) {
           // chỉ có trên 256gb
-          findBy.push({'productFields.storage_gb': {$gt: 256}});
+          findBy.push({
+            $or: [
+              {'productFields.storage_gb': {$gt: 256}},
+              {'productFields.storage_tb': {$gte: 1}},
+            ],
+          });
         } else {
           // trên 256gb và option
           findBy.push({
             $or: [
               {'productFields.storage_gb': {$gt: 256}},
               {'productFields.storage_gb': {$in: filter.storage.map(Number)}},
+              {'productFields.storage_tb': {$gte: 1}},
             ],
           });
         }

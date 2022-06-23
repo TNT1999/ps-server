@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import {authenticate} from '@loopback/authentication';
+import {authorize} from '@loopback/authorization';
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {get, param, patch, post, requestBody, response} from '@loopback/rest';
@@ -120,8 +121,8 @@ export class OrderController {
     });
     return order;
   }
-
   @authenticate('jwt')
+  @authorize({allowedRoles: ['admin']})
   @patch('order/success/{id}')
   @response(200, {
     description: 'Make order finish delivery',
@@ -143,12 +144,12 @@ export class OrderController {
     currentUserProfile: UserProfile,
     @param.path.string('id') orderId: string,
   ) {
-    const userId = currentUserProfile[securityId];
+    // const userId = currentUserProfile[securityId];
     try {
       await this.orderRepository.execute(
         'Order',
         'findOneAndUpdate',
-        {userId: new ObjectId(userId), orderId},
+        {orderId},
         {
           $set: {
             'shippingInfo.deliveredAt': new Date(),

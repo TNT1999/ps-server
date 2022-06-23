@@ -6,17 +6,20 @@ import {
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
 import {inject} from '@loopback/core';
-import {repository} from '@loopback/repository';
+import {FilterBuilder, repository} from '@loopback/repository';
 import {
+  del,
   get,
   param,
   post,
+  put,
   Request,
   requestBody,
   response,
   RestBindings,
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import {isNil, omitBy} from 'lodash';
 import {ObjectId} from 'mongodb';
 // import d from '../../src/d.json';
 import {
@@ -25,7 +28,11 @@ import {
   RecentProduct,
   RecentProductItem,
 } from '../models';
-import {ProductRepository, UserRepository} from '../repositories';
+import {
+  ProductRepository,
+  ReviewRepository,
+  UserRepository,
+} from '../repositories';
 import {RecentProductRepository} from '../repositories/recent-product.repository';
 import {JWTService, ProductService, ProductServiceBindings} from '../services';
 
@@ -34,6 +41,7 @@ const fs = require('fs');
 export class ProductController {
   constructor(
     @repository(ProductRepository) public productRepository: ProductRepository,
+    @repository(ReviewRepository) public reviewRepository: ReviewRepository,
     @repository(RecentProductRepository)
     public recentProductRepository: RecentProductRepository,
     @inject(RestBindings.Http.REQUEST) public request: Request,
@@ -60,6 +68,7 @@ export class ProductController {
     const products = await this.productRepository.find({
       where: {
         isMainProduct: true,
+        // isHot: true,
       },
       fields: {
         attrs: false,
@@ -194,43 +203,79 @@ export class ProductController {
       },
     },
   })
-  async getProduct(
-    @param.path.string('slug') slug: string,
-  ): Promise<ProductWithRelations | null> {
-    const product = await this.productRepository.findOne({
-      where: {slug},
-      include: [
-        {
-          relation: 'variants',
-        },
-        {
-          relation: 'comments',
-          scope: {
-            where: {
-              level: 0,
+  async getProduct(@param.path.string('slug') slug: string): Promise<any> {
+    const filterBuilder = new FilterBuilder<Product>();
+
+    filterBuilder
+      .where({slug})
+      .include('variants')
+      .include({
+        relation: 'comments',
+        scope: {
+          where: {
+            level: 0,
+          },
+          skip: 0,
+          limit: 20,
+          order: ['createdAt DESC'],
+          include: [
+            {
+              relation: 'replies',
+              scope: {
+                order: ['createdAt ASC'],
+              },
             },
-            skip: 0,
-            limit: 20,
-            // fields: {
-            //   rootCommentId: false,
-            //   replyToCommentId: false,
-            //   replyToUser: false,
-            //   deletedAt: false,
-            // },
-            order: ['createdAt DESC'],
-            // totalLimit: 1,
-            include: [{relation: 'replies', scope: {order: ['createdAt ASC']}}],
+          ],
+        },
+      })
+      .include({
+        relation: 'reviews',
+        scope: {
+          skip: 0,
+          limit: 5,
+          order: ['createdAt DESC'],
+        },
+      })
+      .build();
+
+    const product: any = await this.productRepository.findOne(
+      filterBuilder.filter,
+    );
+
+    const reviews = await this.reviewRepository.execute('Review', 'aggregate', [
+      {
+        $match: {
+          productId: new ObjectId(product?.id),
+        },
+      },
+      {
+        $group: {
+          _id: '$reviewValue',
+          // count: {$sum: 1},
+          count: {
+            $count: {},
           },
         },
-        {
-          relation: 'reviews',
-          scope: {
-            order: ['createdAt DESC'],
-          },
-        },
-      ],
-    });
-    return product;
+      },
+      // {
+      //   $group: {
+      //     _id: 'null',
+      //     ratingByStar: {
+      //       $push: {
+      //         star: '$_id',
+      //         count: '$count',
+      //       },
+      //     },
+      //     // totalReview: {$sum: '$count'},
+      //   },
+      // },
+      {$project: {star: '$_id', _id: 0, count: 1}},
+    ]);
+
+    const ratingByStar = await reviews.toArray();
+
+    const newProduct = Object.assign({}, {ratingByStar}, product);
+    return newProduct;
   }
 
   @get('product')
@@ -897,7 +942,6 @@ export class ProductController {
     },
   })
   async AllViewRecent() {
-    // currentUserProfile: UserProfile, // @inject(SecurityBindings.USER)
     const allRecent = await this.recentProductRepository.find({});
     const result: any[] = [];
 
@@ -913,5 +957,198 @@ export class ProductController {
 
     return result;
   }
-  // const userId = currentUserProfile[securityId];
+
+  @get('{pid}/calc/review')
+  @response(200, {
+    description: 'Get All View product recent of User',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async calcCountAndAvgReview(@param.path.string('pid') pid: string) {
+    const result = await this.reviewRepository.execute('Review', 'aggregate', [
+      {
+        $match: {productId: new ObjectId(pid)},
+      },
+      {
+        $group: {
+          _id: null,
+          count: {$sum: 1},
+          avg: {$avg: '$reviewValue'},
+        },
+      },
+    ]);
+
+    const [{count, avg}] = await result.toArray();
+
+    await this.productRepository.updateById(pid, {
+      ratingValue: avg,
+      reviewCount: count,
+    });
+    return 'ok';
+  }
+
+  @put('product')
+  @response(200, {
+    description: 'Update product for Admin',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async updateProduct(@requestBody() updateProduct: Product) {
+    try {
+      // const result = await this.productRepository.execute(
+      //   'Product',
+      //   'findOneAndUpdate',
+      //   {
+      //     id: new ObjectId(updateProduct.id),
+      //   },
+      //   {
+      //     $set: {
+      //       updateProduct,
+      //     },
+      //   },
+      //   {
+      //     returnDocument: 'after',
+      //   },
+      // );
+      const result = await this.productRepository.updateById(
+        updateProduct.id,
+        updateProduct,
+      );
+      return result;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  @get('origin/product/{slug}')
+  @response(200, {
+    description: 'Get origin product for admin',
+    content: {
+      'application/json': {
+        schema: {
+          'x-ts-type': Product,
+        },
+      },
+    },
+  })
+  async getOriginProduct(@param.path.string('slug') slug: string) {
+    const result = await this.productRepository.findOne({
+      where: {slug},
+      fields: {
+        updatedAt: false,
+        ratingValue: false,
+        reviewCount: false,
+      },
+    });
+    return omitBy(result, isNil);
+  }
+
+  @get('origin/products')
+  @response(200, {
+    description: 'Get origin product for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: Product,
+        },
+      },
+    },
+  })
+  async getOriginProducts(@param.query.number('page') page: number) {
+    if (page <= 0) {
+      return [];
+    }
+    const filterBuilder = new FilterBuilder<Product>();
+    const reviewPerPage = 10;
+    const filter = filterBuilder
+      .where({})
+      // .limit(reviewPerPage)
+      // .offset((page - 1) * reviewPerPage)
+      .order('createdAt DESC')
+      .fields({
+        attrs: false,
+        lname: false,
+        // updatedAt: false
+        // productFields: false,
+      })
+      .build();
+    const result: any[] = await this.productRepository.find(filter);
+    return result;
+  }
+
+  @del('product/{pid}')
+  @response(200, {
+    description: 'Delete product for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: Product,
+        },
+      },
+    },
+  })
+  async deleteProduct(@param.path.string('pid') pid: string) {
+    const result = await this.productRepository.deleteById(pid);
+    return result;
+  }
+
+  @get('xyz')
+  @response(200, {
+    description: 'Delete product for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: Product,
+        },
+      },
+    },
+  })
+  async a() {
+    const result = await this.productRepository.find({});
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+    result.forEach(async product => {
+      const a = [
+        'Hãng sản xuất',
+        'Dung lượng RAM',
+        'Bộ nhớ trong',
+        'Kích thước màn hình',
+      ];
+      product.attrs?.map(attr => {
+        if (a.includes(attr.name)) {
+          attr.canDelete = false;
+          attr.canEditName = false;
+        }
+        if (attr.name === 'Hãng sản xuất') {
+          attr.productFields = 'brand';
+          attr.type = 'select';
+        }
+        if (attr.name === 'Dung lượng RAM') {
+          attr.productFields = 'ram_gb';
+        }
+        if (attr.name === 'Kích thước màn hình') {
+          attr.productFields = 'display_size_inches';
+        }
+        if (attr.name === 'Bộ nhớ trong') {
+          attr.productFields = 'storage_gb';
+        }
+        return attr;
+      });
+
+      await this.productRepository.update(product);
+    });
+    return result;
+  }
 }
