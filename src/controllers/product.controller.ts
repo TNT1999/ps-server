@@ -1073,8 +1073,8 @@ export class ProductController {
     const reviewPerPage = 10;
     const filter = filterBuilder
       .where({})
-      // .limit(reviewPerPage)
-      // .offset((page - 1) * reviewPerPage)
+      .limit(reviewPerPage)
+      .offset((page - 1) * reviewPerPage)
       .order('createdAt DESC')
       .fields({
         attrs: false,

@@ -2,7 +2,7 @@
 import {authenticate} from '@loopback/authentication';
 import {authorize} from '@loopback/authorization';
 import {inject} from '@loopback/core';
-import {repository} from '@loopback/repository';
+import {FilterBuilder, repository} from '@loopback/repository';
 import {get, param, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {ObjectId} from 'mongodb';
@@ -65,7 +65,7 @@ export class OrderController {
   @authenticate('jwt')
   @get('orders')
   @response(200, {
-    description: 'Get orders',
+    description: 'Get orders for users',
     content: {
       'application/json': {
         schema: {
@@ -90,6 +90,45 @@ export class OrderController {
       },
     });
     return orders;
+  }
+
+  @authenticate('jwt')
+  @get('origin/orders')
+  @response(200, {
+    description: 'Get orders for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: {
+            'x-ts-type': Order,
+          },
+        },
+      },
+    },
+  })
+  async getAllOrders(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.query.number('page') page: number,
+  ) {
+    if (page <= 0) {
+      return [];
+    }
+    const filterBuilder = new FilterBuilder<Order>();
+    const OrderPerPage = 10;
+    const filter = filterBuilder
+      .where({})
+      .limit(OrderPerPage)
+      .offset((page - 1) * OrderPerPage)
+      .order('createdAt DESC')
+      .fields({
+        shippingAddress: false,
+        shippingInfo: false,
+      })
+      .build();
+    const result: Order[] = await this.orderRepository.find(filter);
+    return result;
   }
 
   @authenticate('jwt')

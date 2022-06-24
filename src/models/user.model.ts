@@ -88,6 +88,11 @@ export class User extends Entity {
   isActive?: boolean;
 
   @property({
+    type: 'string',
+  })
+  avatar?: string;
+
+  @property({
     type: 'date',
     defaultFn: 'now',
   })
