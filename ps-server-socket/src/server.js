@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 const cors = require('cors');
 const socketIO = require('socket.io');
 const http = require('http');
@@ -53,7 +53,7 @@ io.on('connection', socket => {
   // });
 });
 
-const PORT = 8081;
+const PORT = 3000;
 app.use(cors());
 app.listen(PORT, () => {
   console.log('Socket runing in port: ' + PORT);
