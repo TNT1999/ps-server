@@ -111,6 +111,7 @@ export class OrderController {
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
     @param.query.number('page') page: number,
+    @param.query.string('status') status: string,
   ) {
     if (page <= 0) {
       return [];
@@ -118,7 +119,9 @@ export class OrderController {
     const filterBuilder = new FilterBuilder<Order>();
     const OrderPerPage = 10;
     const filter = filterBuilder
-      .where({})
+      .where({
+        orderStatus: status,
+      })
       .limit(OrderPerPage)
       .offset((page - 1) * OrderPerPage)
       .order('createdAt DESC')
@@ -129,6 +132,34 @@ export class OrderController {
       .build();
     const result: Order[] = await this.orderRepository.find(filter);
     return result;
+  }
+
+  @authenticate('jwt')
+  @get('origin/order/{id}')
+  @response(200, {
+    description: 'Get detail order for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: {
+            'x-ts-type': Order,
+          },
+        },
+      },
+    },
+  })
+  async getDetailOrder(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+  ) {
+    const order = await this.orderRepository.findOne({
+      where: {
+        orderId,
+      },
+    });
+    return order;
   }
 
   @authenticate('jwt')
@@ -160,6 +191,7 @@ export class OrderController {
     });
     return order;
   }
+
   @authenticate('jwt')
   @authorize({allowedRoles: ['admin']})
   @patch('order/success/{id}')
@@ -207,6 +239,7 @@ export class OrderController {
   }
 
   @authenticate('jwt')
+  @authorize({allowedRoles: ['admin']})
   @patch('order/shipping/{id}')
   @response(200, {
     description: 'Make order shipping delivery',

@@ -22,7 +22,7 @@ export enum PaymentStatus {
 @model({
   settings: {
     mongodb: {collection: 'Orders'},
-    hiddenProperties: ['userId'],
+    // hiddenProperties: ['userId'],
   },
 })
 export class Order extends Entity {

@@ -588,7 +588,7 @@ export class UserController {
   }
 
   // @authenticate('jwt')
-  @get('/users')
+  @get('/origin/users')
   @response(200, {
     description: 'Get all user for dashboard',
     content: {
@@ -600,7 +600,7 @@ export class UserController {
       },
     },
   })
-  async getUser(
+  async getUsers(
     // @inject(SecurityBindings.USER)
     // currentUserProfile: UserProfile,
     @param.query.number('page') page: number,
@@ -618,5 +618,26 @@ export class UserController {
 
     const users = await this.userRepository.find(filter);
     return users;
+  }
+
+  @get('/origin/user/{id}')
+  @response(200, {
+    description: 'Get all user for dashboard',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: User,
+        },
+      },
+    },
+  })
+  async getUser(
+    // @inject(SecurityBindings.USER)
+    // currentUserProfile: UserProfile,
+    @param.path.string('id') uid: string,
+  ): Promise<User> {
+    const user = await this.userRepository.findById(uid);
+    return user;
   }
 }

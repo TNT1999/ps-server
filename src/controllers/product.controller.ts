@@ -1083,8 +1083,16 @@ export class ProductController {
         // productFields: false,
       })
       .build();
-    const result: any[] = await this.productRepository.find(filter);
-    return result;
+    const [products, countProduct] = await Promise.all([
+      this.productRepository.find(filter),
+      this.productRepository.count({}),
+    ]);
+    // const result: any[] = await
+    // const countProduct = await
+    return {
+      products,
+      totalProduct: countProduct.count,
+    };
   }
 
   @del('product/{pid}')
