@@ -19,12 +19,3 @@ services:
       - '80:8000'
     depends_on:
       - my-redis
-
-  my-socket:
-    container_name: socket-container
-    build:
-      context: ./ps-server-socket
-      dockerfile: Dockerfile
-    restart: on-failure:5
-    ports:
-      - '3000:3000'

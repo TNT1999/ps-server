@@ -1159,4 +1159,43 @@ export class ProductController {
     });
     return result;
   }
+
+  @get('train-content-base')
+  @response(200, {
+    description: 'Train product for admin',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: Product,
+        },
+      },
+    },
+  })
+  async trainContentBase() {
+    try {
+      // const products = await Product.find({}, {_id: 1});
+      const spawn = require('child_process').spawn;
+      const process = spawn('python', ['./train/content-base.py']);
+      process.stdout.on('data', async (data: any) => {
+        console.log(data);
+        // Convert string to JSON
+        // const _data = JSON.stringify(data.toString());
+        // const result = JSON.parse(JSON.parse(_data));
+        // const recommendFound = await Relate.findOne({
+        //   product: products[i]._id,
+        // });
+        // if (recommendFound) {
+        //   recommendFound.recommend = result.data;
+        //   await recommendFound.save();
+        // } else {
+        //   const relate = new Relate();
+        //   (relate.product = products[i]._id), (relate.recommend = result.data);
+        //   await relate.save();
+        // }
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
 }

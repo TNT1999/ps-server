@@ -5,10 +5,3 @@ services:
     image: 'redis:alpine'
     ports:
       - '6379:6379'
-  my-socket:
-    container_name: socket-container
-    build:
-      context: ./ps-server-socket
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
