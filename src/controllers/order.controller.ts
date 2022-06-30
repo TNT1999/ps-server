@@ -5,7 +5,7 @@ import {inject} from '@loopback/core';
 import {FilterBuilder, repository} from '@loopback/repository';
 import {get, param, patch, post, requestBody, response} from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
-import {ObjectId} from 'mongodb';
+import {isArray} from 'lodash';
 import {customAlphabet} from 'nanoid';
 import {Order, OrderItem, OrderStatus} from '../models';
 import {OrderRepository} from '../repositories';
@@ -27,16 +27,16 @@ export class OrderController {
 
   @authenticate('jwt')
   @post('order')
-  @response(200, {
-    description: 'Post order',
-    content: {
-      'application/json': {
-        schema: {
-          'x-ts-type': Order,
-        },
-      },
-    },
-  })
+  // @response(200, {
+  //   description: 'Post order',
+  //   content: {
+  //     'application/json': {
+  //       schema: {
+  //         'x-ts-type': Order,
+  //       },
+  //     },
+  //   },
+  // })
   async saveOrder(
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
@@ -49,8 +49,10 @@ export class OrderController {
     // generate id for order product item
     order.products.map((product: OrderItem) => {
       product.id = nanoid(8);
+      delete product.selected;
       return product;
     });
+    console.log(order.products);
     const savedOrder = await this.orderRepository.create({
       // products: body.products,
       ...order,
@@ -193,6 +195,40 @@ export class OrderController {
   }
 
   @authenticate('jwt')
+  @get('origin/order/{id}/{status}')
+  @response(200, {
+    description: 'Search order by orderID',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: {
+            'x-ts-type': Order,
+          },
+        },
+      },
+    },
+  })
+  async searchOrder(
+    @inject(SecurityBindings.USER)
+    currentUserProfile: UserProfile,
+    @param.path.string('id') orderId: string,
+    @param.path.string('status') status: string,
+  ) {
+    const userId = currentUserProfile[securityId];
+    const order = await this.orderRepository.find({
+      where: {
+        orderId,
+        // orderStatus: status,
+      },
+    });
+    if (!isArray(order)) {
+      return [...order];
+    }
+    return order;
+  }
+
+  @authenticate('jwt')
   @authorize({allowedRoles: ['admin']})
   @patch('order/success/{id}')
   @response(200, {
@@ -266,7 +302,7 @@ export class OrderController {
       await this.orderRepository.execute(
         'Order',
         'findOneAndUpdate',
-        {userId: new ObjectId(userId), orderId},
+        {orderId},
         {
           $set: {
             'shippingInfo.shippingAt': new Date(),
@@ -285,7 +321,7 @@ export class OrderController {
   }
 
   @authenticate('jwt')
-  @patch('order/cancel/{id}')
+  @patch('order/cancel/{oid}')
   @response(200, {
     description: 'Cancel order',
     content: {
@@ -304,17 +340,18 @@ export class OrderController {
   async cancelOrder(
     @inject(SecurityBindings.USER)
     currentUserProfile: UserProfile,
-    @param.path.string('id') orderId: string,
+    @param.path.string('oid') orderId: string,
   ) {
     const userId = currentUserProfile[securityId];
     try {
       await this.orderRepository.execute(
         'Order',
         'findOneAndUpdate',
-        {userId: new ObjectId(userId), orderId},
+        {orderId},
         {
           $set: {
             orderStatus: OrderStatus.CANCELED,
+            canceledAt: new Date(),
           },
         },
       );

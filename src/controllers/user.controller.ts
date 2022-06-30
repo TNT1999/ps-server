@@ -5,7 +5,7 @@ import {
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
 import {authorize} from '@loopback/authorization';
-import {inject} from '@loopback/core';
+import {inject, intercept} from '@loopback/core';
 import {FilterBuilder} from '@loopback/repository';
 import {
   get,
@@ -20,8 +20,8 @@ import {
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {compare, genSalt, hash} from 'bcryptjs';
 import omit from 'lodash/omit';
-import pick from 'lodash/pick';
 import {ObjectId} from 'mongodb';
+import {ValidateEmailInterceptor} from '../interceptors';
 import {Order, ROLES, User} from '../models';
 import {UserRepository} from '../repositories';
 import {
@@ -281,7 +281,7 @@ export class UserController {
     return currentUser;
   }
 
-  // @intercept(ValidateEmailInterceptor.BINDING_KEY)
+  @intercept(ValidateEmailInterceptor.BINDING_KEY)
   @post('/auth/register')
   @response(200, {
     description: 'Register new user',
@@ -379,7 +379,10 @@ export class UserController {
     }
     user.resetPasswordToken = resetKey;
     await this.userRepository.save(user);
-    await this.emailService.sendResetPasswordMail(user, token);
+
+    const urlResetPassword = `${process.env.SITE_URL}/reset-password?token=${token}`;
+
+    await this.emailService.sendResetPasswordMail(urlResetPassword, user);
     //send email
     return 'Reset password link sending to email';
   }
@@ -422,7 +425,7 @@ export class UserController {
   ): Promise<string> {
     console.log('COMPLETE');
     const {email, resetKey} = await this.jwtService.verifyResetPasswordToken(
-      token,
+      requestBody.token,
     );
     console.log('DECODE', email, resetKey);
     const user = await this.userRepository.findOne({
@@ -440,7 +443,7 @@ export class UserController {
     user.password = hashNewPassword;
     user.resetPasswordToken = undefined;
     await this.userRepository.save(user);
-    return 'Success';
+    return 'Đặt lại mật khẩu thành công';
   }
 
   @authenticate('jwt')
@@ -483,7 +486,7 @@ export class UserController {
       password: hashNewPassword,
       resetPasswordToken: undefined,
     });
-    return 'Success';
+    return 'Thay đổi thành công';
   }
 
   @authenticate('jwt')
@@ -538,7 +541,7 @@ export class UserController {
       },
     );
 
-    return pick(result.value, 'name', 'email', 'phone');
+    return result.value;
   }
 
   @authenticate('jwt')

@@ -6,6 +6,11 @@ export enum ROLES {
   ADMIN = 'admin',
 }
 
+export enum GENDER {
+  MALE = 'male',
+  FEMALE = 'female',
+  OTHER = 'other',
+}
 @model({
   settings: {
     mongodb: {collection: 'Users'},
@@ -119,6 +124,14 @@ export class User extends Entity {
     },
   })
   roles?: ROLES[];
+
+  @property({
+    type: 'string',
+    jsonSchema: {
+      enum: Object.values(GENDER),
+    },
+  })
+  gender?: string;
 
   @hasMany(() => Order, {keyTo: 'userId'})
   orders?: Order[];

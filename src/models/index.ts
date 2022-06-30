@@ -2,6 +2,7 @@ export * from './address.model';
 export * from './brand.model';
 export * from './cart';
 export * from './comment.model';
+export * from './notification.model';
 export * from './order';
 export * from './order/order.model';
 export * from './product';

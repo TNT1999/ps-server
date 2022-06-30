@@ -83,6 +83,11 @@ export class Order extends Entity {
   createdAt?: 'date';
 
   @property({
+    type: 'date',
+  })
+  canceledAt?: 'date';
+
+  @property({
     type: 'string',
     default: PaymentType.COD,
     jsonSchema: {

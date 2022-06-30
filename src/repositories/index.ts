@@ -2,6 +2,7 @@ export * from './address.repository';
 export * from './brand.repository';
 export * from './cart.repository';
 export * from './comment.repository';
+export * from './notification.repository';
 export * from './order.repository';
 export * from './product.repository';
 export * from './refreshtoken.repository';

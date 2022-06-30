@@ -34,6 +34,8 @@ export class OrderItem extends Model {
     default: false,
   })
   reviewed: boolean;
+
+  [key: string]: unknown;
 }
 
 export interface OrderItemRelations {
