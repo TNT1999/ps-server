@@ -1,7 +1,6 @@
 import {AuthenticationComponent} from '@loopback/authentication';
 import {
   JWTAuthenticationComponent,
-  RefreshTokenServiceBindings,
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
@@ -33,13 +32,13 @@ import {
   GoogleBindings,
   GoogleService,
   JWTService,
-  MyRefreshTokenServiceBindings,
+  // MyRefreshTokenServiceBindings,
   MyUserService,
   MyUserServiceBindings,
   ProductService,
   ProductServiceBindings,
-  RefreshTokenService,
-  RefreshTokenServiceConstants,
+  // RefreshTokenService,
+  // RefreshTokenServiceConstants,
   S3Service,
   S3ServiceBindings,
   ShippingService,
@@ -92,9 +91,9 @@ export class PsServerApplication extends BootMixin(
     // Bind jwt service
     this.bind(TokenServiceBindings.TOKEN_SERVICE).toClass(JWTService);
     // Bind refresh token service
-    this.bind(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE).toClass(
-      RefreshTokenService,
-    );
+    // this.bind(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE).toClass(
+    //   RefreshTokenService,
+    // );
     // Bind token constants
     this.bind(TokenServiceBindings.TOKEN_SECRET).to(
       CustomJWTServiceConstants.TOKEN_SECRET_VALUE,
@@ -103,12 +102,12 @@ export class PsServerApplication extends BootMixin(
       CustomJWTServiceConstants.TOKEN_EXPIRES_IN_VALUE,
     );
     // Bind refresh token contains
-    this.bind(RefreshTokenServiceBindings.REFRESH_SECRET).to(
-      RefreshTokenServiceConstants.REFRESH_SECRET_VALUE,
-    );
-    this.bind(RefreshTokenServiceBindings.REFRESH_EXPIRES_IN).to(
-      RefreshTokenServiceConstants.REFRESH_EXPIRES_IN_VALUE,
-    );
+    // this.bind(RefreshTokenServiceBindings.REFRESH_SECRET).to(
+    //   RefreshTokenServiceConstants.REFRESH_SECRET_VALUE,
+    // );
+    // this.bind(RefreshTokenServiceBindings.REFRESH_EXPIRES_IN).to(
+    //   RefreshTokenServiceConstants.REFRESH_EXPIRES_IN_VALUE,
+    // );
     // Bind product service
     this.bind(ProductServiceBindings.PRODUCT_SERVICE).toClass(ProductService);
     // Bind the authorizer provider

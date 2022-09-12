@@ -1,6 +1,5 @@
 import {authenticate} from '@loopback/authentication';
 import {
-  TokenObject,
   TokenServiceBindings,
   UserServiceBindings,
 } from '@loopback/authentication-jwt';
@@ -33,10 +32,9 @@ import {
   GoogleBindings,
   GoogleService,
   JWTService,
-  MyRefreshTokenServiceBindings,
+  // MyRefreshTokenServiceBindings,
   MyUserService,
   MyUserServiceBindings,
-  RefreshTokenService,
 } from '../services';
 const CredentialsSchema: SchemaObject = {
   type: 'object',
@@ -104,9 +102,7 @@ export class UserController {
     @inject(GoogleBindings.GOOGLE_SERVICE)
     public googleService: GoogleService,
     @inject(FacebookBindings.FACEBOOK_SERVICE)
-    public facebookService: FacebookService,
-    @inject(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE)
-    private refreshTokenService: RefreshTokenService,
+    public facebookService: FacebookService, // @inject(MyRefreshTokenServiceBindings.REFRESH_TOKEN_SERVICE) // private refreshTokenService: RefreshTokenService,
   ) {}
 
   @post('auth/login')
@@ -135,7 +131,7 @@ export class UserController {
     @requestBody(CredentialsRequestBody) credentials: Credentials,
   ): Promise<{
     accessToken?: string | undefined;
-    refreshToken?: string | undefined;
+    // refreshToken?: string | undefined;
     user: object;
   }> {
     // ensure the user exists, and the password is correct
@@ -145,13 +141,13 @@ export class UserController {
 
     console.log('login', user, userProfile);
     // create a JSON Web Token based on the user profile
-    const token = await this.jwtService.generateToken(userProfile);
-    const result = await this.refreshTokenService.generateToken(
-      userProfile,
-      token,
-    );
+    const accessToken = await this.jwtService.generateToken(userProfile);
+    // const result = await this.refreshTokenService.generateToken(
+    //   userProfile,
+    //   token,
+    // );
     return {
-      ...result,
+      accessToken,
       user: userProfile,
     };
   }
@@ -182,7 +178,7 @@ export class UserController {
     @requestBody() requestBody: {code: string},
   ): Promise<{
     accessToken?: string | undefined;
-    refreshToken?: string | undefined;
+    // refreshToken?: string | undefined;
     user: object;
   }> {
     const {
@@ -197,13 +193,13 @@ export class UserController {
     } as User);
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
-    const token = await this.jwtService.generateToken(userProfile);
-    const result = await this.refreshTokenService.generateToken(
-      userProfile,
-      token,
-    );
+    const accessToken = await this.jwtService.generateToken(userProfile);
+    // const result = await this.refreshTokenService.generateToken(
+    //   userProfile,
+    //   token,
+    // );
     return {
-      ...result,
+      accessToken,
       user: userProfile,
     };
   }
@@ -234,7 +230,7 @@ export class UserController {
     @requestBody() requestBody: {code: string},
   ): Promise<{
     accessToken?: string | undefined;
-    refreshToken?: string | undefined;
+    // refreshToken?: string | undefined;
     user: object;
   }> {
     const {
@@ -249,13 +245,13 @@ export class UserController {
     } as User);
     const userProfile = this.userService.convertToUserProfile(user);
     // create a JSON Web Token based on the user profile
-    const token = await this.jwtService.generateToken(userProfile);
-    const result = await this.refreshTokenService.generateToken(
-      userProfile,
-      token,
-    );
+    const accessToken = await this.jwtService.generateToken(userProfile);
+    // const result = await this.refreshTokenService.generateToken(
+    //   userProfile,
+    //   token,
+    // );
     return {
-      ...result,
+      accessToken,
       user: userProfile,
     };
   }
@@ -305,25 +301,25 @@ export class UserController {
     return savedUser;
   }
 
-  @post('/auth/refreshToken')
-  @response(200, {
-    description: 'Refresh new token',
-    content: {
-      'application/json': {
-        schema: {
-          type: 'object',
-        },
-      },
-    },
-  })
-  async refreshToken(
-    @requestBody() requestBody: {refreshToken: string},
-  ): Promise<Partial<TokenObject>> {
-    const result = await this.refreshTokenService.refreshToken(
-      requestBody.refreshToken,
-    );
-    return result;
-  }
+  // @post('/auth/refreshToken')
+  // @response(200, {
+  //   description: 'Refresh new token',
+  //   content: {
+  //     'application/json': {
+  //       schema: {
+  //         type: 'object',
+  //       },
+  //     },
+  //   },
+  // })
+  // async refreshToken(
+  //   @requestBody() requestBody: {refreshToken: string},
+  // ): Promise<Partial<TokenObject>> {
+  //   const result = await this.refreshTokenService.refreshToken(
+  //     requestBody.refreshToken,
+  //   );
+  //   return result;
+  // }
 
   @get('/auth/verify-email')
   @response(200, {
